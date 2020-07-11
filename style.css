@@ -178,10 +178,14 @@ body {
 
 .navbar_vert-container {
 	display: none;
+	position: fixed;
 	text-align: left;
 	max-width: 300px;
 	background-color: rgb(254, 252, 246);
 	border-radius: 5px;
+	padding: 0px 20px;
+	top: 0px;
+	bottom: 0px;
 }
 
 .navbar_vert-text {
@@ -203,9 +207,15 @@ body {
 }
 
 @media screen and (max-width: 1099px) {
+	
 	.navbar_vert-container {
 		display: block;
 	}
+
+	.header {
+		padding: 3% 0px;
+	}
+
 	.header a {
 		width: 56%;
 	}

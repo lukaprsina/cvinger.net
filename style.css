@@ -21,12 +21,14 @@ body {
 	height: 200px;
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
 	border-bottom: 1px solid rgb(152, 0, 0);
-	overflow: hidden;	
+	overflow: hidden;
 }
 
 .header a {
 	display: inline-block;
-	width: 615px;
+	width: 70%;
+	max-width: 615px;
+	min-width: 400px;
 	height: auto;
 	position: relative;
 	top: 50%;
@@ -38,12 +40,13 @@ body {
 }
 
 .logo {
-	/*logo se ne zmanjšuje!!*/
+	margin: 20px 40px;
 }
 
 .page {
 	max-width: 800px;
 	margin: auto;
+	padding: 0px 20px;
 }
 
 /*nav home*/

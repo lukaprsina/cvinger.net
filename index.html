@@ -186,7 +186,7 @@
 			var query = full_href.substring(full_href.indexOf("#") + 1);
 
 			if (query == full_href || query == "home") {
-				if (screen.width >= 1100) {
+				if (window.innerWidth >= 1100) {
 					document.getElementsByClassName("navbar_home-container")[0].style.display = "block";
 				}
 				document.getElementsByClassName("navbar_page-container")[0].style.display = "none";
@@ -196,7 +196,7 @@
 				var selected = "nav_".concat(query);
 				var article = "article_".concat(query);
 				document.getElementsByClassName("navbar_home-container")[0].style.display = "none";
-				if (screen.width >= 1100) {
+				if (window.innerWidth >= 1100) {
 					document.getElementsByClassName("navbar_page-container")[0].style.display = "block";
 					document.getElementById(selected).getElementsByClassName("selected_page")[0].style.visibility = "visible";
 				}
@@ -205,7 +205,7 @@
 		}
 
 		function chk_width() {
-			if (screen.width >= 1100) {
+			if (window.innerWidth >= 1100) {
 				build()
 			} else {
 				document.getElementsByClassName("navbar_page-container")[0].style.display = "none";

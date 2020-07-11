@@ -214,3 +214,9 @@ body {
 		display: block;
 	}
 }
+
+@media screen and (max-width: 840px) {
+	.page {
+		margin: 0px 20px;
+	}
+}

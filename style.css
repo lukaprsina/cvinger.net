@@ -6,6 +6,7 @@
 	margin: 0;
 	padding: 0;
 	text-align: justify;
+	box-sizing: border-box;
 }
 
 html {
@@ -18,29 +19,21 @@ body {
 
 .header {
 	background-color: rgb(252, 244, 224);
-	height: 200px;
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
 	border-bottom: 1px solid rgb(152, 0, 0);
-	overflow: hidden;
+	overflow: auto;
+	text-align: center;
+	padding: 44px 0px;
 }
 
 .header a {
 	display: inline-block;
-	width: 70%;
-	max-width: 615px;
-	min-width: 400px;
-	height: auto;
-	position: relative;
-	top: 50%;
-	left: 50%;
-	-moz-transform: translate(-50%, -50%);
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
+	width: 615px;
+	min-width: 200px;
 }
 
 .logo {
-	/*margin: 20px 40px;*/
+	
 }
 
 .page {
@@ -209,14 +202,11 @@ body {
 	margin-bottom: 0px;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1099px) {
 	.navbar_vert-container {
 		display: block;
 	}
-}
-
-@media screen and (max-width: 840px) {
-	.page {
-		margin: 0px 20px;
+	.header a {
+		width: 56%;
 	}
 }

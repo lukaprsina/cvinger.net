@@ -23,12 +23,13 @@ body {
 	border-bottom: 1px solid rgb(152, 0, 0);
 	overflow: auto;
 	text-align: center;
-	padding: 44px 0px;
+	/*padding: 44px 0px;*/
+	padding: 26px 0px;
 }
 
 .header a {
 	display: inline-block;
-	width: 615px;
+	width: 369px; /*619*/
 }
 
 .logo {
@@ -179,7 +180,7 @@ body {
 	display: none;
 	position: fixed;
 	text-align: left;
-	width: 400px;
+	width: 300px;
 	background-color: rgb(254, 252, 246);
 	border-radius: 5px;
 	padding: 20px 20px;

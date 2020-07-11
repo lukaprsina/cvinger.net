@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Cvinger</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+	<script type="text/javascript">
+	</script>
+</head>
+
+<body onresize="chk_width()" onhashchange="build()">
+	<!-- header -->
+	<div class="header">
+		<a href="#home" target=_self><img class="logo" src="images/logo.svg"></a>
+	</div>
+	<!-- navbar_vert -->
+	<div class="navbar_vert-container">
+		<a class="navbar_vert-text" href="#pot">Arheološka pot</a>
+		<a class="navbar_vert-text" href="#gradisce">Prazgodovinsko gradišče</a>
+		<a class="navbar_vert-text" href="#vhod">Utrjen vhod</a>
+		<a class="navbar_vert-text" href="#jama">Cvingerska jama</a>
+		<a class="navbar_vert-text" href="#talilnice">Talilniško območje</a>
+		<a class="navbar_vert-text" href="#gomile">Gomilno grobišče</a>
+		<a class="navbar_vert-text" href="#zemljevid">Zemljevid</a>
+		<a class="navbar_vert-text" href="#literatura">Literatura</a>
+	</div>
+	<!-- navbar_page -->
+	<div class="navbar_page-container">
+		<div class="navbar_page-background">
+			<div class="navbar_page">
+				<a class="navbar_page-text" href="#pot" id="nav_pot">Arheološka pot<div class="selected_page"></div></a>
+				<div class="navbar_page-circle"></div>
+				<a class="navbar_page-text" href="#gradisce" id="nav_gradisce">Prazgodovinsko gradišče<div class="selected_page"></div></a>
+				<div class="navbar_page-circle"></div>
+				<a class="navbar_page-text" href="#vhod" id="nav_vhod">Utrjen vhod<div class="selected_page"></div></a>
+				<div class="navbar_page-circle"></div>
+				<a class="navbar_page-text" href="#jama" id="nav_jama">Cvingerska jama<div class="selected_page"></div></a>
+				<div class="navbar_page-circle"></div>
+				<a class="navbar_page-text" href="#talilnice" id="nav_talilnice">Talilniško območje<div class="selected_page"></div></a>
+				<div class="navbar_page-circle"></div>
+				<a class="navbar_page-text" href="#gomile" id="nav_gomile">Gomilno grobišče<div class="selected_page"></div></a>
+				<div class="navbar_page-circle"></div>
+				<a class="navbar_page-text" href="#zemljevid" id="nav_zemljevid">Zemljevid<div class="selected_page"></div></a>
+				<div class="navbar_page-circle"></div>
+				<a class="navbar_page-text" href="#literatura" id="nav_literatura">Literatura<div class="selected_page"></div></a>
+			</div>
+		</div>
+		<div style="height:50px;"></div>
+	</div>
+	<!-- navbar_home -->
+	<div class="navbar_home-container">
+			<div style="height:50px;"></div>
+			<div class="navbar_home">
+				<a class="navbar_home-element" href="#pot" id="nav_pot">
+					<div class="navbar_home-circle"><img src="images/00_home/01_pot.png"></div>
+					<p class="navbar_home-text">Arheološka pot</p>
+				</a>
+				<div class="navbar_home-spacing"></div>
+				<a class="navbar_home-element" href="#gradisce" id="nav_gradisce">
+					<div class="navbar_home-circle"><img src="images/00_home/02_gradisce.png"></div>
+					<p class="navbar_home-text">Prazgodovinsko gradišče</p>
+				</a>
+				<div class="navbar_home-spacing"></div>
+				<a class="navbar_home-element" href="#vhod" id="nav_vhod">
+					<div class="navbar_home-circle"><img src="images/00_home/03_vhod.png"></div>
+					<p class="navbar_home-text">Utrjen vhod</p>
+				</a>
+				<div class="navbar_home-spacing"></div>
+				<a class="navbar_home-element" href="#jama" id="nav_jama">
+					<div class="navbar_home-circle"><img src="images/00_home/04_jama.png"></div>
+					<p class="navbar_home-text">Cvingerska jama</p>
+				</a>
+			</div>
+			<div style="height:16px;"></div>
+			<div class="navbar_home">
+				<a class="navbar_home-element" href="#talilnice" id="nav_talilnice">
+					<div class="navbar_home-circle"><img src="images/00_home/05_talilnice.png"></div>
+					<p class="navbar_home-text">Talilniško območje</p>
+				</a>
+				<div class="navbar_home-spacing"></div>
+				<a class="navbar_home-element" href="#gomile" id="nav_gomile">
+					<div class="navbar_home-circle"><img src="images/00_home/06_gomile.png"></div>
+					<p class="navbar_home-text">Gomilno grobišče</p>
+				</a>
+				<div class="navbar_home-spacing"></div>
+				<a class="navbar_home-element" href="#zemljevid" id="nav_zemljevid">
+					<div class="navbar_home-circle"><img src="images/00_home/07_zemljevid.png"></div>
+					<p class="navbar_home-text">Zemljevid</p>
+				</a>
+				<div class="navbar_home-spacing"></div>
+				<a class="navbar_home-element" href="#literatura" id="nav_literatura">
+					<div class="navbar_home-circle"><img src="images/00_home/08_literatura.png"></div>
+					<p class="navbar_home-text">Literatura</p>
+				</a>
+			</div>
+			<div style="height:31px;"></div>
+	</div>
+	<!-- page -->
+	<div class="page">
+		<div class="article" id="article_home">
+			<p>Cvinger pri Dolenjskih Toplicah je eno najpomembnejših starejšeželeznodobnih središč v Sloveniji in širšem jugovzhodnem predalpskem prostoru. Najdišče, ki leži na odlični strateški lokaciji, je v naravi predstavljeno kot arheološki park. Njegove najpomembnejše gradnike povezuje arheološka pot, s čimer prazgodovinsko dediščino predstavlja v izvirnem okolju (in situ). Primarna sestavina najdišča je <b>prazgodovinsko gradišče</b>, ki je obdano z nekoč mogočnim obzidjem in je v krajšem segmentu delno rekonstruirano. Na njegovem južnem pobočju se razteza <b>talilniško območje</b>, na katerem so staroselci v več sto talilnih pečeh pridobivali železo. Tega so nato s kovanjem predelovali v nakit, orodje, orožje in druge uporabne izdelke, s katerimi so trgovali v širšem prostoru. Vsebinsko celoto najdišča zaključuje <b>gomilno grobišče</b>, kjer so v številnih zemljenih gomilah skupaj z grobnimi pridatki pokopani nekdanji pripadniki tukajšnje dolenjske prazgodovinske skupnosti.<br><br>
+
+			Najstarejši deli najdišča sodijo v pozno bronasto dobo oziroma v začetek starejše železne dobe (10.–8. stoletje pr. n. št.). Njej sledi poselitvena prekinitev vse do mladohalštatskega obdobja (6.–4. stoletje pr. n. št.), ko je bil Cvinger s ponovno poselitvijo na višku svoje moči. Ohranjeni materialni ostanki in izjemne arheološke najdbe nam zgovorno pričajo o pomenu in gospodarski moči skupnosti, ki je pred poltretjim tisočletjem sooblikovala evropski kulturni prostor in neizbrisno obogatila zakladnico evropske kulturne dediščine.<br><br>
+
+			Najdišče je kot enota kulturne dediščine Dolenjske Toplice - Arheološko najdišče Cvinger (EŠD 110) vpisano v <a href="https://gisportal.gov.si/portal/apps/webappviewer/index.html?id=df5b0c8a300145fda417eda6b0c2b52b&extent=503151.3467%2C67099.7664%2C504812.9333%2C68802.3636%2C3912" target="_blank">register kulturne dediščine</a>. Status kulturnega spomenika je z občinskim odlokom pridobilo že leta 1992. Današnjo pravno zaščito temu kulturnemu spomeniku zagotavlja <a href="https://www.google.com/search?q=pdf+manjka" target="_blank">Odlok o razglasitvi</a> nepremičnih kulturnih spomenikov lokalnega pomena na območju Občine Dolenjske Toplice iz leta 2018.</p>
+		</div>
+		<div class="article" id="article_pot">
+			<h1>Arheološka pot</h1>
+			<p>Prve raziskovalce je Cvinger pritegnil že v sedemdesetih letih 19. stoletja, prva izkopavanja na gomilnem grobišču in tudi v naselju pa so potekala zadnja leta navedenega stoletja. Njim so sledila izkopavanja v zahodnem delu gradišča v tridesetih letih 20. stoletja. Prve povojne raziskave Cvingerja so potekale med letoma 1986 in 1991. Arheologi so tu izkopali šest sond, s katerimi so želeli ugotoviti časovni razpon gradišča, način gradnje obzidja in morebitne ostanke stavb v notranjosti naselja. V sklopu arheoloških raziskav so s sodelovanjem jamarjev in domačinov delno očistili mlajše nasutje v Cvingerski jami, na gradišču delno rekonstruirali odsek prazgodovinskega obzidja, postavili prve informativne table ter z markacijami označili krožno pešpot. Njena vzpostavitev leta 1990 je bila pionirsko delo, saj je to najstarejša arheološka tematska pot v Sloveniji.<br><br>
+
+			Izhodišča pešpoti so na križišču v gozdu pri odcepu ceste za Dolenje Polje blizu osnovne šole, ob parkirišču v bližini topliškega pokopališča ter sredi Meniške vasi. Speljana je po gozdnih stezah in poteh ter označena z markacijo stilizirane situle. Celovito je opremljena z uvodnimi pojasnjevalnimi tablami na izhodiščih ter vmesnimi na treh vstopih v gradišče. Vsebinska razširitev z informativnimi tablami pohodnika pričaka na ključnih postajah ob poti: pri delno rekonstruiranem obzidju, Cvingerski jami, utrjeni dohodni poti, železarsko-talilniškem območju ter gomilnem grobišču. Za lažjo orientacijo v naravi so na križiščih postavljene usmerjevalne table. Pot na Cvinger (265 m n.m.), ki je dolga 2,5 km, ni zahtevna – treba je le premagati višinsko razliko 60 m. Vabimo vas, da se sprehodite med ohranjenimi pomniki topliške prazgodovine. Priporočamo vam terensko obutev in … srečno pot!</p>
+		</div>
+		<div class="article" id="article_gradisce">
+			<h1>Prazgodovinsko gradišče</h1>
+			<p>V vseh obdobjih človekove prisotnosti na naših tleh so osnovne komunikacije ter obenem ugoden prostor za poselitev in bivanje predstavljale rečne doline. Pritoki in sotočja so bili še posebej privlačni, saj so križišča poti točke z največjim pretokom ljudi in blaga. Širše območje Dolenjskih Toplic v istoimenski občini, ki mu poenostavljeno pravimo Topliška dolina, je značilen tovrstni primer. Tu se od poti po dolini reke Krke proti jugu odcepi pot po dolini Črmošnjice. Skoraj vzporedno z omenjeno poteka tudi pot po dolini Sušice, obe pa po najugodnejših naravnih prehodih pripeljeta v Belo krajino in naprej na Hrvaško. Obravnavani prostor je zato bogato posejan z ostalinami človekove dejavnosti v preteklih obdobjih. Osrednje mesto med tukajšnjimi arheološkimi najdišči zaradi številnih raziskav in izjemnih najdb pripada arheološkemu najdišču Cvinger. Ta se razprostira v osrčju omenjene doline v trikotniku med naselji Dolenjske Toplice, Meniška vas in Sela pri Dolenjskih Toplicah. Njegov ključni del je utrjeno prazgodovinsko naselje oziroma gradišče, h kateremu prištevamo še železarsko-talilniško območje južno od naselja, pripadajoče gomilno grobišče Branževec nad Seli ter posamezne gomile na območju Meniške vasi. Arheološke najdbe z okoliških najdišč nam dokazujejo, da je življenje na tem prostoru potekalo vse od kamene dobe do zgodnjega srednjega veka.<br><br>
+
+			Utrjeno prazgodovinsko gradišče dominira na zakraselem in z gozdom poraslem kopastem hribu Cvinger z najvišjo točko 265 m. Na njegovem severu teče reka Krka, na zahodu in vzhodu ga oklepata reka Radeščica in hudourniška Sušica. Južno pobočje Cvingerja prehajajo v hribovit hrbet med Radeščico in Sušico. Z vrtačami posejan vrh, ki na najvišji točki premore celo kraško brezno, obdaja 740 m dolgo sklenjeno obzidje. Njegovi ostanki so danes vidni kot kamnit okop, ki se na notranji strani dviguje do višine dveh metrov, na zunanji strani pa strmo pada proti dolini. Še vidni ostanki obzidja so v preteklosti med ljudmi ustvarjali vtis, da je na Cvingerju nekoč stal samostan. Po njegovih menihih je namreč v vznožju ležeča Meniška vas dobila svoje ime. Novejše raziskave zgodovinarjev kažejo, da so stiški menihi tukaj res imeli svojo posest, samostana pa na Cvingerju vendarle ni bilo. Osrednji vhod v utrjeno naselje je bil na južni strani obzidja. Do tja je iz doline Radeščice mimo gomil in železarskega območja pripeljala prazgodovinska pot, ki so jo v zavojih varovale mogočne kamnite zapore.<br><br>
+
+			V literaturo arheološko je najdišče na Cvingerju vstopilo relativno zgodaj. V svoji obsežni knjigi o zgodovini železa na Kranjskem, Goriškem in Istri je leta 1909 Alfons Müllner zapisal: »Tu med Krko in vodotokoma Radeča in Sušica leži hrib Branževci, kjer sem leta 1873 našel prazgodovinsko obzidje. To je obsegalo 680 metrov. Zid je sestavljen iz zemlje in kamenja, med katerimi se nahaja železova žlindra. V naselju se najdejo sledovi koč in odprtega kurišča ter veliko železove žlindre. Zunaj Cvingerja se je v gozdu nahajala lepa, na žalost zdaj uničena, gomila, ki je merila 2 metra v višino in je obsegala 70 korakov. Vsebovala je okoli 40 grobov. Najdbe iz te gomile in poleg ležečih grobov so bile iz »halštatskega« obdobja VI. in V. stoletja.« V naselju je med letoma 1898 in 1899 prvi izkopaval vodja antropološko-prazgodovinske zbirke Prirodoslovnega muzeja na Dunaju Josef Szombathy. Naselje je obhodil, izmeril ter v svojem dnevniku med drugim narisal skico gradišča z legami posameznih sond. Njegovo delo štejemo za prvo večje raziskovanje kakega prazgodovinskega gradišča na nekdanjem Kranjskem. Po ljudskem izročilu naj bi pred prvo svetovno vojno na Cvingerju izkopavala tudi vojvodinja Mecklenburška, vendar pisni viri o njenem tukajšnjem delovanju niso znani. V tridesetih letih 20. stoletja je na zahodnem delu gradišča izkopaval še Walter Schmid, žal pa so rezultati njegovega dela izgubljeni. Ohranili so se le skromni podatki iz časopisa Jutro, v katerem so objavili novico o štirih stavbah, ki jih je našel. Leta 1986 je na Cvingerju s sodobnimi raziskavami pričel takratni Zavod za varstvo naravne in kulturne dediščine Novo mesto pod vodstvom arheologa Boruta Križa. V šestih zaporednih letih je arheološka ekipa izkopala šest sond, ki so zadovoljivo pojasnile videz prazgodovinskih obzidij in njihovo časovno sosledje, v njihovi notranjosti pa nakazale način gradnje stanovanjskih stavb.<br><br>
+
+			Najstarejše obzidje, ki je obdajalo Cvinger, je bilo zgrajeno iz lesa in zemlje. Med dvojni opaž iz lesenih brun s širino dobrega metra so njegovi graditelji nasuli ilovico. Ker je to obzidje mestoma uničil požar, se je le-ta prežgala. Ohranila se je kot rdeče-oranžno-siva gmota, ki se je pomešala s pooglenelimi stenami zrušenega opaža. S pomočjo radiokarbonske analize ostankov lesa in nekaj drobnih najdb lončenine lahko to obzidje datiramo v čas pozne bronaste dobe oziroma v začetek starejše železne dobe (10.–8. stoletje pr. n. št.). Nad ruševine oziroma ostanke tega obzidja so nato postavili kamnito obzidje. Zgrajeno je bilo tako, da je bilo zunanje in notranje lice zloženo iz izbranega kamenja, njegov vmesni prostor pa je bil nasut s kamnitim drobirjem in zemljo. Širina tega zidu je znašala okoli dva metra. Pred njim je bila na zunanji strani urejena klančina, ki se je po nekaj metrih strmega spusta zaključila z manjšo škarpo in jarkom. Kamniti zid so dodatno utrjevala pokončna bruna (stojke), ki so segala pod nivo zidu. Sondažne raziskave so prinesle zanesljive ugotovitve, da je bilo to obzidje na več mestih popravljeno.<br><br>
+
+			Na notranji strani so tik ob obzidju stale stavbe. Zgrajene so bile iz brun, ki so bila premazana z glino, ki je na ta način tvorila nekakšen omet (hišni lep). Stavbe so bile postavljene na vodoravno položena bruna, ki so ležala v manjših jarkih, s čimer so tvorila temelje. V nekaterih primerih so imele stavbe temelje sestavljene iz vodoravno položenih kamnov. Številne so imele luknje za stojke, ki so bile pogosto obložene s kamenjem. To je služilo kot zagozda za pokončno postavljena bruna, ki so nosila ostenje in ostrešje. Stavbe so običajno imele shrambne jame, ki so bile vkopane v tla ali celo vklesane v kamnito osnovo znotraj objekta.<br><br>
+
+			Drobne najdbe iz notranjosti naselja so bili predvsem predmeti, povezani z vsakdanjim življenjem: odlomki lončenih posod, glinen hišni lep, lončena vretenca kot uteži in vztrajniki pri preslici za predenje, glinene piramidalne uteži za statve pri tkanju, lončeni svitki za kuho, ostanki mesne prehrane (živalske kosti) ter železova žlindra kot ostanki kovaške obdelave železa. Analiza živalskih kosti in ostankov prehrane prazgodovinskih prebivalcev kaže na veliko prevlado domačih (gojenih) živali (krave, prašiči, koze, ovce) in le na manjšo količino divjih (lovnih) živali. Bogato rastlinsko prehrano so sestavljali proso, pšenica, ječmen, lan, bezeg, robide, križnice (koleraba, repa) in presenetljivo velike količine gorčice.</p>
+		</div>
+		<div class="article" id="article_vhod">
+			<h1>Utrjen vhod</h1>
+			<p>Dodati raziskave 2016-2018, Črešnar.</p>
+		</div>
+		<div class="article" id="article_jama">
+			<h1>Cvingerska jama</h1>
+			<p>Dolenjski griči in hribi so na široko posejani s prazgodovinskimi gradišči. Cvingersko med vsemi izstopa po tem, da se na najvišji točki, ki je skorajda v središču gradišča, nahaja kraško brezno Cvingerska (tudi Keltska) jama. Ali je bila znana že v halštatski dobi, ali se je morda odprla pozneje, pa je uganka, ki so jo med večletnimi raziskavami poskušali družno razrešiti arheologi in novomeški jamarji.<br><br>
+
+			Verjetno je prav lega jame v bližini obljudenih krajev spodbudila domišljijo nekaterih piscev iz začetka 20. stoletja, da so jami namenili vsak po nekaj vrstic. Najstarejši znani zapis o njej najdemo v drobni knjižici Zdravišče Toplice, ki jo je leta 1900 spisal Pavel Zhuber pl. Okrog. V poglavju Okolica zdravišča je navedel: »Takoj za parkom vzdiguje se polagoma že prej imenovani hrib Tabor. Od ceste peljejo lepe gozdne poti in stezice med gostimi, visokimi smrekami proti vrhu k nekdanji keltiški naselbini. Prav na vrhu je nad 20 metrov globoka navpična jama. Zaradi nevarnega vhoda do sedaj nihče še ni preiskal te jame, vendar pa se sodi, da so s to navpično jamo v zvezi še druge vodoravne votline. V tej jami so prav lepi kapniki.« Slabo desetletje pozneje (1909) je omenjeni Alfons Müllner objavil knjigo o zgodovini železa, v kateri je na kratko opisal svoj obisk (1873) prazgodovinskega obzidja in gomil, ter jo opremil z risbama – na prvi je označil zemljepisno lego Cvingerja, na drugi pa je risbi obzidja dodal še prerez naselja, sredi katerega je dobro vidno brezno. Na naslednjo pisno obravnavo je jama čakala vse do leta 1991, ko je domačin Andrej Hudoklin v prispevku za Naše jame objavil kratek pregled do tedaj znanega dogajanja z obravnavano jamo. Ena izmed njegovih ugotovitev je bila, da je nasutje v jami nastalo po drugi svetovni vojni, kar so potrdili tudi ostanki eksplodiranih minskih teles. Ob tem je zabeležil tudi pripovedi, ki so o jami in njenih skrivnostih krožile med domačini.<br><br> 
+
+			Cvingersko jamo so uradno prvi obiskali topliški jamarji, sicer člani Jamarskega kluba Novo mesto (1982). Za trikotnim vhodom (2 x 2,5 m) so izmerili 6 m globoko in 10 m dolgo vhodno brezno, v katerem pa zaradi očitnega nasutja z vrha ni bilo nadaljevanja. Ker je bila njena bližnja in širša okolica več stoletij obljudena, bi lahko v jamo po naključju (ali namerno) padli tudi razni predmeti iz različnih zgodovinskih obdobij, zato je jama zaradi svoje specifične lege dobila visok arheološki potencial. Med letoma 1986 in 1987 so se zato tudi jamarji vključili v arheološke raziskave, ki jih je takrat na Cvingerju vodil Borut Križ. V teh dveh poletnih sezonah so odkopavali nasutje, ki je domnevno prekrivalo arheološke plasti in ki je hkrati zapiralo prehod v nižje dele jame. Iz jame so s pomočjo vrvne tehnike izvlekli okoli 10 m3 materiala (zemlja, kamenje, komunalni odpadki), s čimer so jamo poglobili za več metrov. Ker so večje skale, ki jih niso mogli izvleči, začele groziti s podorom, so s kopanjem v jami prenehali. Prehod v morebitno jamsko nadaljevanje ali dostop do arheoloških plasti je zato tudi po zaključenih raziskavah ostal neznanka.<br><br>
+
+			Delo v jami je zastalo za natanko tri desetletja, dokler niso jamarji dobili vnovičnega povabila arheološke raziskovalne ekipe pod vodstvom dr. Matije Črešnarja (Oddelek za arheologijo, Filozofska fakulteta, UL), da bi s čiščenjem nasipnega stožca pod jamskim vhodom nadaljevali. Kopači v jami so nasutje nalagali v plastične sode, od koder so jih z električnim vitlom dvigovali ter po horizontalni žičnici odvlekli na petnajst metrov oddaljeno deponijo za arheološki pregled. Na več akcijah v letih 2016 in 2017 so izvlekli novih 10 m3 materiala in jamo poglobili do te mere, da se je ob jamski steni na dveh mestih odprlo nadaljevanje. Jamarske raziskave so nato pokazale, da se brezno med razvejanimi korozijskimi razpokami in manjšimi dvoranami v več stopnjah nadaljuje. Največji notranji prostor je Dvorana balvanov, ki je visoka 15 m. Na njenem dnu je splet stranskih rovov in prehodov, ki se vsi po vrsti zaprejo z neprehodnimi ožinami. Novoodkriti deli se zaključijo v jašku dobrih 10 m pod podornimi bloki omenjene dvorane na globini 51 m.<br><br>
+
+			Po zaključenih raziskavah se je pokazalo, da v arheološkem pogledu jama ni izpolnila pričakovanj. Med izkopanim nasutjem je v množici novodobnih predmetov izstopal le zajeten kos prazgodovinske keramike, ki je bil nekoč del ostenja posode za kuhanje na ognju. Kulturnih plasti v novoodkritih delih jame ni bilo, saj so bili doslej človeku očito nedostopni. Odsotnost najdb si strokovnjaki razlagajo s tem, da je bil vhod v jamo v času poselitve gradišča zakrit oziroma zadelan. Enako verjetna je razlaga, da se je vhod vanjo z vrušenjem jamskega stropa odprl šele po tem, ko je prazgodovinska skupnost naselje že opustila.</p>
+		</div>
+		<div class="article" id="article_talilnice">
+			<h1>Talilniško območje</h1>
+			<p>Med najpomembnejše dejavnosti tukajšnjih prazgodovinskih prebivalcev štejemo taljenje železa in kovaštvo. Sledovi teh dejavnosti so prisotni tako znotraj naselja, kjer lahko na tleh najdemo kovaško žlindro, predvsem pa na južnem pobočju Cvingerja. Nekje na polovici poti med naseljem in gomilnim grobiščem Branževec so leta 1988 strokovnjaki med terenskimi pregledi na površini našli večje količine železove žlindre. Ker so bili vmes tudi koščki prežgane ilovice, je vse kazalo na to, da se pod gozdnim humusom skrivajo ostanki železnodobnih peči (talilnikov). Domnevo so takrat preverili z manjšo sondo (3 x 4 m) na sredini prostora, kjer je bila koncentracija najdb na površini največja. Sondiranje je domneve potrdilo, saj se je tik pod površjem nahajala večja količina železove žlindre in prežgane ilovice, ki je ležala raztresena po celi površini sonde. S poglabljanjem arheološke sonde na nivo oranžno-rdeče ilovice (50-60 cm pod površjem), so se pokazali jasni obrisi dvanajstih železarskih talilnih peči. Ležale so tesno skupaj, dve sta se celo dotikali. Nadaljnji izkop je pokazal, da gre za jame, vkopane v ilovnata tla. Njihova notranjost je bila večinoma močno ožgana in zapolnjena s temnejšo zemljo, kosi železove žlindre, lesnim ogljem in ponekod tudi prežganim kamenjem. Ohranili so se le spodnji deli peči z ostenjem, ki je bilo izdelano iz gline. V tlorisu so bile peči povečini okroglih oblik s premerom od 40 do 70 cm, le ena je merila 80 x 100 cm. Njihovi ostanki so se nahajali zelo blizu ena drugi, kar kaže na to, da so bile peči pogosto prenovljene in le nekajkrat uporabljene. Ko je namreč stara postala neuporabna, so v njeni bližini postavili novo.<br><br> 
+
+			Arheološko sondiranje na Branževcu je torej potrdilo domnevo, da je tu v železni dobi stal talilniški obrat. Dodatne nedestruktivne geofizikalne raziskave (magnetometrija, 1997) so pokazale, da se je ta raztezal na približno 50 m širokem in 100 m dolgem prostoru, na katerem so nekdaj postavili več sto talilnih peči. Pridobivanje železa je v tistem času potekalo izven naselja, pridobljeno surovo železo (volk) pa so predelovali in kovali tudi znotraj naselja.<br><br>
+
+			Dodati raziskave 2016-2018, Črešnar.</p>
+		</div>
+		<div class="article" id="article_gomile">
+			<h1>Gomilno grobišče</h1>
+			<p>Cvingersko gomilno grobišče sodi med klasična starejšeželeznodobna najdišča Dolenjske, ki so s svojimi bogatimi najdbami v arheološkem svetu že ob koncu 19. stoletja sooblikovala pojem »cvetoči dolenjski halštat«. Do njega iz naselja navzdol vodi prazgodovinska pot, ki se mimo talilniškega območja proti jugu spusti do ledine Branževec nad današnjo vasjo Sela. Grobišče danes šteje 31 še vidnih zemljenih gomil. To so v tlorisu okrogle kopaste tvorbe s premerom 6 do 20 metrov in z ohranjeno višino do 4 metre. V času njihovega nastanka in uporabe so bile še precej višje. Z izkopavanji teh gomil je leta 1898 začel znani dolenjski starinokop Jernej Pečnik in v tem ter naslednjem letu izkopal 16 gomil ter še eno v Dolgih delih pri Meniški vasi. Med delom ga je nekajkrat obiskal omenjeni Josef Szombathy, ki ga je nadziral in hkrati finančno pokrival. Izkopano gradivo je zato prišlo v last Prirodoslovnega muzeja na Dunaju, kjer je del restavriranih najdb vključenih v stalno postavitev arheološke zbirke. Vsi predmeti iz gomil časovno sodijo v mlajše obdobje starejše železne dobe ter v začetek mlajše železne dobe.<br><br>
+
+			Med izkopanimi predmeti prevladujejo lončene posode s hrano in pijačo, ki so jih v grobove priložili umrlim kot popotnico v onostranstvo. Praviloma so vse posode okrašene s plastičnim, vrezanim in slikanim okrasom. Pogosto imajo ročaje in stojijo na različno visokih nogah. Izdelovali so jih prostoročno v domačih lončarskih delavnicah, najdemo pa jih v moških in ženskih grobovih. Poleg lončenih posod so bili v ženske grobove priloženi še nakitni predmeti: bronaste masivne in votle, različno okrašene zapestnice in nanožnice, bronaste in železne zaponke različnih tipov in velikosti, bronasti lasni obročki ter bronasti okrašeni valjasti uhani in obeski. Ob njih najdemo še ogrlice, izdelane iz uvoženih jantarnih jagod ter iz raznobarvnih, bogato okrašenih in na Dolenjskem izdelanih steklenih jagod. Med najznačilnejše grobne pridatke ženskih grobov sodijo tudi okrašena lončena vretenca (vztrajniki) ter uteži za preslico pri predenju volne. V moške grobove so bili poleg lončenih posod s popotnico priloženi še železno in bronasto orožje ter deli oblačil in opreme. Oborožitev bojevnika sta sestavljali železna tulasta ali plavutasta sekira ter ena ali dve sulici. K opremi je sodil ukrivljen železen nož in kamnit brus ter kovinska pasna garnitura – pasna plošča ali obročki in pasni jezički, ki so bili z zakovicami pritrjeni na pas.<br><br>
+
+			Posebno kategorijo pokojnikov predstavljajo pokopi, kjer se kot grobni pridatki pojavljajo bronaste čelade, konjska oprema ter bronasto posodje. V teh grobovih lahko prepoznamo vodilni sloj tedanje družbe – halštatske kneze. To so bili veljaki, ki so v svojih rokah združevali vojaško, politično in ekonomsko oblast. S prestižnimi pridatki so tudi v zagrobnem življenju predstavljali posebnost, ne le v okviru svoje družine, temveč v celotni skupnosti. Poleg izjemnih grobnih pridatkov sta status pokojnika nakazovali še njihova lega v gomili ter grobna arhitektura. Izpostaviti velja grob 9 v gomili V, ki je bil, kot je zapisal izkopavalec Pečnik, »prekrit kar s tremi vozovi kamenja«. Vseboval je čelado negovskega tipa, bronasto narebreno cisto, dve sulici, sekiro, nož, britev, bronaste fibule in pasno garnituro. Njemu je podoben grob 17 v isti gomili, le da gre v tem primeru za dvojni pokop (moškega in ženske). V njem se poleg značilnih moških grobnih pridatkov, kot so bronasta negovska čelada, dve železni sulici in sekira, dva železna ražnja, nož in britev, deli pasu in obročki ter bronasta situla in bronasta kotlička, pojavljajo še značilni ženski pridatki, kot so jantarne ogrlice ter votle in masivne bronaste zapestnice.<br><br>
+
+			Posebnost predstavlja tudi grob 23 v gomili II. V tem, po pridatkih sodeč moškem grobu sta ležali dve železni sulični osti, železen nož, dve bronasti certoški fibuli, bronasti pasni jezički, železna ostroga ter bronasta figuralno okrašena situla. Ta je skupaj s situlama iz Vač in z Magdalenske gore ena najlepših v Sloveniji. Situlski spomenik ima plašč, ki je okrašen s tremi figuralnimi frizi. Na zgornjem je prikazan sprevod jezdecev in enoosnih vozov s konjsko vprego. Prvi v sprevodu, ki se premika v levo, je pešec, sledi mu vprežni dvokolesni voz s potnikom ter na voz stopajočo osebo z dolgo palico. Sledita konja, ki ju na povodcu vodita moža, ter slabo viden vprežni voz, ki mu sledi še konjenik. Vse osebe so moškega spola in pokrite z baretkam podobnimi pokrivali. V drugem, osrednjem frizu, ki je precej poškodovan, je predstavljen sprevod pešcev ter jezdec. V spodnjem, poškodovanem frizu je znana scena lovca z lokom in šolanim lovskim psom ter trop rogatih živali. Situla je okrašena v klasičnem situlskem stilu s prehoda iz 6. v 5. stoletje pr. n. št. Med situlske spomenike iz grobov na Cvingerju sodi še figuralno okrašena pasna spona iz groba 21 gomile XI, ki pa je slabše izdelana, saj so konji na njej dokaj slabo prikazani. Na tem grobišču so poleg opisanih našli še tri bronaste situle z neokrašenimi plašči, dva bronasta kotlička, tri bronaste čelade, bogato konjsko opremo, množico orožja, nakitnih predmetov ter lončenega posodja.<br><br>
+
+			Na območju Cvingerja posebnost predstavlja lončena posoda, ki je bila vkopana v prazgodovinsko gomilo in se po obliki, izdelavi in okrasju bistveno loči od ostalih lončenih posod, ki so ležale v prazgodovinskih grobovih. Kaže, da je bila ta za 7. stoletje značilna posoda v prazgodovinsko gomilo vkopana naknadno, s čimer predstavlja enega prvih žganih slovanskih pokopov na našem prostoru.</p>
+		</div>
+		<div class="article" id="article_zemljevid">
+			<h1>Zemljevid</h1>
+			<img src="images/07_zemljevid/01_zemljevid.jpg">
+		</div>
+		<div class="article" id="article_literatura">
+			<h1>Literatura</h1>
+		</div>
+	</div>
+	<!-- script -->
+	<script type="text/javascript">
+		function build() {
+			document.querySelectorAll(".article").forEach(item => {
+				item.style.display = "none";
+			});
+
+			document.querySelectorAll(".selected_page").forEach(item => {
+				item.style.visibility = "hidden";
+			});
+
+			var full_href = window.location.href;
+			var query = full_href.substring(full_href.indexOf("#") + 1);
+
+			if (query == full_href || query == "home") {
+				if (screen.width >= 1100) {
+					document.getElementsByClassName("navbar_home-container")[0].style.display = "block";
+				}
+				document.getElementsByClassName("navbar_page-container")[0].style.display = "none";
+				document.getElementById("article_home").style.display = "block";
+
+			} else {
+				var selected = "nav_".concat(query);
+				var article = "article_".concat(query);
+				document.getElementsByClassName("navbar_home-container")[0].style.display = "none";
+				if (screen.width >= 1100) {
+					document.getElementsByClassName("navbar_page-container")[0].style.display = "block";
+					document.getElementById(selected).getElementsByClassName("selected_page")[0].style.visibility = "visible";
+				}
+				document.getElementById(article).style.display = "block";
+			}
+		}
+
+		function chk_width() {
+			if (screen.width >= 1100) {
+				build()
+			} else {
+				document.getElementsByClassName("navbar_page-container")[0].style.display = "none";
+				document.getElementsByClassName("navbar_home-container")[0].style.display = "none";
+			}
+		}
+		build();
+	</script>
+</body>
+
+</html>

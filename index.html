@@ -11,13 +11,18 @@
 	</script>
 </head>
 
-<body onresize="chk_width()" onhashchange="build()">
+<body onresize="chk_width();" onhashchange="build()">
 	<!-- header -->
 	<div class="header">
 		<a href="#home" target=_self><img class="logo" src="images/logo.svg"></a>
 	</div>
 	<!-- navbar_vert -->
-	<!-- <div class="navbar_vert-container">
+	<div class="navbar_vert-container">
+		<button id="menu_button" onclick="menu();">
+			<div></div>
+			<div></div>
+			<div></div>
+		</button>
 		<a class="navbar_vert-text" href="#pot">Arheološka pot</a>
 		<a class="navbar_vert-text" href="#gradisce">Prazgodovinsko gradišče</a>
 		<a class="navbar_vert-text" href="#vhod">Utrjen vhod</a>
@@ -26,7 +31,7 @@
 		<a class="navbar_vert-text" href="#gomile">Gomilno grobišče</a>
 		<a class="navbar_vert-text" href="#zemljevid">Zemljevid</a>
 		<a class="navbar_vert-text" href="#literatura">Literatura</a>
-	</div> -->
+	</div>
 	<!-- navbar_page -->
 	<div class="navbar_page-container">
 		<div class="navbar_page-background">
@@ -211,6 +216,10 @@
 				document.getElementsByClassName("navbar_page-container")[0].style.display = "none";
 				document.getElementsByClassName("navbar_home-container")[0].style.display = "none";
 			}
+		}
+
+		function menu() {
+			document.getElementsByClassName("navbar_vert-container")[0].style.display = "none";
 		}
 		build();
 	</script>

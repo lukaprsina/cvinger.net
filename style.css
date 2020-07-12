@@ -208,20 +208,31 @@ body {
 }
 
 #menu_button {
+	display: inline-block;
 	width: 50px;
 	height: 50px;
 	border-radius: 5px;
 	border: none;
 	background-color: rgb(246, 246, 246);
 	margin-bottom: 20px;
+	text-align: center;
+	padding: 15px 10px;
 }
 
 #menu_button div {
 	width: 30px;
 	height: 4px;
 	background-color: rgba(0, 0, 0, 0.5);
-	margin: 5px 10px;
+	margin: 4px 0px;
 	border-radius: 2px;
+}
+
+#menu_button div:first-child {
+	margin-top: 0;
+}
+
+#menu_button div:last-child {
+	margin-bottom: 0;
 }
 
 @media screen and (max-width: 1099px) {

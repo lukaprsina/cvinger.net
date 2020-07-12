@@ -1,6 +1,5 @@
 * {
 	font-family: Calibri, sans-serif;
-	font-weight: lighter;
 	font-style: normal;
 	font-size: 18px;
 	margin: 0;
@@ -86,7 +85,6 @@ body {
 	cursor: pointer;
 	margin: 15px 0 0 0;
 	text-align: center;
-	font-weight: 400;
 	color: rgb(152, 0, 0);
 }
 
@@ -133,7 +131,6 @@ body {
 	display: inline-block;
 	padding: 7px 6px 5px 6px;
 	border-radius: 10px;
-	font-weight: 400;
 	font-size: 16px;
 	color: rgb(254, 252, 246);
 	position: relative;

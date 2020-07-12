@@ -25,15 +25,6 @@ body {
 	padding: 40px 0 29.58px 0; /*37.79, 2.21*/
 }
 
-#test {
-	display: block;
-	position: absolute;
-	height: 1px;
-	width: 100%;
-	top: 100px;
-	background-color: black;
-}
-
 .header a {
 	display: inline-block;
 	width: 615px;

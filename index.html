@@ -13,17 +13,17 @@
 <body onresize="chk_width();" onhashchange="build()">
 	<!-- header -->
 	<div class="header">
-		<a href="#home" target=_self><img class="logo" src="images/logo.svg"></a>
-	</div>
-	<!-- navbar_vert -->
-	<div class="navbar_vert-container">
 		<a id="menu_button" onclick="menu(); return false;" href="Fallback.html">
 			<div></div>
 			<div></div>
 			<div></div>
 		</a>
-		<a class="navbar_vert-text" href="#pot">Arheološka pot</a>
-		<a class="navbar_vert-text" href="#gradisce">Prazgodovinsko gradišče</a>
+		<a href="#home" target=_self><img class="logo" src="images/logo.svg"></a>
+	</div>
+	<!-- navbar_vert -->
+	<div class="navbar_vert-container">
+		<a class="navbar_vert-text" href="#pot" onclick="menu();">Arheološka pot</a>
+		<a class="navbar_vert-text" href="#gradisce" onclick="menu();">Prazgodovinsko gradišče</a>
 		<a class="navbar_vert-text" href="#vhod">Utrjen vhod</a>
 		<a class="navbar_vert-text" href="#jama">Cvingerska jama</a>
 		<a class="navbar_vert-text" href="#talilnice">Talilniško območje</a>
@@ -225,8 +225,15 @@
 		}
 
 		function menu() {
-			document.getElementsByClassName("navbar_vert-container")[0].style.display = "none";
+			if (menu_open) {
+				document.getElementsByClassName("navbar_vert-container")[0].style.display = "none";
+				menu_open = false
+			} else {
+				document.getElementsByClassName("navbar_vert-container")[0].style.display = "block";
+				menu_open = true
+			}
 		}
+		var menu_open = false
 		build();
 	</script>
 </body>

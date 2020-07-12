@@ -28,7 +28,8 @@ body {
 .header a {
 	display: inline-block;
 	width: 615px;
-	height: 0px;
+	max-width: 80%;
+	height:	auto;
 }
 
 .logo {
@@ -186,14 +187,16 @@ body {
 }
 
 #menu_button {
-	display: inline-block;
+	display: none;
 	width: 50px;
 	height: 50px;
 	border-radius: 5px;
 	border: none;
 	background-color: rgb(246, 246, 246);
-	margin-bottom: 20px;
 	text-align: center;
+	position: absolute;
+	left: 25px;
+	z-index: 99;
 	padding: 15px 10px;
 }
 
@@ -245,16 +248,12 @@ footer {
 
 @media screen and (max-width: 1099px) {
 	
-	.navbar_vert-container {
-		display: block;
+	#menu_button {
+		display: inline-block;
 	}
 
 	.header {
 		margin-bottom: 50px;
 		padding: 20px 0 14.79px 0;
-	}
-
-	.header a {
-		width: 307.5px;
 	}
 }

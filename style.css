@@ -1,7 +1,7 @@
 * {
 	font-family: Calibri, sans-serif;
 	font-style: normal;
-	font-size: 18px;
+	font-size: 16px;
 	margin: 0;
 	padding: 0;
 	text-align: justify;
@@ -131,7 +131,6 @@ body {
 	display: inline-block;
 	padding: 7px 6px 5px 6px;
 	border-radius: 10px;
-	font-size: 16px;
 	color: rgb(254, 252, 246);
 	position: relative;
 	top: 50%;

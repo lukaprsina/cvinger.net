@@ -6,15 +6,17 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script type="text/javascript">
-	</script>
 </head>
 
 <body onresize="chk_width();" onhashchange="build()">
+	<!-- gallery -->
+	<div class="gallery-container" onclick="gallery(false); return false;">
+		<img class="gallery-image" src="">
+	</div>
 	<!-- header -->
 	<div class="header-container">
 		<div class="header">
-			<a id="menu_button" onclick="menu(); return false;" href="Fallback.html">
+			<a id="menu_button" onclick="menu(); return false;" href="fallback.html">
 				<div></div>
 				<div></div>
 				<div></div>
@@ -117,7 +119,7 @@
 			<h1>Arheološka pot</h1>
 			<p>Prve raziskovalce je Cvinger pritegnil že v sedemdesetih letih 19. stoletja, prva izkopavanja na gomilnem grobišču in tudi v naselju pa so potekala zadnja leta navedenega stoletja. Njim so sledila izkopavanja v zahodnem delu gradišča v tridesetih letih 20. stoletja. Prve povojne raziskave Cvingerja so potekale med letoma 1986 in 1991. Arheologi so tu izkopali šest sond, s katerimi so želeli ugotoviti časovni razpon gradišča, način gradnje obzidja in morebitne ostanke stavb v notranjosti naselja. V sklopu arheoloških raziskav so s sodelovanjem jamarjev in domačinov delno očistili mlajše nasutje v Cvingerski jami, na gradišču delno rekonstruirali odsek prazgodovinskega obzidja, postavili prve informativne table ter z markacijami označili krožno pešpot. Njena vzpostavitev leta 1990 je bila pionirsko delo, saj je to najstarejša arheološka tematska pot v Sloveniji.<br><br>
 			<figure>
-				<img src="images/01_pot/01_pot.jpg">
+				<a onclick="gallery('images/01_pot/01_pot.jpg'); return false;" href="fallback.html"><img src="images/01_pot/01_pot.jpg"></a>
 				<figcaption>Podnapis bo zgledal takole.</figcaption>
 			</figure>
 			Izhodišča pešpoti so na križišču v gozdu pri odcepu ceste za Dolenje Polje blizu osnovne šole, ob parkirišču v bližini topliškega pokopališča ter sredi Meniške vasi. Speljana je po gozdnih stezah in poteh ter označena z markacijo stilizirane situle. Celovito je opremljena z uvodnimi pojasnjevalnimi tablami na izhodiščih ter vmesnimi na treh vstopih v gradišče. Vsebinska razširitev z informativnimi tablami pohodnika pričaka na ključnih postajah ob poti: pri delno rekonstruiranem obzidju, Cvingerski jami, utrjeni dohodni poti, železarsko-talilniškem območju ter gomilnem grobišču. Za lažjo orientacijo v naravi so na križiščih postavljene usmerjevalne table. Pot na Cvinger (265 m n.m.), ki je dolga 2,5 km, ni zahtevna – treba je le premagati višinsko razliko 60 m. Vabimo vas, da se sprehodite med ohranjenimi pomniki topliške prazgodovine. Priporočamo vam terensko obutev in … srečno pot!</p>
@@ -174,7 +176,9 @@
 		</div>
 		<div class="article" id="article_zemljevid">
 			<h1>Zemljevid</h1>
-			<img src="images/07_zemljevid/01_zemljevid.jpg">
+			<a onclick="gallery('images/07_zemljevid/01_zemljevid.jpg'); return false;" href="fallback.html">
+				<img src="images/07_zemljevid/01_zemljevid.jpg">
+			</a>
 		</div>
 		<div class="article" id="article_literatura">
 			<h1>Literatura</h1>
@@ -238,6 +242,16 @@
 				menu_open = true
 			}
 		}
+
+		function gallery(image) {
+			if (image) {
+				document.getElementsByClassName("gallery-image")[0].src = image;
+				document.getElementsByClassName("gallery-container")[0].style.display = "block";
+			} else {
+				document.getElementsByClassName("gallery-container")[0].style.display = "none";
+			}
+		}
+
 		var menu_open = false
 		build();
 	</script>

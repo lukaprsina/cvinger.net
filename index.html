@@ -24,7 +24,9 @@
 	</div>
 	<!-- navbar_vert -->
 	<div class="navbar_vert-container">
-		<a class="navbar_vert-text" href="#pot" onclick="menu();">Arheološka pot</a>
+		<a class="navbar_vert-text" href="#pot" onclick="menu();">
+			<!-- <img src="images/00_home/01_pot.png"> -->Arheološka pot
+		</a>
 		<a class="navbar_vert-text" href="#gradisce" onclick="menu();">Prazgodovinsko gradišče</a>
 		<a class="navbar_vert-text" href="#vhod" onclick="menu();">Utrjen vhod</a>
 		<a class="navbar_vert-text" href="#jama" onclick="menu();">Cvingerska jama</a>
@@ -187,6 +189,9 @@
 	<!-- script -->
 	<script type="text/javascript">
 		function build() {
+			if (menu_open) {
+				menu()
+			}
 			document.querySelectorAll(".article").forEach(item => {
 				item.style.display = "none";
 			});

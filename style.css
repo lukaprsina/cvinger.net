@@ -188,6 +188,7 @@ body {
 
 .navbar_vert-background {
 	background-color: rgba(0, 0, 0, 0.5);
+	cursor: pointer;
 	position: fixed;
 	z-index: 101;
 	top: 0;
@@ -259,6 +260,7 @@ body {
 	background-color: rgba(0, 0, 0, 0.5);
 	width: 100%;
 	height: 100%;
+	cursor: pointer;
 }
 
 .gallery-image {

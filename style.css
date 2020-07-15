@@ -8,12 +8,13 @@
 	box-sizing: border-box;
 }
 
-html {
-	overflow-y: scroll;
+a {
+	-webkit-tap-highlight-color: transparent;
 }
 
 body {
 	background-color: rgba(252, 244, 224, 0.25);
+	overflow-y: scroll;
 }
 
 .header-container {
@@ -165,6 +166,16 @@ body {
 .navbar_vert-container {
 	display: none;
 	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+}
+
+.navbar_vert {
+	display: block;
+	position: fixed;
 	text-align: left;
 	width: 300px;
 	background-color: rgb(254, 252, 246);
@@ -173,6 +184,17 @@ body {
 	top: 0px;
 	bottom: 0px;
 	box-shadow: 3px 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.navbar_vert-background {
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	z-index: 101;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 300px;
+	
 }
 
 .navbar_vert-text {
@@ -212,7 +234,7 @@ body {
 	height: 5px;
 	background-color: rgba(0, 0, 0, 0.5);
 	margin: 5px 0px;
-	border-radius: 2px;
+	border-radius: 3px;
 }
 
 #menu_button div:first-child {
@@ -288,7 +310,7 @@ footer {
 
 	.logo {
 		transform: translateY(0);
-		right: 5%;
+		right: 40px;
 	}
 
 	.header-container {

@@ -27,14 +27,17 @@
 	</div>
 	<!-- navbar_vert -->
 	<div class="navbar_vert-container">
-		<a class="navbar_vert-text" href="#pot" onclick="menu();">Arheološka pot</a>
-		<a class="navbar_vert-text" href="#gradisce" onclick="menu();">Prazgodovinsko gradišče</a>
-		<a class="navbar_vert-text" href="#vhod" onclick="menu();">Utrjen vhod</a>
-		<a class="navbar_vert-text" href="#jama" onclick="menu();">Cvingerska jama</a>
-		<a class="navbar_vert-text" href="#talilnice" onclick="menu();">Talilniško območje</a>
-		<a class="navbar_vert-text" href="#gomile" onclick="menu();">Gomilno grobišče</a>
-		<a class="navbar_vert-text" href="#zemljevid" onclick="menu();">Zemljevid</a>
-		<a class="navbar_vert-text" href="#literatura" onclick="menu();">Literatura</a>
+		<div class="navbar_vert">
+			<a class="navbar_vert-text" href="#pot" onclick="menu();">Arheološka pot</a>
+			<a class="navbar_vert-text" href="#gradisce" onclick="menu();">Prazgodovinsko gradišče</a>
+			<a class="navbar_vert-text" href="#vhod" onclick="menu();">Utrjen vhod</a>
+			<a class="navbar_vert-text" href="#jama" onclick="menu();">Cvingerska jama</a>
+			<a class="navbar_vert-text" href="#talilnice" onclick="menu();">Talilniško območje</a>
+			<a class="navbar_vert-text" href="#gomile" onclick="menu();">Gomilno grobišče</a>
+			<a class="navbar_vert-text" href="#zemljevid" onclick="menu();">Zemljevid</a>
+			<a class="navbar_vert-text" href="#literatura" onclick="menu();">Literatura</a>
+		</div>
+		<div class="navbar_vert-background" onclick="menu(); return false;"></div>
 	</div>
 	<!-- navbar_page -->
 	<div class="navbar_page-container">
@@ -239,9 +242,11 @@
 		function menu() {
 			if (menu_open) {
 				document.getElementsByClassName("navbar_vert-container")[0].style.display = "none";
+				document.getElementsByTagName("body")[0].style.overflow = "scroll"
 				menu_open = false
 			} else {
 				document.getElementsByClassName("navbar_vert-container")[0].style.display = "block";
+				document.getElementsByTagName("body")[0].style.overflow = "hidden"
 				menu_open = true
 			}
 		}

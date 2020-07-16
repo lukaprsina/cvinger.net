@@ -265,7 +265,8 @@ body {
 
 .gallery-image {
 	width: 1200px;
-	max-width: 100%;
+	max-width: 100%; 
+	display:block;
 	height: auto;
 	position: fixed;
 	top: 50%;
@@ -280,10 +281,25 @@ body {
 
 .article figure {
 	margin: 0 0 20px 0;
+	text-align: center;
+}
+.article .portrait figcaption {
+	margin-left: 100px;
+}
+
+.article figure a {
+	display: inline-block;
+	line-height: 0;
 }
 
 .article img {
 	width: 100%;
+	margin-top: 20px;
+}
+
+.article .portrait a {
+	height: auto;
+	width: 600px;
 }
 
 .article h1 {

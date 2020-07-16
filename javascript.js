@@ -32,7 +32,7 @@ function build() {
     }
 }
 
-function chk_width() {
+function chkWidth() {
     if (window.innerWidth >= 1100) {
         build()
     } else {
@@ -63,6 +63,21 @@ function gallery(image) {
         document.getElementsByTagName("body")[0].style.overflowY = "scroll";
     }
 }
+
+function checkKey(e) {
+	e = e || window.event;
+	if (e.keyCode == 37) {
+		console.log(document.getElementsByClassName("gallery-image")[0].src)
+	}
+	if (e.keyCode == 39) {
+		console.log(document.getElementsByClassName("gallery-image")[0].src)
+	}
+}
+
+function getImage() {
+	
+}
+
 
 var menu_open = false;
 build();

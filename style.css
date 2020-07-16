@@ -12,9 +12,12 @@ a {
 	-webkit-tap-highlight-color: transparent;
 }
 
+html {
+	overflow-y: scroll;
+}
+
 body {
 	background-color: rgba(252, 244, 224, 0.25);
-	overflow-y: scroll;
 }
 
 .header-container {
@@ -264,11 +267,9 @@ body {
 }
 
 .gallery-image {
-	width: 1200px;
-	max-width: 100%; 
-	display:block;
-	height: auto;
-	position: fixed;
+	max-width: 100%;
+	max-height: 100%;
+	position: absolute;
 	top: 50%;
 	left: 50%;
 	-ms-transform: translate(-50%, -50%);
@@ -283,9 +284,6 @@ body {
 	margin: 0 0 20px 0;
 	text-align: center;
 }
-.article .portrait figcaption {
-	margin-left: 100px;
-}
 
 .article figure a {
 	display: inline-block;
@@ -295,11 +293,6 @@ body {
 .article img {
 	width: 100%;
 	margin-top: 20px;
-}
-
-.article .portrait a {
-	height: auto;
-	width: 600px;
 }
 
 .article h1 {

@@ -4,5 +4,5 @@ printf "Commit message: "
 read msg
 
 git add .
-git commit -m $msg
-git push
+git commit -m "$msg"
+#git push

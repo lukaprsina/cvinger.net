@@ -276,6 +276,17 @@ body {
 	transform: translate(-50%, -50%);
 }
 
+.gallery-link {
+	background: none;
+	border: none;
+	padding: 0;
+	color: #069;
+	text-decoration: underline;
+	cursor: pointer;
+	outline: none;
+	line-height: 0;
+}
+
 .article {
 	display: none;
 }

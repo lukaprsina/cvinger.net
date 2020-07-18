@@ -32,9 +32,16 @@ function build() {
 		}
 		document.getElementById(article).style.display = "block";
 	}
+
 	if (params.image) {
 		gallery(true);
+	} else {
+		gallery(false);
 	}
+
+	document.querySelectorAll(".gallery-link").forEach(item => {
+		item.onclick = function(){pshImgToUrl(this)};
+	});
 }
 
 function chkWidth() {
@@ -61,15 +68,14 @@ function menu() {
 function gallery(action) {
 	var params = getParams();
 	if (action) {
-		var imgsrc = "images/".concat(params.page, "/", params.image, ".jpg");
+		var imgsrc = "images/".concat(params.page, "/", params.image);
 		document.getElementsByClassName("gallery-image")[0].src = imgsrc;
 		document.getElementsByClassName("gallery-container")[0].style.display = "block";
-		document.getElementsByTagName("html")[0].style.overflowY = "hidden";
+		// document.getElementsByTagName("html")[0].style.overflowY = "hidden";
 	} else {
-		// window.location.hash += "&test=yes"
 		var query = window.location.hash.substr(1);
 		document.getElementsByClassName("gallery-container")[0].style.display = "none";
-		document.getElementsByTagName("html")[0].style.overflowY = "scroll";
+		// document.getElementsByTagName("html")[0].style.overflowY = "scroll";
 		window.location.hash = query.replace("&image=".concat(params.image), "");
 	}
 }
@@ -77,21 +83,30 @@ function gallery(action) {
 function checkKey(e) {
 	e = e || window.event;
 	if (e.keyCode == 37) {
-		
+		moveGallery(-1);	
 	}
+
 	if (e.keyCode == 39) {
-		console.log(document.getElementsByClassName("gallery-image")[0].src)
+		moveGallery(1);
 	}
 }
 
-function pshImgToUrl(imageName) {
+function moveGallery(number) {
+	var params = getParams();
+	var links = document.getElementsByClassName("gallery-link");
+	// console.log(document.getElementsByClassName("gallery-image")[0]);
+	console.log(links.item(1))
+}
+
+function pshImgToUrl(link) {
 	var params = getParams();
 	var image = params.image;
+	element = link //global variable
 	if (!image) {
-		window.location.hash += '&image='.concat(imageName)
+		var source = link.getElementsByTagName("img")[0].src;
+		window.location.hash += '&image='.concat(source.slice(source.lastIndexOf("/") + 1))
 		gallery(true)
 	}
-
 }
 
 function getParams() {

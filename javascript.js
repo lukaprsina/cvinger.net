@@ -88,19 +88,21 @@ function checkKey(e) {
 
 function moveGallery(number) {
 	var params = getParams();
-	var links = document.getElementsByClassName("gallery-link");
-	// console.log(document.getElementsByClassName("gallery-image")[0]);
-	console.log(links.item(1))
+	let list = [...document.getElementsByClassName("gallery-link")];
+	var newImage = list.indexOf(element) + number; //če ravno naložiš stran, element še ne obstaja
+	if (newImage >= 0 && newImage < list.length) {
+		console.log(list[newImage]);
+	}
 }
 
 function pshImgToUrl(link) {
 	var params = getParams();
 	var image = params.image;
-	element = link //global variable
+	element = link; //global variable
 	if (!image) {
 		var source = link.getElementsByTagName("img")[0].src;
-		window.location.hash += '&image='.concat(source.slice(source.lastIndexOf("/") + 1))
-		gallery(true)
+		window.location.hash += '&image='.concat(source.slice(source.lastIndexOf("/") + 1));
+		gallery(true);
 	}
 }
 

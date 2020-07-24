@@ -1,37 +1,46 @@
-function build() {
-	if (menu_open) {
-		menu()
+function genInfo() {
+	var vars = window.location.hash.substr(1).split('&');
+	var varsLength = vars.length
+	params = {};
+
+	for (var i=0; i < varsLength; i++) {
+		var pair = vars[i].split('=');
+		params[pair[0]] = decodeURIComponent(pair[1]);
 	}
+
+	info = {
+		"article": "article_".concat(params.page),
+		"query": window.location.hash.substr(1),
+		"imgsrc": "images/".concat(params.page, "/", params.image)
+	};
+}
+
+function build(reload) {
+	genInfo();
+	// if (reload) {return;} 'ustavi funkcijo, da ne builda preveč (galerija pa to)'
+	if (params.image) {
+		gallery(true);
+	} else {
+		gallery(false);
+	}
+
 	document.querySelectorAll(".article").forEach(item => {
 		item.style.display = "none";
 	});
 
-	var query = window.location.hash.substr(1);
-	var params = getParams();
-	var page = params.page;
-	var image = params.image;
-
-	if (!page || page == "home") {
-		if (window.innerWidth >= 1100) {
+	if (!params.page || params.page == "home") {
+		if (window.innerWidth >= minWidth) {
 			document.getElementsByClassName("navbar_home-container")[0].style.display = "block";
 		}
 		document.getElementsByClassName("navbar_page-container")[0].style.display = "none";
 		document.getElementById("article_home").style.display = "block";
 
 	} else {
-		var selected = "nav_".concat(page);
-		var article = "article_".concat(page);
 		document.getElementsByClassName("navbar_home-container")[0].style.display = "none";
-		if (window.innerWidth >= 1100) {
+		if (window.innerWidth >= minWidth) {
 			document.getElementsByClassName("navbar_page-container")[0].style.display = "block";
 		}
-		document.getElementById(article).style.display = "block";
-	}
-
-	if (params.image) {
-		gallery(true);
-	} else {
-		gallery(false);
+		document.getElementById(info.article).style.display = "block";
 	}
 
 	document.querySelectorAll(".gallery-link").forEach(item => {
@@ -40,7 +49,7 @@ function build() {
 }
 
 function chkWidth() {
-	if (window.innerWidth >= 1100) {
+	if (window.innerWidth >= minWidth) {
 		build()
 	} else {
 		document.getElementsByClassName("navbar_page-container")[0].style.display = "none";
@@ -48,30 +57,15 @@ function chkWidth() {
 	}
 }
 
-function menu() {
-	if (menu_open) {
-		document.getElementsByClassName("navbar_vert-container")[0].style.display = "none";
-		document.getElementsByTagName("html")[0].style.overflowY = "scroll";
-		menu_open = false
-	} else {
-		document.getElementsByClassName("navbar_vert-container")[0].style.display = "block";
-		document.getElementsByTagName("html")[0].style.overflowY = "hidden";
-		menu_open = true
-	}
-}
-
-function gallery(action) {
-	var params = getParams();
+function navbarVert(action) {
+	var navbarVertDisplay = document.getElementsByClassName("navbar_vert-container")[0].style.display
+	// if (navbarVertDisplay == "block") {
 	if (action) {
-		var imgsrc = "images/".concat(params.page, "/", params.image);
-		document.getElementsByClassName("gallery-image")[0].src = imgsrc;
-		document.getElementsByClassName("gallery-container")[0].style.display = "block";
-		// document.getElementsByTagName("html")[0].style.overflowY = "hidden";
-	} else {
-		var query = window.location.hash.substr(1);
-		document.getElementsByClassName("gallery-container")[0].style.display = "none";
+		navbarVertDisplay = "block";
 		// document.getElementsByTagName("html")[0].style.overflowY = "scroll";
-		window.location.hash = query.replace("&image=".concat(params.image), "");
+	} else {
+		navbarVertDisplay = "none";
+		// document.getElementsByTagName("html")[0].style.overflowY = "hidden";
 	}
 }
 
@@ -86,35 +80,52 @@ function checkKey(e) {
 	}
 }
 
-function moveGallery(number) {
-	var params = getParams();
-	let list = [...document.getElementsByClassName("gallery-link")];
-	var newImage = list.indexOf(element) + number; //če ravno naložiš stran, element še ne obstaja
-	if (newImage >= 0 && newImage < list.length) {
-		console.log(list[newImage]);
+function gallery(action) {
+	if (action) {
+		document.getElementsByClassName("gallery-image")[0].src = info.imgsrc;
+		document.getElementsByClassName("gallery-container")[0].style.display = "block";
+		// document.getElementsByTagName("html")[0].style.overflowY = "hidden";
+	} else {
+		document.getElementsByClassName("gallery-container")[0].style.display = "none";
+		// document.getElementsByTagName("html")[0].style.overflowY = "scroll";
+		window.location.hash = info.query.replace("&image=".concat(params.image), "");
 	}
 }
+
 
 function pshImgToUrl(link) {
-	var params = getParams();
-	var image = params.image;
-	element = link; //global variable
-	if (!image) {
-		var source = link.getElementsByTagName("img")[0].src;
-		window.location.hash += '&image='.concat(source.slice(source.lastIndexOf("/") + 1));
-		gallery(true);
+	var source = link.getElementsByTagName("img")[0].src;
+	window.location.hash += '&image='.concat(source.slice(source.lastIndexOf("/") + 1));
+	genInfo();
+	gallery(true);
+}
+
+function moveGallery(number) {
+	genInfo();
+	images = []
+	document.getElementById(info.article).querySelectorAll(".gallery-link").forEach(item => {
+		images.push(item)
+	});
+
+	var imagesLength = images.length;
+	for (var i=0; i < imagesLength; i++) {
+		var listSrc = images[i].getElementsByTagName("img")[0].src;
+		var gallerySrc = document.getElementsByClassName("gallery-image")[0].src
+
+		if (listSrc == gallerySrc) {
+			var newImgNum = i + number;
+			if (newImgNum >= 0 && newImgNum < imagesLength) {
+				window.location.hash = info.query.replace("&image=".concat(params.image), "");
+				console.log(newImgNum)
+				pshImgToUrl(images[newImgNum]);
+				return;
+			} else {
+				// tukaj pride koda za animacijo, če je slika
+				// prva ali zadnja
+			}
+		}
 	}
 }
 
-function getParams() {
-	params = {};
-	var query = window.location.hash.substr(1);
-	var vars = query.split('&');
-	for (var i=0; i < vars.length; i++) {
-		var pair = vars[i].split('=');
-		params[pair[0]] = decodeURIComponent(pair[1]);
-	}
-	return params;
-}
-var menu_open = false;
-build();
+var minWidth = 1100;
+build(false);

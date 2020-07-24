@@ -58,13 +58,12 @@ function chkWidth() {
 }
 
 function navbarVert(action) {
-	var navbarVertDisplay = document.getElementsByClassName("navbar_vert-container")[0].style.display
-	// if (navbarVertDisplay == "block") {
+	var navbarVertDisplay = document.getElementsByClassName("navbar_vert-container")[0]
 	if (action) {
-		navbarVertDisplay = "block";
+		navbarVertDisplay.style.display = "block";
 		// document.getElementsByTagName("html")[0].style.overflowY = "scroll";
 	} else {
-		navbarVertDisplay = "none";
+		navbarVertDisplay.style.display = "none";
 		// document.getElementsByTagName("html")[0].style.overflowY = "hidden";
 	}
 }

@@ -6,10 +6,6 @@ function build() {
 		item.style.display = "none";
 	});
 
-	document.querySelectorAll(".selected_page").forEach(item => {
-		item.style.visibility = "hidden";
-	});
-
 	var query = window.location.hash.substr(1);
 	var params = getParams();
 	var page = params.page;
@@ -28,7 +24,6 @@ function build() {
 		document.getElementsByClassName("navbar_home-container")[0].style.display = "none";
 		if (window.innerWidth >= 1100) {
 			document.getElementsByClassName("navbar_page-container")[0].style.display = "block";
-			document.getElementById(selected).getElementsByClassName("selected_page")[0].style.visibility = "visible";
 		}
 		document.getElementById(article).style.display = "block";
 	}
@@ -119,6 +114,5 @@ function getParams() {
 	}
 	return params;
 }
-
 var menu_open = false;
 build();

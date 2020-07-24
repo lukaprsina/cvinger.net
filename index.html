@@ -15,16 +15,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body onresize="chkWidth();" onhashchange="build();" onkeydown="checkKey();">
+<body onresize="chkWidth();" onhashchange="build(false);" onkeydown="checkKey();">
 	<!-- gallery -->
 	<div class="gallery-container">
-		<div class="gallery-background" onclick="gallery(false); return false;"></div>
+		<div class="gallery-background" onclick="gallery(false);"></div>
 		<img class="gallery-image" src="">
 	</div>
 	<!-- header -->
 	<div class="header-container">
 		<div class="header">
-			<a id="menu_button" onclick="menu(); return false;" href="fallback.html">
+			<a id="menu_button" onclick="navbarVert(); return false;" href="fallback.html">
 				<div></div>
 				<div></div>
 				<div></div>
@@ -35,36 +35,36 @@
 	<!-- navbar_vert -->
 	<div class="navbar_vert-container">
 		<div class="navbar_vert">
-			<a class="navbar_vert-text" href="#page=pot" onclick="menu();">Arheološka pot</a>
-			<a class="navbar_vert-text" href="#page=gradisce" onclick="menu();">Prazgodovinsko gradišče</a>
-			<a class="navbar_vert-text" href="#page=vhod" onclick="menu();">Utrjen vhod</a>
-			<a class="navbar_vert-text" href="#page=jama" onclick="menu();">Cvingerska jama</a>
-			<a class="navbar_vert-text" href="#page=talilnice" onclick="menu();">Talilniško območje</a>
-			<a class="navbar_vert-text" href="#page=gomile" onclick="menu();">Gomilno grobišče</a>
-			<a class="navbar_vert-text" href="#page=zemljevid" onclick="menu();">Zemljevid</a>
-			<a class="navbar_vert-text" href="#page=literatura" onclick="menu();">Literatura</a>
+			<a class="navbar_vert-text" href="#page=pot" onclick="navbarVert();">Arheološka pot</a>
+			<a class="navbar_vert-text" href="#page=gradisce" onclick="navbarVert();">Prazgodovinsko gradišče</a>
+			<a class="navbar_vert-text" href="#page=vhod" onclick="navbarVert();">Utrjen vhod</a>
+			<a class="navbar_vert-text" href="#page=jama" onclick="navbarVert();">Cvingerska jama</a>
+			<a class="navbar_vert-text" href="#page=talilnice" onclick="navbarVert();">Talilniško območje</a>
+			<a class="navbar_vert-text" href="#page=gomile" onclick="navbarVert();">Gomilno grobišče</a>
+			<a class="navbar_vert-text" href="#page=zemljevid" onclick="navbarVert();">Zemljevid</a>
+			<a class="navbar_vert-text" href="#page=literatura" onclick="navbarVert();">Literatura</a>
 		</div>
-		<div class="navbar_vert-background" onclick="menu(); return false;"></div>
+		<div class="navbar_vert-background" onclick="navbarVert(); return false;"></div>
 	</div>
 	<!-- navbar_page -->
 	<div class="navbar_page-container">
 		<div class="navbar_page-background">
 			<div class="navbar_page">
-				<a class="navbar_page-text" href="#page=pot" id="nav_pot">Arheološka pot<div class="selected_page"></div></a>
+				<a class="navbar_page-text" href="#page=pot" id="nav_pot">Arheološka pot</a>
 				<div class="navbar_page-circle"></div>
-				<a class="navbar_page-text" href="#page=gradisce" id="nav_gradisce">Prazgodovinsko gradišče<div class="selected_page"></div></a>
+				<a class="navbar_page-text" href="#page=gradisce" id="nav_gradisce">Prazgodovinsko gradišče</a>
 				<div class="navbar_page-circle"></div>
-				<a class="navbar_page-text" href="#page=vhod" id="nav_vhod">Utrjen vhod<div class="selected_page"></div></a>
+				<a class="navbar_page-text" href="#page=vhod" id="nav_vhod">Utrjen vhod</a>
 				<div class="navbar_page-circle"></div>
-				<a class="navbar_page-text" href="#page=jama" id="nav_jama">Cvingerska jama<div class="selected_page"></div></a>
+				<a class="navbar_page-text" href="#page=jama" id="nav_jama">Cvingerska jama</a>
 				<div class="navbar_page-circle"></div>
-				<a class="navbar_page-text" href="#page=talilnice" id="nav_talilnice">Talilniško območje<div class="selected_page"></div></a>
+				<a class="navbar_page-text" href="#page=talilnice" id="nav_talilnice">Talilniško območje</a>
 				<div class="navbar_page-circle"></div>
-				<a class="navbar_page-text" href="#page=gomile" id="nav_gomile">Gomilno grobišče<div class="selected_page"></div></a>
+				<a class="navbar_page-text" href="#page=gomile" id="nav_gomile">Gomilno grobišče</a>
 				<div class="navbar_page-circle"></div>
-				<a class="navbar_page-text" href="#page=zemljevid" id="nav_zemljevid">Zemljevid<div class="selected_page"></div></a>
+				<a class="navbar_page-text" href="#page=zemljevid" id="nav_zemljevid">Zemljevid</a>
 				<div class="navbar_page-circle"></div>
-				<a class="navbar_page-text" href="#page=literatura" id="nav_literatura">Literatura<div class="selected_page"></div></a>
+				<a class="navbar_page-text" href="#page=literatura" id="nav_literatura">Literatura</a>
 			</div>
 		</div>
 		<div style="height:50px;"></div>
@@ -214,7 +214,7 @@
 		Footer
 	</footer>
 	<!-- script -->
-	<script type="text/javascript" src="javascript.js">
+	<script type="text/javascript" src="javascript2.js">
 	</script>
 </body>
 

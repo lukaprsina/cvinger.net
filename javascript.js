@@ -11,7 +11,9 @@ function genInfo() {
 	info = {
 		"article": "article_".concat(params.page),
 		"query": window.location.hash.substr(1),
-		"imgsrc": "images/".concat(params.page, "/", params.image)
+		"imgsrc": "images/".concat(params.page, "/", params.image),
+		"width": window.innerWidth,
+		"height":  window.innerHeight
 	};
 }
 
@@ -46,15 +48,20 @@ function build(reload) {
 	document.querySelectorAll(".gallery-link").forEach(item => {
 		item.onclick = function(){pshImgToUrl(this)};
 	});
+	checkWidth();
 }
 
-function chkWidth() {
-	if (window.innerWidth >= minWidth) {
-		build()
-	} else {
+function checkWidth() {
+	genInfo();
+	if (info.width <= minWidth) {
 		document.getElementsByClassName("navbar_page-container")[0].style.display = "none";
 		document.getElementsByClassName("navbar_home-container")[0].style.display = "none";
 	}
+
+	document.getElementsByClassName("gallery-control")[0].style.width = String(document.getElementsByClassName("gallery-image")[0].width).concat("px");
+	document.getElementsByClassName("gallery-control")[0].style.height = String(document.getElementsByClassName("gallery-image")[0].height).concat("px");
+
+
 }
 
 function navbarVert(action) {
@@ -81,12 +88,13 @@ function checkKey(e) {
 
 function gallery(action) {
 	if (action) {
+		// document.getElementsByTagName("html")[0].style.overflowY = "hidden";
+
 		document.getElementsByClassName("gallery-image")[0].src = info.imgsrc;
 		document.getElementsByClassName("gallery-container")[0].style.display = "block";
-		// document.getElementsByTagName("html")[0].style.overflowY = "hidden";
 	} else {
-		document.getElementsByClassName("gallery-container")[0].style.display = "none";
 		// document.getElementsByTagName("html")[0].style.overflowY = "scroll";
+		document.getElementsByClassName("gallery-container")[0].style.display = "none";
 		window.location.hash = info.query.replace("&image=".concat(params.image), "");
 	}
 }

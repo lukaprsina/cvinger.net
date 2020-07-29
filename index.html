@@ -19,12 +19,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
-<body onresize="chkWidth();" onhashchange="build(false);" onkeydown="checkKey();">
+<body onresize="checkWidth();" onhashchange="build();" onkeydown="checkKey();">
 	<!-- gallery -->
 	<div class="gallery-container">
 		<div class="gallery-background" onclick="gallery(false);"></div>
-		<div class="test">
-			<img class="gallery-image" src="">
+		<img class="gallery-image">
+		<div class="gallery-control">
+			<div class="gallery-button" onclick="moveGallery(-1)"></div>
+			<div class="gallery-button" onclick="moveGallery(1)"></div>
 		</div>
 	</div>
 	<!-- header -->

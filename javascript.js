@@ -10,6 +10,7 @@ function genInfo() {
 
 	info = {
 		"article": "article_".concat(params.page),
+		"nav": "nav_".concat(params.page),
 		"query": window.location.hash.substr(1),
 		"imgsrc": "images/".concat(params.page, "/", params.image)
 	};
@@ -28,8 +29,12 @@ function build(reload) {
 		item.style.display = "none";
 	});
 
+	document.querySelectorAll(".navbar_page-text").forEach(item => {
+		item.style.backgroundColor = "";
+	});
+
 	if (!params.page || params.page == "home") {
-		if (window.innerWidth >= minWidth) {
+		if (window.innerWidth >= 1100) {
 			document.getElementsByClassName("navbar_home-container")[0].style.display = "block";
 		}
 		document.getElementsByClassName("navbar_page-container")[0].style.display = "none";
@@ -37,8 +42,9 @@ function build(reload) {
 
 	} else {
 		document.getElementsByClassName("navbar_home-container")[0].style.display = "none";
-		if (window.innerWidth >= minWidth) {
+		if (window.innerWidth >= 1100) {
 			document.getElementsByClassName("navbar_page-container")[0].style.display = "block";
+			document.getElementById(info.nav).style.backgroundColor = 'rgb(' + [211,135,135,0.8].join(',') + ')';
 		}
 		document.getElementById(info.article).style.display = "block";
 	}
@@ -49,7 +55,7 @@ function build(reload) {
 }
 
 function chkWidth() {
-	if (window.innerWidth >= minWidth) {
+	if (window.innerWidth >= 1100) {
 		build()
 	} else {
 		document.getElementsByClassName("navbar_page-container")[0].style.display = "none";
@@ -61,10 +67,10 @@ function navbarVert(action) {
 	var navbarVertDisplay = document.getElementsByClassName("navbar_vert-container")[0]
 	if (action) {
 		navbarVertDisplay.style.display = "block";
-		// document.getElementsByTagName("html")[0].style.overflowY = "scroll";
+		document.getElementsByTagName("html")[0].style.overflowY = "scroll";
 	} else {
 		navbarVertDisplay.style.display = "none";
-		// document.getElementsByTagName("html")[0].style.overflowY = "hidden";
+		document.getElementsByTagName("html")[0].style.overflowY = "hidden";
 	}
 }
 
@@ -83,10 +89,10 @@ function gallery(action) {
 	if (action) {
 		document.getElementsByClassName("gallery-image")[0].src = info.imgsrc;
 		document.getElementsByClassName("gallery-container")[0].style.display = "block";
-		// document.getElementsByTagName("html")[0].style.overflowY = "hidden";
+		document.getElementsByTagName("html")[0].style.overflowY = "hidden";
 	} else {
 		document.getElementsByClassName("gallery-container")[0].style.display = "none";
-		// document.getElementsByTagName("html")[0].style.overflowY = "scroll";
+		document.getElementsByTagName("html")[0].style.overflowY = "scroll";
 		window.location.hash = info.query.replace("&image=".concat(params.image), "");
 	}
 }
@@ -125,6 +131,4 @@ function moveGallery(number) {
 		}
 	}
 }
-
-var minWidth = 1100;
 build(false);

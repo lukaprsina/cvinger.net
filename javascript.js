@@ -12,14 +12,16 @@ function genInfo() {
 		"article": "article_".concat(params.page),
 		"query": window.location.hash.substr(1),
 		"imgsrc": "images/".concat(params.page, "/", params.image),
-		"width": window.innerWidth,
-		"height":  window.innerHeight
 	};
 }
 
-function build(reload) {
+function build() {
+	if (stopBuild) {
+		stopBuild = false;
+		return;
+	}
+
 	genInfo();
-	// if (reload) {return;} 'ustavi funkcijo, da ne builda preveč (galerija pa to)'
 	if (params.image) {
 		gallery(true);
 	} else {
@@ -29,7 +31,6 @@ function build(reload) {
 	document.querySelectorAll(".article").forEach(item => {
 		item.style.display = "none";
 	});
-
 	if (!params.page || params.page == "home") {
 		if (window.innerWidth >= minWidth) {
 			document.getElementsByClassName("navbar_home-container")[0].style.display = "block";
@@ -48,16 +49,14 @@ function build(reload) {
 	document.querySelectorAll(".gallery-link").forEach(item => {
 		item.onclick = function(){pshImgToUrl(this)};
 	});
-	checkWidth();
 }
 
 function checkWidth() {
-	genInfo();
-	if (info.width <= minWidth) {
+	if (window.innerWidth <= minWidth) {
 		document.getElementsByClassName("navbar_page-container")[0].style.display = "none";
 		document.getElementsByClassName("navbar_home-container")[0].style.display = "none";
 	}
-
+	build();
 	document.getElementsByClassName("gallery-control")[0].style.width = String(document.getElementsByClassName("gallery-image")[0].width).concat("px");
 	document.getElementsByClassName("gallery-control")[0].style.height = String(document.getElementsByClassName("gallery-image")[0].height).concat("px");
 
@@ -89,26 +88,25 @@ function checkKey(e) {
 function gallery(action) {
 	if (action) {
 		// document.getElementsByTagName("html")[0].style.overflowY = "hidden";
-
 		document.getElementsByClassName("gallery-image")[0].src = info.imgsrc;
 		document.getElementsByClassName("gallery-container")[0].style.display = "block";
 	} else {
 		// document.getElementsByTagName("html")[0].style.overflowY = "scroll";
 		document.getElementsByClassName("gallery-container")[0].style.display = "none";
-		window.location.hash = info.query.replace("&image=".concat(params.image), "");
+		// stopBuild = true;
 	}
 }
 
 
 function pshImgToUrl(link) {
 	var source = link.getElementsByTagName("img")[0].src;
+	stopBuild = true;
 	window.location.hash += '&image='.concat(source.slice(source.lastIndexOf("/") + 1));
 	genInfo();
 	gallery(true);
 }
 
 function moveGallery(number) {
-	genInfo();
 	images = []
 	document.getElementById(info.article).querySelectorAll(".gallery-link").forEach(item => {
 		images.push(item)
@@ -122,6 +120,7 @@ function moveGallery(number) {
 		if (listSrc == gallerySrc) {
 			var newImgNum = i + number;
 			if (newImgNum >= 0 && newImgNum < imagesLength) {
+				stopBuild = true;
 				window.location.hash = info.query.replace("&image=".concat(params.image), "");
 				console.log(newImgNum)
 				pshImgToUrl(images[newImgNum]);
@@ -134,5 +133,6 @@ function moveGallery(number) {
 	}
 }
 
+var stopBuild = false;
 var minWidth = 1100;
-build(false);
+build();

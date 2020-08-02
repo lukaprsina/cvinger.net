@@ -8,9 +8,9 @@
 	box-sizing: border-box;
 }
 
-a {
-	-webkit-tap-highlight-color: transparent;
-}
+a {-webkit-tap-highlight-color: transparent;}
+
+button {-webkit-tap-highlight-color: transparent;}
 
 html {
 	overflow-y: scroll;

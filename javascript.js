@@ -17,29 +17,23 @@ function genInfo() {
 }
 
 function build() {
-	document.getElementsByClassName("gallery-control")[0].style.width = String(document.getElementsByClassName("gallery-image")[0].width).concat("px");
-	document.getElementsByClassName("gallery-control")[0].style.height = String(document.getElementsByClassName("gallery-image")[0].height).concat("px");
-	
-	if (stopBuild) {
-		stopBuild = false;
-		return;
-	}
-
 	genInfo();
 	if (params.image) {
 		gallery(true);
 	} else {
 		gallery(false);
 	}
-
+	
 	document.querySelectorAll(".article").forEach(item => {
-		item.style.display = "none";
+		if (item != document.getElementById(info.article)) {
+			item.style.display = "none";
+		}
 	});
 
-	document.querySelectorAll(".navbar_page-text").forEach(item => {
+	/*document.querySelectorAll(".navbar_page-text").forEach(item => {
 		// item.style.boxShadow = "none";
 		// item.style.backgroundColor = "none";
-	});
+	});*/
 	
 	if (!params.page || params.page == "home") {
 		if (window.innerWidth >= 1100) {
@@ -108,23 +102,21 @@ function gallery(action) {
 		// document.getElementsByTagName("html")[0].style.overflowY = "scroll";
 		document.getElementsByClassName("gallery-container")[0].style.display = "none";
 		window.location.hash = info.query.replace("&image=".concat(params.image), "");
-		// stopBuild = true;
 	}
 }
 
 
 function pshImgToUrl(link) {
 	var source = link.getElementsByTagName("img")[0].src;
-	stopBuild = true;
 	window.location.hash += '&image='.concat(source.slice(source.lastIndexOf("/") + 1));
 	genInfo();
 	gallery(true);
 }
 
 function moveGallery(number) {
-	images = []
+	images = [];
 	document.getElementById(info.article).querySelectorAll(".gallery-link").forEach(item => {
-		images.push(item)
+		images.push(item);
 	});
 
 	var imagesLength = images.length;
@@ -135,7 +127,6 @@ function moveGallery(number) {
 		if (listSrc == gallerySrc) {
 			var newImgNum = i + number;
 			if (newImgNum >= 0 && newImgNum < imagesLength) {
-				stopBuild = true;
 				window.location.hash = info.query.replace("&image=".concat(params.image), "");
 				pshImgToUrl(images[newImgNum]);
 				return;
@@ -146,7 +137,12 @@ function moveGallery(number) {
 		}
 	}
 }
-var stopBuild = false;
+
+function galleryBuild() {
+	document.getElementsByClassName("gallery-control")[0].style.width = String(document.getElementsByClassName("gallery-image")[0].width).concat("px");
+	document.getElementsByClassName("gallery-control")[0].style.height = String(document.getElementsByClassName("gallery-image")[0].height).concat("px");
+}
+
 var minWidth = 1100;
 build();
 // navbarVert(true);

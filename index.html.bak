@@ -41,38 +41,14 @@
 	<!-- navbar_vert -->
 	<div class="navbar_vert-container">
 		<div class="navbar_vert">
-			<a class="navbar_vert-text" href="#page=pot" onclick="navbarVert();">
-				<div class="navbar_vert-icon"></div>
-				<p>Arheološka pot</p>
-			</a>
-			<a class="navbar_vert-text" href="#page=gradisce" onclick="navbarVert();">
-				<div class="navbar_vert-icon"></div>
-				<p>Prazgodovinsko gradišče</p>
-			</a>
-			<a class="navbar_vert-text" href="#page=vhod" onclick="navbarVert();">
-				<div class="navbar_vert-icon"></div>
-				<p>Utrjen vhod</p>
-			</a>
-			<a class="navbar_vert-text" href="#page=jama" onclick="navbarVert();">
-				<div class="navbar_vert-icon"></div>
-				<p>Cvingerska jama</p>
-			</a>
-			<a class="navbar_vert-text" href="#page=talilnice" onclick="navbarVert();">
-				<div class="navbar_vert-icon"></div>
-				<p>Talilniško območje</p>
-			</a>
-			<a class="navbar_vert-text" href="#page=gomile" onclick="navbarVert();">
-				<div class="navbar_vert-icon"></div>
-				<p>Gomilno grobišče</p>
-			</a>
-			<a class="navbar_vert-text" href="#page=zemljevid" onclick="navbarVert();">
-				<div class="navbar_vert-icon"></div>
-				<p>Zemljevid</p>
-			</a>
-			<a class="navbar_vert-text" href="#page=literatura" onclick="navbarVert();">
-				<div class="navbar_vert-icon"></div>
-				<p>Literatura</p>
-			</a>
+			<a class="navbar_vert-text" href="#page=pot" onclick="navbarVert();">Arheološka pot</a>
+			<a class="navbar_vert-text" href="#page=gradisce" onclick="navbarVert();">Prazgodovinsko gradišče</a>
+			<a class="navbar_vert-text" href="#page=vhod" onclick="navbarVert();">Utrjen vhod</a>
+			<a class="navbar_vert-text" href="#page=jama" onclick="navbarVert();">Cvingerska jama</a>
+			<a class="navbar_vert-text" href="#page=talilnice" onclick="navbarVert();">Talilniško območje</a>
+			<a class="navbar_vert-text" href="#page=gomile" onclick="navbarVert();">Gomilno grobišče</a>
+			<a class="navbar_vert-text" href="#page=zemljevid" onclick="navbarVert();">Zemljevid</a>
+			<a class="navbar_vert-text" href="#page=literatura" onclick="navbarVert();">Literatura</a>
 		</div>
 		<div class="navbar_vert-background" onclick="navbarVert(false); return false;"></div>
 	</div>
@@ -161,20 +137,20 @@
 			<p>Prve raziskovalce je Cvinger pritegnil že v sedemdesetih letih 19. stoletja, prva izkopavanja na gomilnem grobišču in tudi v naselju pa so potekala zadnja leta navedenega stoletja. Njim so sledila izkopavanja v zahodnem delu gradišča v tridesetih letih 20. stoletja. Prve povojne raziskave Cvingerja so potekale med letoma 1986 in 1991. Arheologi so tu izkopali šest sond, s katerimi so želeli ugotoviti časovni razpon gradišča, način gradnje obzidja in morebitne ostanke stavb v notranjosti naselja. V sklopu arheoloških raziskav so s sodelovanjem jamarjev in domačinov delno očistili mlajše nasutje v Cvingerski jami, na gradišču delno rekonstruirali odsek prazgodovinskega obzidja, postavili prve informativne table ter z markacijami označili krožno pešpot. Njena vzpostavitev leta 1990 je bila pionirsko delo, saj je to najstarejša arheološka tematska pot v Sloveniji.
 			<figure>
 				<button class="gallery-link">
-					<img alt="images/pot/panorama.jpg">
+					<img src="images/pot/panorama.jpg">
 				</button>
 				<figcaption>PodnapisPodnapisPodnapisPodnapisPodnapis.</figcaption>
 			</figure>
 			<figure>
 				<button class="gallery-link">
-					<img alt="images/pot/tabla.jpg">
+					<img src="images/pot/tabla.jpg">
 				</button>
 				<figcaption>PodnapisPodnapisPodnapisPodnapisPodnapis.</figcaption>
 			</figure>
 			Izhodišča pešpoti so na križišču v gozdu pri odcepu ceste za Dolenje Polje blizu osnovne šole, ob parkirišču v bližini topliškega pokopališča ter sredi Meniške vasi. Speljana je po gozdnih stezah in poteh ter označena z markacijo stilizirane situle. Celovito je opremljena z uvodnimi pojasnjevalnimi tablami na izhodiščih ter vmesnimi na treh vstopih v gradišče. Vsebinska razširitev z informativnimi tablami pohodnika pričaka na ključnih postajah ob poti: pri delno rekonstruiranem obzidju, Cvingerski jami, utrjeni dohodni poti, železarsko-talilniškem območju ter gomilnem grobišču. Za lažjo orientacijo v naravi so na križiščih postavljene usmerjevalne table. Pot na Cvinger (265 m n.m.), ki je dolga 2,5 km, ni zahtevna – treba je le premagati višinsko razliko 60 m. Vabimo vas, da se sprehodite med ohranjenimi pomniki topliške prazgodovine. Priporočamo vam terensko obutev in … srečno pot!</p>
 			<figure>
 				<button class="gallery-link">
-					<img alt="images/pot/smerokaz.jpg">
+					<img src="images/pot/smerokaz.jpg">
 				</button>
 				<figcaption>PodnapisPodnapisPodnapisPodnapisPodnapis.</figcaption>
 			</figure>
@@ -231,11 +207,9 @@
 		</div>
 		<div class="article" id="article_zemljevid">
 			<h1>Zemljevid</h1>
-			<figure>
-				<button class="gallery-link">
-					<img alt="images/zemljevid/zemljevid.jpg">
-				</button>
-			</figure>
+			<button class="gallery-link">
+				<img src="images/zemljevid/zemljevid.jpg">
+			</button>
 		</div>
 		<div class="article" id="article_literatura">
 			<h1>Literatura</h1>

@@ -133,7 +133,7 @@ body {
 .navbar_page-text {
 	text-decoration: none;
 	display: inline-block;
-	padding: 7px 6px/* 5px*/;
+	padding: 6px/* 5px*/;
 	border-radius: 10px;
 	color: rgb(254, 252, 246);
 	position: relative;
@@ -143,17 +143,18 @@ body {
 }
 
 .navbar_page-text:hover {
-	background-color: rgba(211, 135, 135, 0.4);
+	/*background-color: rgba(211, 135, 135, 0.4);*/
+	background-color: rgba(254, 244, 224, 0.4);
 }
 
 .navbar_page-circle {
 	height: 4px;
 	width: 4px;
-	background-color: rgb(254, 252, 246);
+	background-color: rgb(254, 244, 224);
 	border-radius: 50%;
 	display: inline-block;
 	position: relative;
-	top: 6px;
+	top: 7px;
 }
 
 .navbar_vert-container {
@@ -172,6 +173,7 @@ body {
 	text-align: left;
 	width: 300px;
 	background-color: rgb(254, 252, 246);
+	/*background-color: rgba(252, 244, 224, 0.4);*/
 	border-radius: 5px;
 	padding: 20px 20px;
 	top: 0px;
@@ -188,14 +190,21 @@ body {
 	right: 0;
 	bottom: 0;
 	left: 300px;
-	
+}
+
+.navbar_vert-icon {
+	width: 24px;
+	height: 24px;
+	margin: 0px 10px;
+	background-color: lightgray; 
 }
 
 .navbar_vert-text {
-	display: block;
+	display: flex;
+	align-items: center;
 	text-decoration: none;
 	color: rgb(152, 0, 0);
-	background-color: rgb(246, 246, 246);
+	/*background-color: rgb(252, 244, 224);*/
 	margin: 2px 0px;
 	padding: 10px 0px 10px 10px;
 	border-radius: 5px;

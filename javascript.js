@@ -37,7 +37,7 @@ function build() {
 	});
 
 	document.querySelectorAll(".navbar_page-text").forEach(item => {
-		item.style.boxShadow = "none";
+		// item.style.boxShadow = "none";
 		// item.style.backgroundColor = "none";
 	});
 	
@@ -53,10 +53,15 @@ function build() {
 		if (window.innerWidth >= 1100) {
 			document.getElementsByClassName("navbar_page-container")[0].style.display = "block";
 			// document.getElementById(info.nav).style.backgroundColor = 'rgba(' + [211, 135, 135, 0.4].join(',') + ')';
-			document.getElementById(info.nav).style.transition = "box-shadow 0.2s"
-			document.getElementById(info.nav).style.boxShadow = "0 0 0 2px rgba(252, 244, 224, 0.8)";
+			document.getElementById(info.nav).style.transition = "box-shadow 0.2s";
+			// document.getElementById(info.nav).style.boxShadow = "0 0 0 2px rgba(252, 244, 224, 0.8)"
 		}
 		document.getElementById(info.article).style.display = "block";
+		var images = document.getElementById(info.article).getElementsByClassName("gallery-link");
+		var imagesLength = images.length;
+		for (var i=0; i < imagesLength; i++) {
+			images[i].getElementsByTagName("img")[0].src = images[i].getElementsByTagName("img")[0].alt;
+		}
 	}
 
 	document.querySelectorAll(".gallery-link").forEach(item => {
@@ -144,3 +149,4 @@ function moveGallery(number) {
 var stopBuild = false;
 var minWidth = 1100;
 build();
+// navbarVert(true);

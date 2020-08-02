@@ -81,10 +81,10 @@ function navbarVert(action) {
 	var navbarVertDisplay = document.getElementsByClassName("navbar_vert-container")[0]
 	if (action) {
 		navbarVertDisplay.style.display = "block";
-		document.getElementsByTagName("html")[0].style.overflowY = "scroll";
+		// document.getElementsByTagName("html")[0].style.overflowY = "scroll";
 	} else {
 		navbarVertDisplay.style.display = "none";
-		document.getElementsByTagName("html")[0].style.overflowY = "hidden";
+		// document.getElementsByTagName("html")[0].style.overflowY = "hidden";
 	}
 }
 
@@ -149,4 +149,4 @@ function moveGallery(number) {
 var stopBuild = false;
 var minWidth = 1100;
 build();
-navbarVert(true);
+// navbarVert(true);

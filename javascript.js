@@ -149,4 +149,4 @@ function moveGallery(number) {
 var stopBuild = false;
 var minWidth = 1100;
 build();
-// navbarVert(true);
+navbarVert(true);

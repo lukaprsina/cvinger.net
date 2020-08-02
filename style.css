@@ -70,6 +70,7 @@ body {
 .navbar_home-element {
 	float: left;
 	text-decoration: none;
+	width: 185px;
 }
 
 .navbar_home-circle {
@@ -193,10 +194,22 @@ body {
 }
 
 .navbar_vert-icon {
-	width: 24px;
-	height: 24px;
+	width: 30px;
+	height: 30px;
 	margin: 0px 10px;
-	background-color: lightgray; 
+	background-color: rgb(152, 0, 0);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	color: rgb(254, 252, 246);
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.navbar_vert-icon p {
+	position: relative;
+	top: 1px;
 }
 
 .navbar_vert-text {

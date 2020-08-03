@@ -2,7 +2,7 @@ function genInfo() {
 	var vars = window.location.hash.substr(1).split('&');
 	var varsLength = vars.length
 	params = {};
-
+	// console.log(vars);
 	for (var i=0; i < varsLength; i++) {
 		var pair = vars[i].split('=');
 		params[pair[0]] = decodeURIComponent(pair[1]);
@@ -51,22 +51,23 @@ function build() {
 			// document.getElementById(info.nav).style.boxShadow = "0 0 0 2px rgba(252, 244, 224, 0.8)"
 		}
 		document.getElementById(info.article).style.display = "block";
-		var images = document.getElementById(info.article).getElementsByClassName("gallery-link");
-		var imagesLength = images.length;
-		for (var i=0; i < imagesLength; i++) {
-			images[i].getElementsByTagName("img")[0].src = images[i].getElementsByTagName("img")[0].alt;
-		}
 	}
 
 	document.querySelectorAll(".gallery-link").forEach(item => {
 		item.onclick = function(){pshImgToUrl(this)};
 	});
+	var images = document.getElementById(info.article).getElementsByClassName("gallery-link");
+	var imagesLength = images.length;
+	for (var i=0; i < imagesLength; i++) {
+		images[i].getElementsByTagName("img")[0].src = images[i].getElementsByTagName("img")[0].alt;
+	}
 }
 
 function checkWidth() {
 	if (window.innerWidth <= minWidth) {
 		document.getElementsByClassName("navbar_page-container")[0].style.display = "none";
 		document.getElementsByClassName("navbar_home-container")[0].style.display = "none";
+		navbarVert(false);
 	}
 	build();
 }
@@ -141,8 +142,9 @@ function moveGallery(number) {
 function galleryBuild() {
 	document.getElementsByClassName("gallery-control")[0].style.width = String(document.getElementsByClassName("gallery-image")[0].width).concat("px");
 	document.getElementsByClassName("gallery-control")[0].style.height = String(document.getElementsByClassName("gallery-image")[0].height).concat("px");
+	document.getElementsByTagName("footer")[0].style.display = "block"
 }
 
 var minWidth = 1100;
 build();
-// navbarVert(true);
+// navbarVert(true);C

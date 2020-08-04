@@ -53,10 +53,6 @@ function build() {
 		document.getElementById(info.article).style.display = "block";
 	}
 
-	document.querySelectorAll(".gallery-link").forEach(item => {
-		item.onclick = function(){pshImgToUrl(this)};
-	});
-
 	if (!params.page) {
 		var images = document.getElementById("article_home").getElementsByClassName("gallery-link");
 	} else {
@@ -115,7 +111,11 @@ function gallery(action) {
 
 function pshImgToUrl(link) {
 	var source = link.getElementsByTagName("img")[0].src;
-	window.location.hash += '&image='.concat(source.slice(source.lastIndexOf("/") + 1));
+	if (params.page) {
+		window.location.hash += '&image='.concat(source.slice(source.lastIndexOf("/") + 1));
+	} else {
+		window.location.hash += 'page=home&image='.concat(source.slice(source.lastIndexOf("/") + 1));
+	}
 	genInfo();
 	gallery(true);
 }
@@ -145,21 +145,27 @@ function moveGallery(number) {
 	}
 }
 
-function galleryBuild() {
-	document.getElementsByClassName("gallery-control")[0].style.width = String(document.getElementsByClassName("gallery-image")[0].width).concat("px");
-	document.getElementsByClassName("gallery-control")[0].style.height = String(document.getElementsByClassName("gallery-image")[0].height).concat("px");
+function imageBuild() {
 	document.getElementsByTagName("footer")[0].style.display = "block";
-	// debugger;
 	if (params.page != "jama") {
 		document.getElementById("article_jama").style.visibility = "hidden";
 		document.getElementById("article_jama").style.display = "block";
-		new Cocoen(document.querySelector('.cocoen'));console.log("test");
+		new Cocoen(document.querySelector('.cocoen'));
 		document.getElementById("article_jama").style.display = "none";
 		document.getElementById("article_jama").style.visibility = "visible";
 	} else {
-		new Cocoen(document.querySelector('.cocoen'));console.log("test");
+		new Cocoen(document.querySelector('.cocoen'));
 	}
 }
+
+document.querySelectorAll(".gallery-link").forEach(item => {
+	item.onclick = function(){pshImgToUrl(this)};
+});
+
+document.getElementsByClassName("gallery-image")[0].onload = function(){
+	document.getElementsByClassName("gallery-control")[0].style.width = String(document.getElementsByClassName("gallery-image")[0].width).concat("px");
+	document.getElementsByClassName("gallery-control")[0].style.height = String(document.getElementsByClassName("gallery-image")[0].height).concat("px");
+};
 
 var minWidth = 1100;
 build();

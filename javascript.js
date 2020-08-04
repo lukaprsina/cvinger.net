@@ -2,7 +2,6 @@ function genInfo() {
 	var vars = window.location.hash.substr(1).split('&');
 	var varsLength = vars.length
 	params = {};
-	// console.log(vars);
 	for (var i=0; i < varsLength; i++) {
 		var pair = vars[i].split('=');
 		params[pair[0]] = decodeURIComponent(pair[1]);
@@ -18,6 +17,7 @@ function genInfo() {
 
 function build() {
 	genInfo();
+
 	if (params.image) {
 		gallery(true);
 	} else {
@@ -56,10 +56,16 @@ function build() {
 	document.querySelectorAll(".gallery-link").forEach(item => {
 		item.onclick = function(){pshImgToUrl(this)};
 	});
-	var images = document.getElementById(info.article).getElementsByClassName("gallery-link");
+
+	if (!params.page) {
+		var images = document.getElementById("article_home").getElementsByClassName("gallery-link");
+	} else {
+		var images = document.getElementById(info.article).getElementsByClassName("gallery-link");
+	}
+
 	var imagesLength = images.length;
 	for (var i=0; i < imagesLength; i++) {
-		images[i].getElementsByTagName("img")[0].src = images[i].getElementsByTagName("img")[0].alt;
+		images[i].getElementsByClassName("page-image")[0].src = images[i].getElementsByClassName("page-image")[0].alt;
 	}
 }
 
@@ -142,9 +148,19 @@ function moveGallery(number) {
 function galleryBuild() {
 	document.getElementsByClassName("gallery-control")[0].style.width = String(document.getElementsByClassName("gallery-image")[0].width).concat("px");
 	document.getElementsByClassName("gallery-control")[0].style.height = String(document.getElementsByClassName("gallery-image")[0].height).concat("px");
-	document.getElementsByTagName("footer")[0].style.display = "block"
+	document.getElementsByTagName("footer")[0].style.display = "block";
+	// debugger;
+	if (params.page != "jama") {
+		document.getElementById("article_jama").style.visibility = "hidden";
+		document.getElementById("article_jama").style.display = "block";
+		new Cocoen(document.querySelector('.cocoen'));console.log("test");
+		document.getElementById("article_jama").style.display = "none";
+		document.getElementById("article_jama").style.visibility = "visible";
+	} else {
+		new Cocoen(document.querySelector('.cocoen'));console.log("test");
+	}
 }
 
 var minWidth = 1100;
 build();
-// navbarVert(true);C
+// navbarVert(true);

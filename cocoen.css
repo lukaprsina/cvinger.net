@@ -2,7 +2,7 @@
    box-sizing: border-box;
    cursor: pointer;
    line-height: 0;
-   margin-bottom: 20px;
+   margin: 0;
    overflow: hidden;
    padding: 0;
    position: relative;

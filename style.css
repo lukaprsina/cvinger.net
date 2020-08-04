@@ -12,13 +12,9 @@ a {-webkit-tap-highlight-color: transparent;}
 
 button {-webkit-tap-highlight-color: transparent;}
 
-html {
-	overflow-y: scroll;
-}
+html {overflow-y: scroll;}
 
-body {
-	background-color: rgba(252, 244, 224, 0.25);
-}
+body {background-color: rgba(252, 244, 224, 0.25);}
 
 .header-container {
 	background-color: rgb(252, 244, 224);
@@ -105,10 +101,9 @@ body {
 .navbar_page-container {
 	display: none;
 	overflow: hidden;
-	position: -webkit-sticky;
 	position: sticky;
+	position: -webkit-sticky;
 	top: 0;
-	z-index: 100;
 }
 
 .navbar_page-background {
@@ -166,8 +161,6 @@ body {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	z-index: 88;
-
 }
 
 .navbar_vert {
@@ -182,17 +175,18 @@ body {
 	top: 0px;
 	bottom: 0px;
 	box-shadow: 3px 0 3px rgba(0, 0, 0, 0.5);
+	z-index: 10;
 }
 
 .navbar_vert-background {
 	background-color: rgba(0, 0, 0, 0.5);
 	cursor: pointer;
 	position: fixed;
-	z-index: 101;
 	top: 0;
 	right: 0;
 	bottom: 0;
-	left: 300px;
+	left: 10;
+	z-index: 9;
 }
 
 .navbar_vert-icon {
@@ -234,7 +228,6 @@ body {
 	height: 25px;
 	border-radius: 5px;
 	text-align: center;
-	z-index: 99;
 	position: absolute;
 	left: 40px;
 	top: 50%;
@@ -260,7 +253,6 @@ body {
 
 .gallery-container {
 	display: none;
-	z-index: 100;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -300,7 +292,6 @@ body {
 
 .gallery-control {
 	position: fixed;
-	z-index: 101;
 	display: flex;
 	align-items: center;
 	align-self: center;
@@ -316,29 +307,22 @@ body {
 	cursor: auto;
 }
 
-.article {
-	display: none;
-}
+.article {display: none;}
 
-.article figure {
-	margin: 0 0 20px 0;
-	text-align: center;
-}
+.article figure {text-align: center;}
 
-.article figure a {
-	display: inline-block;
-	line-height: 0;
-}
+.article p {margin: 20px 0;}
+
+.article figcaption {margin: 10px 0 20px 0;}
 
 .article img {
+/*	margin: 20px 0 0 0;*/
 	width: 100%;
-	margin-top: 20px;
 }
 
 .article h1 {
 	font-weight: bold;
 	font-size: 30px;
-	padding: 0px 0px 27px 0px;
 	color: rgb(152, 0, 0);
 }
 
@@ -362,7 +346,7 @@ footer {
 	}
 
 	.header-container {
-		margin-bottom: 40px;
+		margin-bottom: 25px;
 	}
 
 	.header {

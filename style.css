@@ -313,7 +313,10 @@ body {background-color: rgba(252, 244, 224, 0.25);}
 
 .article p {margin: 20px 0;}
 
-.article figcaption {margin: 10px 0 20px 0;}
+.article figcaption {
+	margin: 10px 0 20px 0;
+	font-variant: small-caps;
+}
 
 .article img {
 /*	margin: 20px 0 0 0;*/

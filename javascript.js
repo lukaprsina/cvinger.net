@@ -12,7 +12,6 @@ function genInfo() {
 		"nav": "nav_".concat(params.page),
 		"query": window.location.hash.substr(1),
 		"imgsrc": "images/".concat(params.page, "/", params.image),
-		"icon": document.getElementsByClassName("navbar_vert")[0].getElementsByClassName("nav_".concat(params.page))[0].getElementsByClassName("navbar_vert-icon")[0]
 	};
 }
 
@@ -83,9 +82,13 @@ function navbarVert(action) {
 	var navbarVertDisplay = document.getElementsByClassName("navbar_vert-container")[0]
 	if (action) {
 		navbarVertDisplay.style.display = "block";
-		info.icon.style.backgroundColor = 'rgba(' + [254, 244, 224, 0.3].join(',') + ')';
-		info.icon.style.color = 'rgb(' + [152, 0, 0].join(',') + ')';
-		info.icon.style.border = '3px solid rgb(' + [152, 0, 0].join(',') + ')';
+
+		if (params.page && params.page != "home") {
+			var currentIcon = document.getElementsByClassName("navbar_vert")[0].getElementsByClassName("nav_".concat(params.page))[0].getElementsByClassName("navbar_vert-icon")[0]
+			currentIcon.style.backgroundColor = 'rgba(' + [254, 244, 224, 0.3].join(',') + ')';
+			currentIcon.style.color = 'rgb(' + [152, 0, 0].join(',') + ')';
+			currentIcon.style.border = '3px solid rgb(' + [152, 0, 0].join(',') + ')';
+		}
 		// document.getElementsByTagName("html")[0].style.overflowY = "scroll";
 	} else {
 		navbarVertDisplay.style.display = "none";

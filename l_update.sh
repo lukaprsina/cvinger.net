@@ -1,7 +1,7 @@
 #!/bin/sh
 
 git status
-printf "Commit message: "
+printf "\n\nCommit message: "
 read msg
 
 git add .

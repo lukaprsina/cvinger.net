@@ -20,6 +20,7 @@ body {background-color: rgba(252, 244, 224, 0.25);}
 	background-color: rgb(252, 244, 224);
 	width: 100%;
 	height: 200px;
+	margin-bottom: 38px;
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
 	border-bottom: 1px solid rgb(152, 0, 0);
 	overflow: hidden;
@@ -54,6 +55,7 @@ body {background-color: rgba(252, 244, 224, 0.25);}
 
 .navbar_home-container {
 	display: none;
+	margin-top: 50px;
 }
 
 .navbar_home {
@@ -281,6 +283,10 @@ body {background-color: rgba(252, 244, 224, 0.25);}
 	cursor: pointer;
 	outline: none;
 	line-height: 0;
+}
+
+.gallery-link img {
+	border-radius: 5px;
 }
 
 .gallery-image {

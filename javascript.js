@@ -158,6 +158,7 @@ function moveGallery(number) {
 
 function imageBuild() {
 	document.getElementsByTagName("footer")[0].style.display = "block";
+	document.getElementById("sketchfab").height = document.getElementById("sketchfab").offsetWidth;
 	if (params.page != "jama") {
 		document.getElementById("article_jama").style.visibility = "hidden";
 		document.getElementById("article_jama").style.display = "block";

@@ -177,4 +177,4 @@ document.getElementsByClassName("gallery-image")[0].onload = function() {
 
 var minWidth = 1100;
 build();
-navbarVert(true);
+// navbarVert(true);

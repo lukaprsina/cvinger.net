@@ -16,6 +16,8 @@ html {overflow-y: scroll;}
 
 body {background-color: rgba(252, 244, 224, 0.25);}
 
+iframe {width: 100%;height: 100%;}
+
 .header-container {
 	background-color: rgb(252, 244, 224);
 	width: 100%;

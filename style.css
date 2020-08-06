@@ -131,8 +131,8 @@ body {background-color: rgba(252, 244, 224, 0.25);}
 .navbar_page-text {
 	text-decoration: none;
 	display: inline-block;
-	padding: 6px/* 5px*/;
-	border-radius: 10px;
+	padding: 5px 6px;
+	border-radius: 11px; /*10*/
 	color: rgb(254, 252, 246);
 	position: relative;
 	top: 50%;
@@ -141,7 +141,6 @@ body {background-color: rgba(252, 244, 224, 0.25);}
 }
 
 .navbar_page-text:hover {
-	/*background-color: rgba(211, 135, 135, 0.4);*/
 	background-color: rgba(254, 244, 224, 0.4);
 }
 
@@ -172,11 +171,12 @@ body {background-color: rgba(252, 244, 224, 0.25);}
 	background-color: rgb(254, 252, 246);
 	/*background-color: rgba(252, 244, 224, 0.4);*/
 	border-radius: 5px;
-	padding: 20px 20px;
+	padding: 10px;
 	top: 0px;
 	bottom: 0px;
 	box-shadow: 3px 0 3px rgba(0, 0, 0, 0.5);
 	z-index: 10;
+	overflow: auto;
 }
 
 .navbar_vert-background {

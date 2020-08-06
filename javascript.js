@@ -34,6 +34,17 @@ function build() {
 		// item.style.boxShadow = "none";
 		// item.style.backgroundColor = "none";
 	});*/
+
+	if (!params.page) {
+		var images = document.getElementById("article_home").getElementsByTagName("figure");
+	} else {
+		var images = document.getElementById(info.article).getElementsByTagName("figure");
+	}
+
+	var imagesLength = images.length;
+	for (var i=0; i < imagesLength; i++) {
+		images[i].getElementsByTagName("img")[0].src = images[i].getElementsByTagName("img")[0].alt;
+	}
 	
 	if (!params.page || params.page == "home") {
 		if (window.innerWidth >= 1100) {
@@ -51,17 +62,6 @@ function build() {
 			// document.getElementById(info.nav).style.boxShadow = "0 0 0 2px rgba(252, 244, 224, 0.8)"
 		}
 		document.getElementById(info.article).style.display = "block";
-	}
-
-	if (!params.page) {
-		var images = document.getElementById("article_home").getElementsByClassName("gallery-link");
-	} else {
-		var images = document.getElementById(info.article).getElementsByClassName("gallery-link");
-	}
-
-	var imagesLength = images.length;
-	for (var i=0; i < imagesLength; i++) {
-		images[i].getElementsByClassName("page-image")[0].src = images[i].getElementsByClassName("page-image")[0].alt;
 	}
 }
 
@@ -147,7 +147,6 @@ function moveGallery(number) {
 
 function imageBuild() {
 	document.getElementsByTagName("footer")[0].style.display = "block";
-	debugger;
 	if (params.page != "jama") {
 		document.getElementById("article_jama").style.visibility = "hidden";
 		document.getElementById("article_jama").style.display = "block";
@@ -157,13 +156,14 @@ function imageBuild() {
 	} else {
 		new Cocoen(document.querySelector('.cocoen'));
 	}
+	console.log( document.cookie );
 }
 
 document.querySelectorAll(".gallery-link").forEach(item => {
 	item.onclick = function(){pshImgToUrl(this)};
 });
 
-document.getElementsByClassName("gallery-image")[0].onload = function(){
+document.getElementsByClassName("gallery-image")[0].onload = function() {
 	document.getElementsByClassName("gallery-control")[0].style.width = String(document.getElementsByClassName("gallery-image")[0].width).concat("px");
 	document.getElementsByClassName("gallery-control")[0].style.height = String(document.getElementsByClassName("gallery-image")[0].height).concat("px");
 };

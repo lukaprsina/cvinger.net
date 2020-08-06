@@ -78,7 +78,7 @@ body {background-color: rgba(252, 244, 224, 0.25);}
 }
 
 .navbar_home-element:hover img {
-	transform: scale(1.05, 1.05);
+	transform: scale(1.03, 1.03);
 	transition: transform 0.3s;
 }
 
@@ -105,6 +105,7 @@ body {background-color: rgba(252, 244, 224, 0.25);}
 	position: -webkit-sticky;
 	top: 0;
 	z-index: 3;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 .navbar_page-background {
@@ -113,7 +114,6 @@ body {background-color: rgba(252, 244, 224, 0.25);}
 	width: 100%;
 	height: 50px;
 	text-align: justify;
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 .navbar_page {
@@ -223,6 +223,11 @@ body {background-color: rgba(252, 244, 224, 0.25);}
 	margin-bottom: 0px;
 }
 
+.navbar_vert-text p {
+	position: relative;
+	top: 0px;
+}
+
 #menu_button {
 	display: none;
 	width: 40px;
@@ -259,12 +264,13 @@ body {background-color: rgba(252, 244, 224, 0.25);}
 	right: 0;
 	bottom: 0;
 	left: 0;
+	z-index: 3;
 }
 
 .gallery-background {
 	background-color: rgba(0, 0, 0, 0.5);
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 	cursor: pointer;
 }
 
@@ -272,8 +278,6 @@ body {background-color: rgba(252, 244, 224, 0.25);}
 	background: none;
 	border: none;
 	padding: 0;
-	color: #069;
-	text-decoration: underline;
 	cursor: pointer;
 	outline: none;
 	line-height: 0;
@@ -312,10 +316,10 @@ body {background-color: rgba(252, 244, 224, 0.25);}
 
 .article figure {text-align: center;}
 
-.article p {margin: 20px 0;}
+.article p {margin: 16px 0;}
 
 .article figcaption {
-	margin: 10px 0 20px 0;
+	margin: 8px 0 16px 0;
 	font-variant: small-caps;
 }
 
@@ -328,6 +332,7 @@ body {background-color: rgba(252, 244, 224, 0.25);}
 	font-weight: bold;
 	font-size: 30px;
 	color: rgb(152, 0, 0);
+	margin: 48px 0 32px 0;
 }
 
 footer {
@@ -347,10 +352,6 @@ footer {
 	.logo {
 		transform: translateY(0);
 		right: 40px;
-	}
-
-	.header-container {
-		margin-bottom: 25px;
 	}
 
 	.header {

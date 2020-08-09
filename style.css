@@ -43,16 +43,14 @@ body {background-color: rgba(252, 244, 224, 0.25);}
 }
 
 .page {
-	max-width: 880px;
+	max-width: 1200px;
 	margin: auto;
-	padding: 0px 40px;
 }
 
 /*nav home*/
 
 .navbar_home-container {
 	display: none;
-	margin-top: 50px;
 }
 
 .navbar_home {
@@ -66,6 +64,7 @@ body {background-color: rgba(252, 244, 224, 0.25);}
 	float: left;
 	text-decoration: none;
 	width: 185px;
+	filter: brightness(0.9);
 }
 
 .navbar_home-circle {
@@ -77,8 +76,9 @@ body {background-color: rgba(252, 244, 224, 0.25);}
 }
 
 .navbar_home-element:hover img {
-	transform: scale(1.03, 1.03);
-	transition: transform 0.3s;
+	/*transform: scale(1.03, 1.03);*/
+	transition: filter 0.3s;
+	filter: brightness(1.2);
 }
 
 .navbar_home-text {
@@ -282,10 +282,6 @@ body {background-color: rgba(252, 244, 224, 0.25);}
 	line-height: 0;
 }
 
-.article figure img, #sketchfab, .cocoen {
-	border-radius: 5px;
-}
-
 .gallery-image {
 	max-width: 100%;
 	max-height: 100%;
@@ -315,7 +311,16 @@ body {background-color: rgba(252, 244, 224, 0.25);}
 	cursor: auto;
 }
 
-.article {display: none;}
+.article {
+	display: none;
+	padding: 0px 40px;
+	max-width: 880px;
+	margin: auto;
+}
+
+.article figure img, #sketchfab, .cocoen {
+	border-radius: 5px;
+}
 
 .article figure {text-align: center;}
 
@@ -347,6 +352,11 @@ footer {
 }
 
 #sketchfab {width: 100%}
+
+#article_zemljevid {
+	margin-top: 48px;
+	max-width: 1200px;
+}
 
 @media screen and (max-width: 1099px) {
 	

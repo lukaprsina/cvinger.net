@@ -160,6 +160,7 @@ body {background-color: rgb(254, 252, 246);}
 	right: 0;
 	bottom: 0;
 	left: 0;
+	z-index: 1000;
 }
 
 .navbar_vert {
@@ -349,7 +350,9 @@ footer {
 	display: none;
 }
 
-#sketchfab {width: 100%}
+#sketchfab {width: 100%;}
+
+#zemljevid {height: 800px;}
 
 #article_zemljevid {
 	margin-top: 48px;

@@ -158,16 +158,30 @@ function moveGallery(number) {
 
 function imageBuild() {
 	document.getElementsByTagName("footer")[0].style.display = "block";
-	if (params.page != "jama") {
-		document.getElementById("article_jama").style.visibility = "hidden";
-		document.getElementById("article_jama").style.display = "block";
-		new Cocoen(document.querySelector('.cocoen'));
-		document.getElementById("sketchfab").height = document.getElementById("sketchfab").offsetWidth;
-		document.getElementById("article_jama").style.display = "none";
-		document.getElementById("article_jama").style.visibility = "visible";
+	hidePages = ["jama", "zemljevid"]
+	if (hidePages.indexOf(params.page) != -1) {
+		hidePages.splice(hidePages.indexOf(params.page), 1);
 	} else {
-		new Cocoen(document.querySelector('.cocoen'));
-		document.getElementById("sketchfab").height = document.getElementById("sketchfab").offsetWidth;
+		console.log("NOT FOUND");
+	}
+	
+	hidePagesLength = hidePages.length
+	for (var i=0; i < hidePagesLength; i++) {
+		// document.getElementById("article_".concat(hidePages[i])).style.visibility = "hidden";
+		document.getElementById("article_".concat(hidePages[i])).style.display = "block";
+	}
+
+	new Cocoen(document.querySelector('.cocoen'));
+	document.getElementById("sketchfab").height = document.getElementById("sketchfab").offsetWidth;
+
+	var map = L.map('zemljevid', {crs: L.CRS.Simple});
+	var bounds = [[0,0], [936,1200]];
+	var image = L.imageOverlay('images/zemljevid/zemljevid1.jpg', bounds).addTo(map);
+	map.fitBounds(bounds);
+
+	for (var i=0; i < hidePagesLength; i++) {
+		document.getElementById("article_".concat(hidePages[i])).style.display = "none";
+		document.getElementById("article_".concat(hidePages[i])).style.visibility = "visible";
 	}
 }
 

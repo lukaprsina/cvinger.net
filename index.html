@@ -10,6 +10,9 @@ naj se reloada
 	<title>Cvinger</title>
 	<link rel="stylesheet" href="cocoen.css" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
 	<meta 
 		name="description"
 		content="Cvinger pri Dolenjskih Toplicah je eno najpomembnejših starejšeželeznodobnih središč v Sloveniji in širšem jugovzhodnem predalpskem prostoru." />
@@ -29,44 +32,6 @@ naj se reloada
 			</a>
 			<a class="logo" href="#page=home" target=_self><img src="images/logo.svg"></a>
 		</div>
-	</div>
-	<!-- navbar_vert -->
-	<div class="navbar_vert-container">
-		<div class="navbar_vert">
-			<a class="navbar_vert-text nav_pot" href="#page=pot" onclick="navbarVert();">
-				<div class="navbar_vert-icon"><span>A</span></div>
-				<p>Arheološka pot</p>
-			</a>
-			<a class="navbar_vert-text nav_gradisce" href="#page=gradisce" onclick="navbarVert();">
-				<div class="navbar_vert-icon"><span>P</span></div>
-				<p>Prazgodovinsko gradišče</p>
-			</a>
-			<a class="navbar_vert-text nav_vhod" href="#page=vhod" onclick="navbarVert();">
-				<div class="navbar_vert-icon"><span>U</span></div>
-				<p>Utrjen vhod</p>
-			</a>
-			<a class="navbar_vert-text nav_jama" href="#page=jama" onclick="navbarVert();">
-				<div class="navbar_vert-icon"><span>C</span></div>
-				<p>Cvingerska jama</p>
-			</a>
-			<a class="navbar_vert-text nav_talilnice" href="#page=talilnice" onclick="navbarVert();">
-				<div class="navbar_vert-icon"><span>T</span></div>
-				<p>Talilniško območje</p>
-			</a>
-			<a class="navbar_vert-text nav_gomile" href="#page=gomile" onclick="navbarVert();">
-				<div class="navbar_vert-icon"><span>G</span></div>
-				<p>Gomilno grobišče</p>
-			</a>
-			<a class="navbar_vert-text nav_zemljevid" href="#page=zemljevid" onclick="navbarVert();">
-				<div class="navbar_vert-icon"><span>Z</span></div>
-				<p>Zemljevid</p>
-			</a>
-			<a class="navbar_vert-text nav_literatura" href="#page=literatura" onclick="navbarVert();"> 
-				<div class="navbar_vert-icon"><span>L</span></div>
-				<p>Literatura</p>
-			</a>
-		</div>
-		<div class="navbar_vert-background" onclick="navbarVert(false); return false;"></div>
 	</div>
 	<!-- navbar_page -->
 	<div class="navbar_page-container">
@@ -251,7 +216,7 @@ naj se reloada
 			<iframe id="sketchfab" width="100%" id="IframeCvinger" title="A 3D model" src="https://sketchfab.com/models/c31f716e4e404254a9a0de31b5131fcd/embed?ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 			<p>Cvingersko jamo so uradno prvi obiskali topliški jamarji, sicer člani Jamarskega kluba Novo mesto (1982). Za trikotnim vhodom (2 x 2,5 m) so izmerili 6 m globoko in 10 m dolgo vhodno brezno, v katerem pa zaradi očitnega nasutja z vrha ni bilo nadaljevanja. Ker je bila njena bližnja in širša okolica več stoletij obljudena, bi lahko v jamo po naključju (ali namerno) padli tudi razni predmeti iz različnih zgodovinskih obdobij, zato je jama zaradi svoje specifične lege dobila visok arheološki potencial. Med letoma 1986 in 1987 so se zato tudi jamarji vključili v arheološke raziskave, ki jih je takrat na Cvingerju vodil Borut Križ. V teh dveh poletnih sezonah so odkopavali nasutje, ki je domnevno prekrivalo arheološke plasti in ki je hkrati zapiralo prehod v nižje dele jame. Iz jame so s pomočjo vrvne tehnike izvlekli okoli 10 m3 materiala (zemlja, kamenje, komunalni odpadki), s čimer so jamo poglobili za več metrov. Ker so večje skale, ki jih niso mogli izvleči, začele groziti s podorom, so s kopanjem v jami prenehali. Prehod v morebitno jamsko nadaljevanje ali dostop do arheoloških plasti je zato tudi po zaključenih raziskavah ostal neznanka.</p>
 			<div class="cocoen">
-				<img id="test" src="images/jama/1987.jpg">
+				<img src="images/jama/1987.jpg">
 				<img src="images/jama/2017.jpg">
 			</div>
 			<p>Delo v jami je zastalo za natanko tri desetletja, dokler niso jamarji dobili vnovičnega povabila arheološke raziskovalne ekipe pod vodstvom dr. Matije Črešnarja (Oddelek za arheologijo, Filozofska fakulteta, UL), da bi s čiščenjem nasipnega stožca pod jamskim vhodom nadaljevali. Kopači v jami so nasutje nalagali v plastične sode, od koder so jih z električnim vitlom dvigovali ter po horizontalni žičnici odvlekli na petnajst metrov oddaljeno deponijo za arheološki pregled. Na več akcijah v letih 2016 in 2017 so izvlekli novih 10 m3 materiala in jamo poglobili do te mere, da se je ob jamski steni na dveh mestih odprlo nadaljevanje. Jamarske raziskave so nato pokazale, da se brezno med razvejanimi korozijskimi razpokami in manjšimi dvoranami v več stopnjah nadaljuje. Največji notranji prostor je Dvorana balvanov, ki je visoka 15 m. Na njenem dnu je splet stranskih rovov in prehodov, ki se vsi po vrsti zaprejo z neprehodnimi ožinami. Novoodkriti deli se zaključijo v jašku dobrih 10 m pod podornimi bloki omenjene dvorane na globini 51 m.</p>
@@ -323,11 +288,50 @@ naj se reloada
 			<p>Na območju Cvingerja posebnost predstavlja lončena posoda, ki je bila vkopana v prazgodovinsko gomilo in se po obliki, izdelavi in okrasju bistveno loči od ostalih lončenih posod, ki so ležale v prazgodovinskih grobovih. Kaže, da je bila ta za 7. stoletje značilna posoda v prazgodovinsko gomilo vkopana naknadno, s čimer predstavlja enega prvih žganih slovanskih pokopov na našem prostoru.</p>
 		</div>
 		<div class="article" id="article_zemljevid">
-			<img src="images/zemljevid/zemljevid1.jpg">
+			<!-- <img id="test" src="images/home/panorama.jpg"> -->
+			<div id="zemljevid"></div>
 		</div>
 		<div class="article" id="article_literatura">
 			<h1>Literatura</h1>
 		</div>
+	</div>
+	<!-- navbar_vert -->
+	<div class="navbar_vert-container">
+		<div class="navbar_vert">
+			<a class="navbar_vert-text nav_pot" href="#page=pot" onclick="navbarVert();">
+				<div class="navbar_vert-icon"><span>A</span></div>
+				<p>Arheološka pot</p>
+			</a>
+			<a class="navbar_vert-text nav_gradisce" href="#page=gradisce" onclick="navbarVert();">
+				<div class="navbar_vert-icon"><span>P</span></div>
+				<p>Prazgodovinsko gradišče</p>
+			</a>
+			<a class="navbar_vert-text nav_vhod" href="#page=vhod" onclick="navbarVert();">
+				<div class="navbar_vert-icon"><span>U</span></div>
+				<p>Utrjen vhod</p>
+			</a>
+			<a class="navbar_vert-text nav_jama" href="#page=jama" onclick="navbarVert();">
+				<div class="navbar_vert-icon"><span>C</span></div>
+				<p>Cvingerska jama</p>
+			</a>
+			<a class="navbar_vert-text nav_talilnice" href="#page=talilnice" onclick="navbarVert();">
+				<div class="navbar_vert-icon"><span>T</span></div>
+				<p>Talilniško območje</p>
+			</a>
+			<a class="navbar_vert-text nav_gomile" href="#page=gomile" onclick="navbarVert();">
+				<div class="navbar_vert-icon"><span>G</span></div>
+				<p>Gomilno grobišče</p>
+			</a>
+			<a class="navbar_vert-text nav_zemljevid" href="#page=zemljevid" onclick="navbarVert();">
+				<div class="navbar_vert-icon"><span>Z</span></div>
+				<p>Zemljevid</p>
+			</a>
+			<a class="navbar_vert-text nav_literatura" href="#page=literatura" onclick="navbarVert();"> 
+				<div class="navbar_vert-icon"><span>L</span></div>
+				<p>Literatura</p>
+			</a>
+		</div>
+		<div class="navbar_vert-background" onclick="navbarVert(false); return false;"></div>
 	</div>
 	<!-- footer -->
 	<footer>
@@ -336,6 +340,9 @@ naj se reloada
 	<!-- script -->
 	<script type="text/javascript" src="cocoen.js"></script>
 	<script type="text/javascript" src="javascript.js"></script>
+	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
 </body>
 
 </html>

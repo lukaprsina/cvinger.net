@@ -149,8 +149,7 @@ function moveGallery(number) {
 				pshImgToUrl(images[newImgNum]);
 				return;
 			} else {
-				// tukaj pride koda za animacijo, če je slika
-				// prva ali zadnja
+				// tukaj pride koda za animacijo
 			}
 		}
 	}

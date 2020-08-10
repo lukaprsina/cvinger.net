@@ -1,8 +1,3 @@
-<!-- zgleda da bo treba stran poenosvit
-naj se reloada
-
--->
-
 <!DOCTYPE html />
 <html lang="sl" />
 
@@ -25,12 +20,12 @@ naj se reloada
 	<!-- header -->
 	<div class="header-container">
 		<div class="header">
-			<a id="menu_button" onclick="navbarVert(true); return false;" href="fallback.html">
+			<a class="logo" href="#page=home"><img src="images/logo.svg"></a>
+			<button class="menu_button" onclick="navbarVert(true);">
 				<div></div>
 				<div></div>
 				<div></div>
-			</a>
-			<a class="logo" href="#page=home" target=_self><img src="images/logo.svg"></a>
+			</button>
 		</div>
 	</div>
 	<!-- navbar_page -->
@@ -102,6 +97,44 @@ naj se reloada
 				</a>
 			</div>
 			<div style="height:31px;"></div>
+	</div>
+	<!-- navbar_vert -->
+	<div class="navbar_vert-container">
+		<div class="navbar_vert">
+			<a class="navbar_vert-text nav_pot" href="#page=pot" onclick="navbarVert();">
+				<div class="navbar_vert-icon"><span>A</span></div>
+				<p>Arheološka pot</p>
+			</a>
+			<a class="navbar_vert-text nav_gradisce" href="#page=gradisce" onclick="navbarVert();">
+				<div class="navbar_vert-icon"><span>P</span></div>
+				<p>Prazgodovinsko gradišče</p>
+			</a>
+			<a class="navbar_vert-text nav_vhod" href="#page=vhod" onclick="navbarVert();">
+				<div class="navbar_vert-icon"><span>U</span></div>
+				<p>Utrjen vhod</p>
+			</a>
+			<a class="navbar_vert-text nav_jama" href="#page=jama" onclick="navbarVert();">
+				<div class="navbar_vert-icon"><span>C</span></div>
+				<p>Cvingerska jama</p>
+			</a>
+			<a class="navbar_vert-text nav_talilnice" href="#page=talilnice" onclick="navbarVert();">
+				<div class="navbar_vert-icon"><span>T</span></div>
+				<p>Talilniško območje</p>
+			</a>
+			<a class="navbar_vert-text nav_gomile" href="#page=gomile" onclick="navbarVert();">
+				<div class="navbar_vert-icon"><span>G</span></div>
+				<p>Gomilno grobišče</p>
+			</a>
+			<a class="navbar_vert-text nav_zemljevid" href="#page=zemljevid" onclick="navbarVert();">
+				<div class="navbar_vert-icon"><span>Z</span></div>
+				<p>Zemljevid</p>
+			</a>
+			<a class="navbar_vert-text nav_literatura" href="#page=literatura" onclick="navbarVert();"> 
+				<div class="navbar_vert-icon"><span>L</span></div>
+				<p>Literatura</p>
+			</a>
+		</div>
+		<div class="navbar_vert-background" onclick="navbarVert(false); return false;"></div>
 	</div>
 	<!-- gallery -->
 	<div class="gallery-container">
@@ -293,44 +326,6 @@ naj se reloada
 		<div class="article" id="article_literatura">
 			<h1>Literatura</h1>
 		</div>
-	</div>
-	<!-- navbar_vert -->
-	<div class="navbar_vert-container">
-		<div class="navbar_vert">
-			<a class="navbar_vert-text nav_pot" href="#page=pot" onclick="navbarVert();">
-				<div class="navbar_vert-icon"><span>A</span></div>
-				<p>Arheološka pot</p>
-			</a>
-			<a class="navbar_vert-text nav_gradisce" href="#page=gradisce" onclick="navbarVert();">
-				<div class="navbar_vert-icon"><span>P</span></div>
-				<p>Prazgodovinsko gradišče</p>
-			</a>
-			<a class="navbar_vert-text nav_vhod" href="#page=vhod" onclick="navbarVert();">
-				<div class="navbar_vert-icon"><span>U</span></div>
-				<p>Utrjen vhod</p>
-			</a>
-			<a class="navbar_vert-text nav_jama" href="#page=jama" onclick="navbarVert();">
-				<div class="navbar_vert-icon"><span>C</span></div>
-				<p>Cvingerska jama</p>
-			</a>
-			<a class="navbar_vert-text nav_talilnice" href="#page=talilnice" onclick="navbarVert();">
-				<div class="navbar_vert-icon"><span>T</span></div>
-				<p>Talilniško območje</p>
-			</a>
-			<a class="navbar_vert-text nav_gomile" href="#page=gomile" onclick="navbarVert();">
-				<div class="navbar_vert-icon"><span>G</span></div>
-				<p>Gomilno grobišče</p>
-			</a>
-			<a class="navbar_vert-text nav_zemljevid" href="#page=zemljevid" onclick="navbarVert();">
-				<div class="navbar_vert-icon"><span>Z</span></div>
-				<p>Zemljevid</p>
-			</a>
-			<a class="navbar_vert-text nav_literatura" href="#page=literatura" onclick="navbarVert();"> 
-				<div class="navbar_vert-icon"><span>L</span></div>
-				<p>Literatura</p>
-			</a>
-		</div>
-		<div class="navbar_vert-background" onclick="navbarVert(false); return false;"></div>
 	</div>
 	<!-- footer -->
 	<footer>

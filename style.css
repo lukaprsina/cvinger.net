@@ -12,7 +12,7 @@ a, button {-webkit-tap-highlight-color: transparent;}
 
 html {overflow-y: scroll;}
 
-body {background-color: rgba(252, 244, 224, 0.25);}
+body {background-color: rgb(254, 252, 246);}
 
 .header-container {
 	background-color: rgb(252, 244, 224);
@@ -85,7 +85,7 @@ body {background-color: rgba(252, 244, 224, 0.25);}
 	cursor: pointer;
 	margin: 15px 0 0 0;
 	text-align: center;
-	color: rgb(152, 0, 0);
+	color: rgb(135, 23, 31);
 }
 
 .navbar_home-spacing {
@@ -108,7 +108,7 @@ body {background-color: rgba(252, 244, 224, 0.25);}
 }
 
 .navbar_page-background {
-	background-color: rgb(152, 0, 0);
+	background-color: rgb(135, 23, 31);
 	margin: auto;
 	width: 100%;
 	height: 50px;
@@ -131,7 +131,7 @@ body {background-color: rgba(252, 244, 224, 0.25);}
 	text-decoration: none;
 	display: inline-block;
 	padding: 5px 6px;
-	border-radius: 11px; /*10*/
+	border-radius: 11px;
 	color: rgb(254, 252, 246);
 	position: relative;
 	top: 50%;
@@ -168,8 +168,7 @@ body {background-color: rgba(252, 244, 224, 0.25);}
 	text-align: left;
 	width: 300px;
 	background-color: rgb(254, 252, 246);
-	/*background-color: rgba(252, 244, 224, 0.4);*/
-	border-radius: 5px;
+	border-radius:0 5px 5px 0;
 	padding: 10px;
 	top: 0px;
 	bottom: 0px;
@@ -193,7 +192,7 @@ body {background-color: rgba(252, 244, 224, 0.25);}
 	width: 30px;
 	height: 30px;
 	margin: 0px 10px;
-	background-color: rgb(152, 0, 0);
+	background-color: rgb(135, 23, 31);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -207,8 +206,7 @@ body {background-color: rgba(252, 244, 224, 0.25);}
 	display: flex;
 	align-items: center;
 	text-decoration: none;
-	color: rgb(152, 0, 0);
-	/*background-color: rgb(252, 244, 224);*/
+	color: rgb(135, 23, 31);
 	margin: 2px 0px;
 	padding: 10px 0px 10px 10px;
 	border-radius: 5px;
@@ -318,8 +316,8 @@ body {background-color: rgba(252, 244, 224, 0.25);}
 	margin: auto;
 }
 
-.article figure img, #sketchfab, .cocoen {
-	border-radius: 5px;
+.article figure img, #sketchfab, .cocoen, .gallery-image {
+	border-radius: 7px;
 }
 
 .article figure {text-align: center;}
@@ -339,14 +337,14 @@ body {background-color: rgba(252, 244, 224, 0.25);}
 .article h1 {
 	font-weight: bold;
 	font-size: 30px;
-	color: rgb(152, 0, 0);
+	color: rgb(135, 23, 31);
 	margin: 48px 0 32px 0;
 }
 
 footer {
 	width: 100%;
 	height: 100px;
-	border-top: 2px solid rgb(152, 0, 0);
+	border-top: 2px solid rgb(135, 23, 31);
 	margin-top: 40px;
 	display: none;
 }

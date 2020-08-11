@@ -156,6 +156,10 @@ function moveGallery(number) {
 }
 
 function imageBuild() {
+	function openPDF(e) {
+    	window.open("documents/table/".concat(e.target._tooltip._content, ".pdf"));
+	}
+
 	document.getElementsByTagName("footer")[0].style.display = "block";
 	hidePages = ["jama", "zemljevid"]
 	if (hidePages.indexOf(params.page) != -1) {
@@ -171,33 +175,45 @@ function imageBuild() {
 	new Cocoen(document.querySelector('.cocoen'));
 	document.getElementById("sketchfab").height = document.getElementById("sketchfab").offsetWidth;
 
-	var map = L.map('zemljevid', {crs: L.CRS.Simple});
-	var bounds = [[0,0], [937,1201]];
+	var map = L.map('zemljevid', {
+		crs: L.CRS.Simple,
+		tileSize: 2000,
+		maxZoom: 2,
+		zoomDelta: 0.5,
+	});
+	var bounds = [[0,0], [936,1200]];
 	var image = L.imageOverlay('images/zemljevid/zemljevid.png', bounds).addTo(map);
 	map.fitBounds(bounds);
 
 	var markers = [
-		{x:282,y:210},
-		{x:525,y:224},
-		{x:813,y:233},
-		{x:585,y:276},
-		{x:468,y:294},
-		{x:522,y:294},
-		{x:525,y:383},
-		{x:520,y:411},
-		{x:522,y:501},
-		{x:643,y:633},
-		{x:831,y:664}
+		{x:282, y:210, text:"1"},
+		{x:525, y:224, text:"2"},
+		{x:813, y:233, text:"3"},
+		{x:585, y:276, text:"4"},
+		{x:468, y:294, text:"5"},
+		{x:522, y:294, text:"6"},
+		{x:525, y:383, text:"7"},
+		{x:520, y:411, text:"8"},
+		{x:522, y:501, text:"9"},
+		{x:643, y:633, text:"10"},
+		{x:831, y:664, text:"11"}
 	];
+
 	var markersLength = markers.length;
-	
+	var offset = 9;
 	for (var i=0; i < markersLength; i++) {
-		L.circle([937 - markers[i].y, markers[i].x], {
+		info = L.circle([bounds[1][0] - markers[i].y - offset, markers[i].x + offset], {
     		color: 'blue',
     		fillColor: 'lightblue',
     		fillOpacity: 0.5,
     		radius: 10
 		}).addTo(map);
+		
+		info.bindTooltip(markers[i].text, {
+			direction: "right",
+		});
+
+		info.on('click', openPDF);
 	}
 
 	for (var i=0; i < hidePagesLength; i++) {

@@ -158,7 +158,7 @@ body {background-color: rgb(254, 252, 246);}
 	right: 0;
 	bottom: 0;
 	left: 0;
-	z-index: 1000;
+	z-index: 2000;
 }
 
 .navbar_vert {

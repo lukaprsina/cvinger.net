@@ -119,7 +119,6 @@ function gallery(action) {
 	}
 }
 
-
 function pshImgToUrl(link) {
 	var source = link.getElementsByTagName("img")[0].src;
 	if (params.page) {
@@ -155,9 +154,9 @@ function moveGallery(number) {
 	}
 }
 
-function imageBuild() {
+function onloadBuild() {
 	function openPDF(e) {
-    	window.open("documents/table/".concat(e.target._tooltip._content, ".pdf"));
+		window.open("documents/table/".concat(e.target._tooltip._content.replace(/ /g,"_"), ".pdf"));
 	}
 
 	document.getElementsByTagName("footer")[0].style.display = "block";
@@ -168,7 +167,7 @@ function imageBuild() {
 	
 	hidePagesLength = hidePages.length;
 	for (var i=0; i < hidePagesLength; i++) {
-		// document.getElementById("article_".concat(hidePages[i])).style.visibility = "hidden";
+		document.getElementById("article_".concat(hidePages[i])).style.visibility = "hidden";
 		document.getElementById("article_".concat(hidePages[i])).style.display = "block";
 	}
 
@@ -186,17 +185,19 @@ function imageBuild() {
 	map.fitBounds(bounds);
 
 	var markers = [
-		{x:282, y:210, text:"1"},
-		{x:525, y:224, text:"2"},
-		{x:813, y:233, text:"3"},
-		{x:585, y:276, text:"4"},
-		{x:468, y:294, text:"5"},
-		{x:522, y:294, text:"6"},
-		{x:525, y:383, text:"7"},
-		{x:520, y:411, text:"8"},
-		{x:522, y:501, text:"9"},
-		{x:643, y:633, text:"10"},
-		{x:831, y:664, text:"11"}
+		{x:282, y:210, text:"Uvodna tabla Meniška vas"},
+		{x:525, y:224, text:"Vmesna tabla Meniška vas"},
+		{x:813, y:233, text:"Uvodna tabla osnovna šola"},
+		{x:585, y:276, text:"Vmesna tabla osnovna šola"},
+		{x:468, y:294, text:"Informativna tabla prazgodovinsko gradišče"},
+		// {x:522, y:294, text:"Informativna tabla apnenice"},
+		{x:520, y:285, text:"Informativna tabla apnenice"},
+		{x:510, y:310, text:"Informativna tabla Cvingerska jama"},
+		{x:525, y:383, text:"Vmesna tabla utrjen vhod"},
+		{x:520, y:411, text:"Informativna tabla utrjen vhod"},
+		{x:522, y:501, text:"Informativna tabla talilniško območje"},
+		{x:643, y:633, text:"Informativna tabla gomilno grobišče"},
+		{x:831, y:664, text:"Uvodna tabla pokopališče.pdf"}
 	];
 
 	var markersLength = markers.length;
@@ -213,6 +214,7 @@ function imageBuild() {
 			direction: "right",
 		});
 
+		// info.file = markers[i].file
 		info.on('click', openPDF);
 	}
 

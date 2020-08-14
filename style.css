@@ -224,36 +224,6 @@ body {background-color: rgb(254, 252, 246);}
 	top: 0px;
 }
 
-.menu_button {
-	background: none;
-	border: none;
-	padding: 0;
-	display: none;
-	width: 40px;
-	height: 25px;
-	float: right;
-	position: relative;
-	top: 50%;
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
-
-.menu_button div {
-	width: 40px;
-	height: 5px;
-	background-color: rgba(0, 0, 0, 0.5);
-	margin: 5px 0px;
-	border-radius: 3px;
-}
-
-.menu_button div:first-child {
-	margin-top: 0;
-}
-
-.menu_button div:last-child {
-	margin-bottom: 0;
-}
-
 .gallery-container {
 	display: none;
 	position: fixed;
@@ -370,6 +340,34 @@ footer {
 	margin-right: 10px;
 }
 
+.literatura-heading {
+	margin: 48px 0 32px 0;
+}
+
+.literatura-heading h1 {
+	margin: 0;
+	display: inline-block;
+}
+
+.literatura-button {
+	float: right;
+	height: 37px;
+	display: flex;
+}
+
+.literatura-button button {
+	padding: 10px;
+	display: inline-block;
+	height: 100%;
+	background-color: transparent;
+	color: rgb(135, 23, 31);
+	border: none;
+}
+
+.literatura-text {
+	display: none;
+}
+
 .library-container {
 	display: flex;
 	flex-flow: row wrap;
@@ -382,11 +380,23 @@ footer {
 	background-color: lightgray;
 }
 
+.menu-button {
+	display: none;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	float: right;
+	position: relative;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+	background-color: rgb(135, 23, 31);
+}
+
 @media screen and (max-width: 1099px) {
-	
-	.menu_button {
-		display: inline-block;
-	}
 
 	.header-container {
 		height: 100px;
@@ -402,6 +412,10 @@ footer {
 		padding: 0px 40px;
 		max-width: 880px;
 		margin: auto;
+		display: block;
+	}
+
+	.menu-button {
 		display: block;
 	}
 	

@@ -81,6 +81,7 @@ function checkWidth() {
 function navbarVert(action) {
 	var navbarVertDisplay = document.getElementsByClassName("navbar_vert-container")[0]
 	if (action) {
+		document.getElementsByClassName("menu-button")[0].classList.add("is-active");
 		navbarVertDisplay.style.display = "block";
 
 		if (params.page && params.page != "home") {
@@ -92,6 +93,7 @@ function navbarVert(action) {
 		// document.getElementsByTagName("html")[0].style.overflowY = "scroll";
 	} else {
 		navbarVertDisplay.style.display = "none";
+		document.getElementsByClassName("menu-button")[0].classList.remove("is-active");
 		// document.getElementsByTagName("html")[0].style.overflowY = "hidden";
 	}
 }
@@ -155,9 +157,19 @@ function moveGallery(number) {
 }
 
 function onloadBuild() {
+
 	function openPDF(e) {
 		window.open("documents/table/".concat(e.target._tooltip._content.replace(/ /g,"_"), ".pdf"));
 	}
+
+	document.getElementsByClassName("literatura-button")[0].getElementsByTagName("button")[0].onclick = function(){
+		document.getElementsByClassName("library-container")[0].style.display = "flex";
+		document.getElementsByClassName("literatura-text")[0].style.display = "none";
+	}
+	document.getElementsByClassName("literatura-button")[0].getElementsByTagName("button")[1].onclick = function(){
+		document.getElementsByClassName("library-container")[0].style.display = "none";
+		document.getElementsByClassName("literatura-text")[0].style.display = "block";
+	};
 
 	document.getElementsByTagName("footer")[0].style.display = "block";
 	hidePages = ["jama", "zemljevid"]
@@ -214,7 +226,6 @@ function onloadBuild() {
 			direction: "right",
 		});
 
-		// info.file = markers[i].file
 		info.on('click', openPDF);
 	}
 

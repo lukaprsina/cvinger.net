@@ -1,3 +1,31 @@
+function init() {
+	genInfo();
+
+	document.querySelectorAll("#article_literatura a").forEach(item => {
+		item.setAttribute('target', "_blank");
+	});
+
+	document.querySelectorAll(".gallery-link").forEach(item => {
+		item.onclick = function(){pshImgToUrl(this)};
+	});
+
+	document.getElementsByClassName("gallery-image")[0].onload = function() {
+		document.getElementsByClassName("gallery-control")[0].style.width = String(document.getElementsByClassName("gallery-image")[0].width).concat("px");
+		document.getElementsByClassName("gallery-control")[0].style.height = String(document.getElementsByClassName("gallery-image")[0].height).concat("px");
+	};
+
+	if (!params.page) {
+		var images = document.getElementById("article_home").getElementsByTagName("figure");
+	} else {
+		var images = document.getElementById(info.article).getElementsByTagName("figure");
+	}
+
+	var imagesLength = images.length;
+	for (var i=0; i < imagesLength; i++) {
+		images[i].getElementsByTagName("img")[0].src = images[i].getElementsByTagName("img")[0].alt;
+	}
+}
+
 function genInfo() {
 	var vars = window.location.hash.substr(1).split('&');
 	var varsLength = vars.length
@@ -39,17 +67,6 @@ function build() {
 		item.style.color = "";
 		item.style.border = "";
 	});
-
-	if (!params.page) {
-		var images = document.getElementById("article_home").getElementsByTagName("figure");
-	} else {
-		var images = document.getElementById(info.article).getElementsByTagName("figure");
-	}
-
-	var imagesLength = images.length;
-	for (var i=0; i < imagesLength; i++) {
-		images[i].getElementsByTagName("img")[0].src = images[i].getElementsByTagName("img")[0].alt;
-	}
 	
 	if (!params.page || params.page == "home") {
 		if (window.innerWidth >= 1100) {
@@ -162,7 +179,7 @@ function onloadBuild() {
 		window.open("documents/table/".concat(e.target._tooltip._content.replace(/ /g,"_"), ".pdf"));
 	}
 
-	document.getElementsByClassName("literatura-button")[0].getElementsByTagName("button")[0].onclick = function(){
+	/*document.getElementsByClassName("literatura-button")[0].getElementsByTagName("button")[0].onclick = function(){
 		document.getElementsByClassName("library-container")[0].style.display = "flex";
 		document.getElementsByClassName("literatura-text")[0].style.display = "none";
 	}
@@ -170,7 +187,7 @@ function onloadBuild() {
 		document.getElementsByClassName("library-container")[0].style.display = "none";
 		document.getElementsByClassName("literatura-text")[0].style.display = "block";
 	};
-
+*/
 	document.getElementsByTagName("footer")[0].style.display = "block";
 	hidePages = ["jama", "zemljevid"]
 	if (hidePages.indexOf(params.page) != -1) {
@@ -235,15 +252,7 @@ function onloadBuild() {
 	}
 }
 
-document.querySelectorAll(".gallery-link").forEach(item => {
-	item.onclick = function(){pshImgToUrl(this)};
-});
-
-document.getElementsByClassName("gallery-image")[0].onload = function() {
-	document.getElementsByClassName("gallery-control")[0].style.width = String(document.getElementsByClassName("gallery-image")[0].width).concat("px");
-	document.getElementsByClassName("gallery-control")[0].style.height = String(document.getElementsByClassName("gallery-image")[0].height).concat("px");
-};
-
+init();
 var minWidth = 1100;
 build();
 // navbarVert(true);

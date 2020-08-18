@@ -331,7 +331,12 @@ footer {
 	padding: 0;
 }
 
-#article_literatura {
+.literatura-name {
+	font-variant: small-caps;
+	font-weight: bold;
+}
+
+/*#article_literatura {
 	padding: 0 30px;
 }
 
@@ -364,6 +369,13 @@ footer {
 	border: none;
 }
 
+.library-item {
+	width: 101px;
+	height: 141px;
+	margin: 10px;
+	background-color: lightgray;
+}
+
 .literatura-text {
 	display: none;
 }
@@ -371,14 +383,7 @@ footer {
 .library-container {
 	display: flex;
 	flex-flow: row wrap;
-}
-
-.library-item {
-	width: 101px;
-	height: 141px;
-	margin: 10px;
-	background-color: lightgray;
-}
+}*/
 
 .menu-button {
 	display: none;

@@ -8,7 +8,10 @@
 	box-sizing: border-box;
 }
 
-a, button {-webkit-tap-highlight-color: transparent;}
+a, button {
+	-webkit-tap-highlight-color: transparent;
+	text-decoration: none;
+}
 
 html {overflow-y: scroll;}
 
@@ -333,7 +336,11 @@ footer {
 
 .literatura-name {
 	font-variant: small-caps;
-	font-weight: bold;
+	/*font-weight: bold;*/
+}
+
+.literatura-italic {
+	font-style: italic;
 }
 
 /*#article_literatura {

@@ -240,9 +240,10 @@ function onloadBuild() {
 		
 		info.bindTooltip(markers[i].text, {
 			direction: "right",
+			offset: [20,0],
 		});
 
-		info.on('click', openPDF);
+		info.on("click", openPDF);
 	}
 
 	for (var i=0; i < hidePagesLength; i++) {

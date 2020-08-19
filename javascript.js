@@ -13,17 +13,6 @@ function init() {
 		document.getElementsByClassName("gallery-control")[0].style.width = String(document.getElementsByClassName("gallery-image")[0].width).concat("px");
 		document.getElementsByClassName("gallery-control")[0].style.height = String(document.getElementsByClassName("gallery-image")[0].height).concat("px");
 	};
-
-	if (!params.page) {
-		var images = document.getElementById("article_home").getElementsByTagName("figure");
-	} else {
-		var images = document.getElementById(info.article).getElementsByTagName("figure");
-	}
-
-	var imagesLength = images.length;
-	for (var i=0; i < imagesLength; i++) {
-		images[i].getElementsByTagName("img")[0].src = images[i].getElementsByTagName("img")[0].alt;
-	}
 }
 
 function genInfo() {
@@ -67,6 +56,17 @@ function build() {
 		item.style.color = "";
 		item.style.border = "";
 	});
+	
+	if (!params.page) {
+		var images = document.getElementById("article_home").getElementsByTagName("figure");
+	} else {
+		var images = document.getElementById(info.article).getElementsByTagName("figure");
+	}
+
+	var imagesLength = images.length;
+	for (var i=0; i < imagesLength; i++) {
+		images[i].getElementsByTagName("img")[0].src = images[i].getElementsByTagName("img")[0].alt;
+	}
 	
 	if (!params.page || params.page == "home") {
 		if (window.innerWidth >= 1100) {

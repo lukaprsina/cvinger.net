@@ -1,8 +1,7 @@
 function init() {
 	genInfo();
-
 	document.querySelectorAll("#article_literatura a").forEach(item => {
-		item.setAttribute('target', "_blank");
+		item.setAttribute("target", "_blank");
 	});
 
 	document.querySelectorAll(".gallery-link").forEach(item => {

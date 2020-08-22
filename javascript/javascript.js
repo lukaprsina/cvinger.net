@@ -12,6 +12,15 @@ function init() {
 		document.getElementsByClassName("gallery-control")[0].style.width = String(document.getElementsByClassName("gallery-image")[0].width).concat("px");
 		document.getElementsByClassName("gallery-control")[0].style.height = String(document.getElementsByClassName("gallery-image")[0].height).concat("px");
 	};
+
+	document.querySelectorAll(".navbar_page a, .navbar_home a").forEach(item => {
+		item.onclick = function() {scrollToTop();};
+	});
+}
+
+function scrollToTop() {
+	document.body.scrollTop = 0; // For Safari
+	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
 function genInfo() {
@@ -200,7 +209,7 @@ function onloadBuild() {
 		zoomDelta: 0.5,
 		maxZoom: 2,
 	});
-	var image = L.imageOverlay('images/zemljevid/zemljevid.png', bounds).addTo(map);
+	var image = L.imageOverlay('images/zemljevid/zemljevid.jpg', bounds).addTo(map);
 	// map.fitBounds(bounds);
 	map.fitBounds(bounds);
 

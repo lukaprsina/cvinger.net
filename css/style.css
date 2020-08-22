@@ -333,7 +333,7 @@ footer {
 
 .literatura-name {
 	font-variant: small-caps;
-	/*font-weight: bold;*/
+	font-weight: bold;
 }
 
 #article_literatura a {
@@ -343,55 +343,6 @@ footer {
 .literatura-italic {
 	font-style: italic;
 }
-
-/*#article_literatura {
-	padding: 0 30px;
-}
-
-#article_literatura h1 {
-	margin-left: 10px;
-	margin-right: 10px;
-}
-
-.literatura-heading {
-	margin: 48px 0 32px 0;
-}
-
-.literatura-heading h1 {
-	margin: 0;
-	display: inline-block;
-}
-
-.literatura-button {
-	float: right;
-	height: 37px;
-	display: flex;
-}
-
-.literatura-button button {
-	padding: 10px;
-	display: inline-block;
-	height: 100%;
-	background-color: transparent;
-	color: rgb(135, 23, 31);
-	border: none;
-}
-
-.library-item {
-	width: 101px;
-	height: 141px;
-	margin: 10px;
-	background-color: lightgray;
-}
-
-.literatura-text {
-	display: none;
-}
-
-.library-container {
-	display: flex;
-	flex-flow: row wrap;
-}*/
 
 .menu-button {
 	display: none;

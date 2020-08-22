@@ -57,9 +57,9 @@ function build() {
 	});
 	
 	if (!params.page) {
-		var images = document.getElementById("article_home").getElementsByTagName("figure");
+		var images = document.getElementById("article_home").getElementsByClassName("image");
 	} else {
-		var images = document.getElementById(info.article).getElementsByTagName("figure");
+		var images = document.getElementById(info.article).getElementsByClassName("image");
 	}
 
 	var imagesLength = images.length;
@@ -178,15 +178,6 @@ function onloadBuild() {
 		window.open("documents/table/".concat(e.target._tooltip._content.replace(/ /g,"_"), ".pdf"));
 	}
 
-	/*document.getElementsByClassName("literatura-button")[0].getElementsByTagName("button")[0].onclick = function(){
-		document.getElementsByClassName("library-container")[0].style.display = "flex";
-		document.getElementsByClassName("literatura-text")[0].style.display = "none";
-	}
-	document.getElementsByClassName("literatura-button")[0].getElementsByTagName("button")[1].onclick = function(){
-		document.getElementsByClassName("library-container")[0].style.display = "none";
-		document.getElementsByClassName("literatura-text")[0].style.display = "block";
-	};
-*/
 	document.getElementsByTagName("footer")[0].style.display = "block";
 	hidePages = ["jama", "zemljevid"]
 	if (hidePages.indexOf(params.page) != -1) {

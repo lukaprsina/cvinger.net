@@ -16,7 +16,30 @@ function init() {
 	document.querySelectorAll(".navbar_page a, .navbar_home a").forEach(item => {
 		item.onclick = function() {scrollToTop();};
 	});
+
+	markers = [
+		{x:282, y:210, text:"Uvodna tabla Meniška vas"},
+		{x:525, y:224, text:"Vmesna tabla Meniška vas"},
+		{x:813, y:233, text:"Uvodna tabla osnovna šola"},
+		{x:585, y:276, text:"Vmesna tabla osnovna šola"},
+		{x:468, y:294, text:"Informativna tabla prazgodovinsko gradišče"},
+		{x:520, y:285, text:"Informativna tabla apnenice"},
+		{x:510, y:310, text:"Informativna tabla Cvingerska jama"},
+		{x:525, y:383, text:"Vmesna tabla utrjen vhod"},
+		{x:520, y:411, text:"Informativna tabla utrjen vhod"},
+		{x:522, y:501, text:"Informativna tabla talilniško območje"},
+		{x:643, y:633, text:"Informativna tabla gomilno grobišče"},
+		{x:831, y:664, text:"Uvodna tabla pokopališče"}
+	];
 }
+
+/*function animate() {
+	var randMarker = Math.floor(Math.random() * markers.length);
+	var coord = (markers[randMarker].x-40)/1201*100 + "% " + (markers[randMarker].y-28)/937*100 + "%";
+	document.getElementsByClassName("leaflet-interactive")[randMarker].style.animationPlayState = "running";
+	return document.getElementsByClassName("leaflet-interactive")[randMarker].style.transformOrigin = coord;
+	
+}*/
 
 function scrollToTop() {
 	document.body.scrollTop = 0; // For Safari
@@ -212,21 +235,6 @@ function onloadBuild() {
 	var image = L.imageOverlay('images/zemljevid/zemljevid.jpg', bounds).addTo(map);
 	// map.fitBounds(bounds);
 	map.fitBounds(bounds);
-
-	var markers = [
-		{x:282, y:210, text:"Uvodna tabla Meniška vas"},
-		{x:525, y:224, text:"Vmesna tabla Meniška vas"},
-		{x:813, y:233, text:"Uvodna tabla osnovna šola"},
-		{x:585, y:276, text:"Vmesna tabla osnovna šola"},
-		{x:468, y:294, text:"Informativna tabla prazgodovinsko gradišče"},
-		{x:520, y:285, text:"Informativna tabla apnenice"},
-		{x:510, y:310, text:"Informativna tabla Cvingerska jama"},
-		{x:525, y:383, text:"Vmesna tabla utrjen vhod"},
-		{x:520, y:411, text:"Informativna tabla utrjen vhod"},
-		{x:522, y:501, text:"Informativna tabla talilniško območje"},
-		{x:643, y:633, text:"Informativna tabla gomilno grobišče"},
-		{x:831, y:664, text:"Uvodna tabla pokopališče"}
-	];
 
 	var markersLength = markers.length;
 	var offset = 9;

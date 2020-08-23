@@ -1,6 +1,5 @@
 * {
 	font-family: Calibri, sans-serif;
-	font-style: normal;
 	font-size: 16px;
 	margin: 0;
 	padding: 0;
@@ -74,7 +73,6 @@ body {background-color: rgb(254, 252, 246);}
 }
 
 .navbar_home-element:hover img {
-	/*transform: scale(1.03, 1.03);*/
 	transition: filter 0.4s;
 	filter: brightness(1.2);
 }
@@ -334,14 +332,9 @@ footer {
 
 .literatura-name {
 	font-variant: small-caps;
-	/*font-weight: bold;*/
 }
 
-#article_literatura a {
-	font-style: italic;
-}
-
-.literatura-italic {
+#article_literatura i {
 	font-style: italic;
 }
 
@@ -363,40 +356,49 @@ footer {
 }
 
 .leaflet-tooltip {
-    -webkit-animation: fadein 0.4s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 0.4s; /* Firefox < 16 */
-        -ms-animation: fadein 0.4s; /* Internet Explorer */
-         -o-animation: fadein 0.4s; /* Opera < 12.1 */
-            animation: fadein 0.4s;
+	-webkit-animation: fadein 0.4s; /* Safari, Chrome and Opera > 12.1 */
+	-moz-animation: fadein 0.4s; /* Firefox < 16 */
+	-ms-animation: fadein 0.4s; /* Internet Explorer */
+	-o-animation: fadein 0.4s; /* Opera < 12.1 */
+	animation: fadein 0.4s;
 }
 
+/*.leaflet-interactive {
+	animation: aura 3s ease-in-out 0s infinite alternate none paused;
+}
+
+@keyframes aura {
+	from {transform: scale(1, 1);}
+	to {transform: scale(15, 15);}
+}*/
+
 @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 0.9; }
+	from {opacity: 0;}
+	to {opacity: 0.9;}
 }
 
 /* Firefox < 16 */
 @-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 0.9; }
+	from {opacity: 0;}
+	to {opacity: 0.9;}
 }
 
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 0.9; }
+	from {opacity: 0;}
+	to {opacity: 0.9;}
 }
 
 /* Internet Explorer */
 @-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 0.9; }
+	from {opacity: 0;}
+	to {opacity: 0.9;}
 }
 
 /* Opera < 12.1 */
 @-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 0.9; }
+	from {opacity: 0;}
+	to {opacity: 0.9;}
 }
 
 

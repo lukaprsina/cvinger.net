@@ -1,3 +1,4 @@
+<!-- ko reloadaš galerija ne premika -->
 <!DOCTYPE html />
 <html lang="sl" />
 
@@ -138,10 +139,13 @@
 	<!-- gallery -->
 	<div class="gallery-container">
 		<div class="gallery-background" onclick="gallery(false);"></div>
-		<img class="gallery-image">
+		<div class="gallery-wrap">
+			<img class="gallery-image">
+			<p class="gallery-subtitle"></p>	
+		</div>
 		<div class="gallery-control">
-			<div class="gallery-button" onclick="moveGallery(-1)"></div>
-			<div class="gallery-button" onclick="moveGallery(1)"></div>
+			<div class="gallery-button" onclick="pshImgToUrl(moveGallery(-1))"></div>
+			<div class="gallery-button" onclick="pshImgToUrl(moveGallery(1))"></div>
 		</div>
 	</div>
 	<!-- page -->
@@ -264,8 +268,8 @@
 			</figure>
 			<p>Delo v jami je zastalo za natanko tri desetletja, dokler niso jamarji dobili vnovičnega povabila arheološke raziskovalne ekipe pod vodstvom dr. Matije Črešnarja (Oddelek za arheologijo, Filozofska fakulteta, UL), da bi s čiščenjem nasipnega stožca pod jamskim vhodom nadaljevali. Kopači v jami so nasutje nalagali v plastične sode, od koder so jih z električnim vitlom dvigovali ter po horizontalni žičnici odvlekli na petnajst metrov oddaljeno deponijo za arheološki pregled. Na več akcijah v letih 2016 in 2017 so izvlekli novih 10 m3 materiala in jamo poglobili do te mere, da se je ob jamski steni na dveh mestih odprlo nadaljevanje. Jamarske raziskave so nato pokazale, da se brezno med razvejanimi korozijskimi razpokami in manjšimi dvoranami v več stopnjah nadaljuje. Največji notranji prostor je Dvorana balvanov, ki je visoka 15 m. Na njenem dnu je splet stranskih rovov in prehodov, ki se vsi po vrsti zaprejo z neprehodnimi ožinami. Novoodkriti deli se zaključijo v jašku dobrih 10 m pod podornimi bloki omenjene dvorane na globini 51 m.</p>
 			<figure class="image">
-				<button class="gallery-link">
-					<img alt="images/jama/načrt.jpg" style="width:60%">
+				<button class="gallery-link" style="width:60%">
+					<img alt="images/jama/načrt.jpg">
 				</button>
 				<figcaption style="display:flex; justify-content:center">Zaščitna ograja okoli vhodnega brezna Cvingerske jame.</figcaption>
 			</figure>
@@ -396,7 +400,7 @@
 	<!-- footer -->
 	<footer>
 		<div>
-			<img src="dm_znak_logotip_barvni.pdf">
+			<!-- <img src="dm_znak_logotip_barvni.pdf"> -->
 			
 		</div>
 	</footer>

@@ -17,6 +17,8 @@ function init() {
 		item.onclick = function() {scrollToTop();};
 	});
 
+
+	subtitle = "";
 	markers = [
 		{x:282, y:210, text:"Uvodna tabla Meniška vas"},
 		{x:525, y:224, text:"Vmesna tabla Meniška vas"},
@@ -32,14 +34,6 @@ function init() {
 		{x:831, y:664, text:"Uvodna tabla pokopališče"}
 	];
 }
-
-/*function animate() {
-	var randMarker = Math.floor(Math.random() * markers.length);
-	var coord = (markers[randMarker].x-40)/1201*100 + "% " + (markers[randMarker].y-28)/937*100 + "%";
-	document.getElementsByClassName("leaflet-interactive")[randMarker].style.animationPlayState = "running";
-	return document.getElementsByClassName("leaflet-interactive")[randMarker].style.transformOrigin = coord;
-	
-}*/
 
 function scrollToTop() {
 	document.body.scrollTop = 0; // For Safari
@@ -149,11 +143,11 @@ function navbarVert(action) {
 function checkKey(e) {
 	e = e || window.event;
 	if (e.keyCode == 37) {
-		moveGallery(-1);	
+		pshImgToUrl(moveGallery(-1));
 	}
 
 	if (e.keyCode == 39) {
-		moveGallery(1);
+		pshImgToUrl(moveGallery(1));
 	}
 }
 
@@ -161,16 +155,29 @@ function gallery(action) {
 	if (action) {
 		// document.getElementsByTagName("html")[0].style.overflowY = "hidden";
 		document.getElementsByClassName("gallery-image")[0].src = info.imgsrc;
+		if (subtitle) {
+			var caption = subtitle.parentElement.getElementsByTagName("figcaption")[0].innerHTML;
+			document.getElementsByClassName("gallery-subtitle")[0].innerHTML = caption;		
+		}
+
+
 		document.getElementsByClassName("gallery-container")[0].style.display = "block";
 	} else {
+		genInfo();
 		// document.getElementsByTagName("html")[0].style.overflowY = "scroll";
 		document.getElementsByClassName("gallery-container")[0].style.display = "none";
-		window.location.hash = info.query.replace("&image=".concat(params.image), "");
+		window.location.hash = decodeURIComponent(info.query).replace("&image=".concat(params.image), "");
 	}
 }
 
 function pshImgToUrl(link) {
+	if (!link) {return;}
 	var source = link.getElementsByTagName("img")[0].src;
+	subtitle = link
+
+	/*console.log(subtitle)
+	console.log(document.getElementsByClassName("gallery-image")[0])*/
+
 	if (params.page) {
 		window.location.hash += '&image='.concat(source.slice(source.lastIndexOf("/") + 1));
 	} else {
@@ -181,24 +188,22 @@ function pshImgToUrl(link) {
 }
 
 function moveGallery(number) {
-	images = [];
+	genInfo();
+	imageButtons = [];
 	document.getElementById(info.article).querySelectorAll(".gallery-link").forEach(item => {
-		images.push(item);
+		imageButtons.push(item);
 	});
 
-	var imagesLength = images.length;
+	var imagesLength = imageButtons.length;
 	for (var i=0; i < imagesLength; i++) {
-		var listSrc = images[i].getElementsByTagName("img")[0].src;
+		var listSrc = imageButtons[i].getElementsByTagName("img")[0].src;
 		var gallerySrc = document.getElementsByClassName("gallery-image")[0].src
 
 		if (listSrc == gallerySrc) {
 			var newImgNum = i + number;
 			if (newImgNum >= 0 && newImgNum < imagesLength) {
 				window.location.hash = info.query.replace("&image=".concat(params.image), "");
-				pshImgToUrl(images[newImgNum]);
-				return;
-			} else {
-				// tukaj pride koda za animacijo
+				return imageButtons[newImgNum];
 			}
 		}
 	}

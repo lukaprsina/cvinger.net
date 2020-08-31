@@ -251,7 +251,6 @@ body {background-color: rgb(254, 252, 246);}
 
 .gallery-wrap {
 	display: flex;
-	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
 	align-content: center;
@@ -261,6 +260,7 @@ body {background-color: rgb(254, 252, 246);}
 
 .gallery-image {
 	max-width: 100%;
+	max-height: 80%;
 	display: flex;
 	z-index: 2;
 }
@@ -274,6 +274,7 @@ body {background-color: rgb(254, 252, 246);}
 	padding: 16px;
 	z-index: 2;
 	font-variant: small-caps;
+/*	order: 1;*/
 }
 
 .gallery-control {
@@ -328,18 +329,31 @@ body {background-color: rgb(254, 252, 246);}
 
 footer {
 	width: 100%;
-	height: 100px;
-	background-color: rgb(135, 23, 31);
-	color: rgb(254, 252, 246);
 	margin-top: 40px;
-	display: none;
+	border-top: 1px solid rgb(135, 23, 31);
+	display: flex;
+	justify-content: center;
+	flex-flow: row wrap;
+	padding: 100px;
+}
+
+.footer-logos {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.footer-logos img {
+	margin: 10px;
+	width: 150px;
+	height: 150px;
+	max-width: 100%;
+	max-height: 100%;
 }
 
 #sketchfab {width: 100%;}
 
-#zemljevid {
-	height: 936px;
-}
+#zemljevid {height: 936px;}
 
 #article_zemljevid {
 	margin-top: 48px;
@@ -347,12 +361,10 @@ footer {
 	padding: 0;
 }
 
+#article_literatura li {margin: 5px 0;}
+
 .literatura-name {
 	font-variant: small-caps;
-}
-
-#article_literatura i {
-	font-style: italic;
 }
 
 .menu-button {
@@ -373,10 +385,6 @@ footer {
 }
 
 .leaflet-tooltip {
-	-webkit-animation: fadein 0.4s; /* Safari, Chrome and Opera > 12.1 */
-	-moz-animation: fadein 0.4s; /* Firefox < 16 */
-	-ms-animation: fadein 0.4s; /* Internet Explorer */
-	-o-animation: fadein 0.4s; /* Opera < 12.1 */
 	animation: fadein 0.4s;
 }
 
@@ -384,31 +392,6 @@ footer {
 	from {opacity: 0;}
 	to {opacity: 0.9;}
 }
-
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-	from {opacity: 0;}
-	to {opacity: 0.9;}
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-	from {opacity: 0;}
-	to {opacity: 0.9;}
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-	from {opacity: 0;}
-	to {opacity: 0.9;}
-}
-
-/* Opera < 12.1 */
-@-o-keyframes fadein {
-	from {opacity: 0;}
-	to {opacity: 0.9;}
-}
-
 
 @media screen and (max-width: 1099px) {
 
@@ -442,4 +425,6 @@ footer {
 		-ms-transform: translateY(-50%);
 		transform: translateY(-50%);
 	}
+
+	footer {padding: 40px;}
 }

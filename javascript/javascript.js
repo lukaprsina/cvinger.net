@@ -16,6 +16,7 @@ function init() {
 	document.querySelectorAll(".navbar_page a, .navbar_home a").forEach(item => {
 		item.onclick = function() {scrollToTop();};
 	});
+	minWidth = 1100;
 
 
 	subtitle = "";
@@ -159,8 +160,6 @@ function gallery(action) {
 			var caption = subtitle.parentElement.getElementsByTagName("figcaption")[0].innerHTML;
 			document.getElementsByClassName("gallery-subtitle")[0].innerHTML = caption;		
 		}
-
-
 		document.getElementsByClassName("gallery-container")[0].style.display = "block";
 	} else {
 		genInfo();
@@ -202,7 +201,7 @@ function moveGallery(number) {
 		if (listSrc == gallerySrc) {
 			var newImgNum = i + number;
 			if (newImgNum >= 0 && newImgNum < imagesLength) {
-				window.location.hash = info.query.replace("&image=".concat(params.image), "");
+				window.location.hash = info.query.replace("&image=".concat(encodeURIComponent(params.image)), "");
 				return imageButtons[newImgNum];
 			}
 		}
@@ -215,7 +214,6 @@ function onloadBuild() {
 		window.open("documents/table/".concat(e.target._tooltip._content.replace(/ /g,"_"), ".pdf"));
 	}
 
-	document.getElementsByTagName("footer")[0].style.display = "block";
 	hidePages = ["jama", "zemljevid"]
 	if (hidePages.indexOf(params.page) != -1) {
 		hidePages.splice(hidePages.indexOf(params.page), 1);
@@ -238,7 +236,6 @@ function onloadBuild() {
 		maxZoom: 2,
 	});
 	var image = L.imageOverlay('images/zemljevid/zemljevid.jpg', bounds).addTo(map);
-	// map.fitBounds(bounds);
 	map.fitBounds(bounds);
 
 	var markersLength = markers.length;
@@ -266,6 +263,4 @@ function onloadBuild() {
 }
 
 init();
-var minWidth = 1100;
 build();
-// navbarVert(true);

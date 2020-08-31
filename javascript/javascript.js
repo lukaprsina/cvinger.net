@@ -245,6 +245,7 @@ function onloadBuild() {
 		zoomDelta: 0.5,
 		maxZoom: 2,
 	});
+	
 	var image = L.imageOverlay('images/zemljevid/zemljevid.jpg', bounds).addTo(map);
 	map.fitBounds(bounds);
 

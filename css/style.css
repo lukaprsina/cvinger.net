@@ -278,7 +278,7 @@ body {background-color: rgb(254, 252, 246);}
 	max-width: 100%;
 	margin-top: 2px;
 	background-color: rgb(254, 252, 246); 
-	padding: 16px;
+	padding: 10px;
 	z-index: 2;
 	font-variant: small-caps;
 	order: 2;
@@ -318,7 +318,7 @@ body {background-color: rgb(254, 252, 246);}
 .article p {margin: 16px 0;}
 
 .article figcaption {
-	margin: 8px 0 16px 0;
+	margin-bottom: 16px;
 	font-variant: small-caps;
 	font-size: 14px;
 }
@@ -353,11 +353,24 @@ footer button {
 	background-color: transparent;
 }
 
-.footer-bottom {
+footer button {
 	width: 100%;
 	height: 100%;
 	display: flex;
 	justify-content: center;
+}
+
+.footer-text {
+	text-align: center;
+	margin-top: 10px;
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height 0.3s ease-out;
+}
+
+.footer-text.on {
+	max-height: 500px;
+	transition: max-height 0.3s ease-in;
 }
 
 .footer-logos {
@@ -384,11 +397,11 @@ footer button {
 	padding: 0;
 }
 
-#article_literatura li {margin: 5px 0;}
+#article_literatura li {margin: 2px 0;}
 
-.literatura-name {
-	font-variant: small-caps;
-}
+.literatura-name {font-variant: small-caps;}
+
+.literatura-link, .literatura-link a {font-size: 14px;}
 
 .menu-button {
 	display: none;
@@ -407,9 +420,7 @@ footer button {
 	background-color: rgb(135, 23, 31);
 }
 
-.leaflet-tooltip {
-	animation: fadein 0.4s;
-}
+.leaflet-tooltip {animation: fadein 0.4s;}
 
 @keyframes fadein {
 	from {opacity: 0;}

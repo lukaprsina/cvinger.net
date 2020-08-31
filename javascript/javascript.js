@@ -208,6 +208,16 @@ function moveGallery(number) {
 	}
 }
 
+function avtorstvo() {
+	var show = document.getElementsByClassName("footer-text")[0];
+
+	if (show.classList.contains("on")) {
+		show.classList.remove("on");
+	} else {
+		show.classList.add("on");
+	}
+}
+
 function onloadBuild() {
 
 	function openPDF(e) {

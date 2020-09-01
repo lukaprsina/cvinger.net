@@ -44,8 +44,6 @@ body {background-color: rgb(254, 252, 246);}
 	margin: auto;
 }
 
-/*nav home*/
-
 .navbar_home-container {
 	display: none;
 }
@@ -90,8 +88,6 @@ body {background-color: rgb(254, 252, 246);}
 	display: inline;
 	float: left;
 }
-
- /*nav page*/
 
 .navbar_page-container {
 	display: none;
@@ -251,18 +247,25 @@ body {background-color: rgb(254, 252, 246);}
 
 .gallery-wrap {
 	display: flex;
-	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
 	align-content: center;
+	flex-flow: row wrap;
 	width: 100%;
 	height: 100%;
 }
 
 .gallery-image {
 	max-width: 100%;
+	max-height: 80%;
 	display: flex;
 	z-index: 2;
+}
+
+.gallery-wrap::before {
+  content: '';
+  width: 100%;
+  order: 1;
 }
 
 .gallery-subtitle {
@@ -271,9 +274,10 @@ body {background-color: rgb(254, 252, 246);}
 	max-width: 100%;
 	margin-top: 2px;
 	background-color: rgb(254, 252, 246); 
-	padding: 16px;
+	padding: 10px;
 	z-index: 2;
 	font-variant: small-caps;
+	order: 2;
 }
 
 .gallery-control {
@@ -301,7 +305,7 @@ body {background-color: rgb(254, 252, 246);}
 	margin: auto;
 }
 
-.article figure img, #sketchfab, .cocoen, .gallery-image, .gallery-subtitle {
+.article figure img, #sketchfab, .cocoen, .gallery-image, .gallery-subtitle, .footer-text, footer button {
 	border-radius: 7px;
 }
 
@@ -310,7 +314,7 @@ body {background-color: rgb(254, 252, 246);}
 .article p {margin: 16px 0;}
 
 .article figcaption {
-	margin: 8px 0 16px 0;
+	margin-bottom: 16px;
 	font-variant: small-caps;
 	font-size: 14px;
 }
@@ -327,19 +331,107 @@ body {background-color: rgb(254, 252, 246);}
 }
 
 footer {
+	box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.5);
+	background-color: rgb(252, 244, 224);
 	width: 100%;
-	height: 100px;
-	background-color: rgb(135, 23, 31);
-	color: rgb(254, 252, 246);
 	margin-top: 40px;
-	display: none;
+	border-top: 1px solid rgb(135, 23, 31);
+	display: block;
+	padding: 80px;
+}
+
+#showAuthors {
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background-color: rgb(152, 0, 0);
+	color: white;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	border-radius: 7px;
+	margin: 20px auto 0;
+	max-width: 800px;
+	transition: border-radius 0.3s;
+	padding: 10px;
+}
+
+#showAuthors.on {
+	border-radius: 7px 7px 0 0;
+	transition: none;
+}
+
+.footer-text {
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height 0.5s ease-out;
+	transition: padding 0.5s ease-out;
+	background-color: rgb(152, 0, 0);
+	color: white;
+	padding: 0;
+	border-radius: 0 0 7px 7px;
+	max-width: 800px;
+	margin: auto;
+}
+
+.footer-text p {text-align: center;}
+
+.footer-text.on {
+	max-height: 500px;
+	padding: 10px;
+	transition: max-height 0.5s ease-in;
+}
+
+.footer-logos {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	width: 800px;
+	margin: auto;
+	height: 100%;
+}
+
+.footer-logo {
+	margin: 10px;
+	width: 200px;
+	height: 100px;
+	max-width: 100%;
+	max-height: 100%;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+.thin-logo {
+	width: 100px;
+}
+
+.footer-logos a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.footer-logo div {
+	display: flex;
+	flex-flow: column nowrap;
+	align-self: stretch;
+}
+
+.footer-logo img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.footer-logo p {
+	text-align: center;
+	font-size: 12px;
+	text-decoration: none;
 }
 
 #sketchfab {width: 100%;}
 
-#zemljevid {
-	height: 936px;
-}
+#zemljevid {height: 936px;}
 
 #article_zemljevid {
 	margin-top: 48px;
@@ -347,13 +439,11 @@ footer {
 	padding: 0;
 }
 
-.literatura-name {
-	font-variant: small-caps;
-}
+#article_literatura li {margin: 2px 0;}
 
-#article_literatura i {
-	font-style: italic;
-}
+.literatura-name {font-variant: small-caps;}
+
+.literatura-link, .literatura-link a {font-size: 12px;}
 
 .menu-button {
 	display: none;
@@ -372,43 +462,12 @@ footer {
 	background-color: rgb(135, 23, 31);
 }
 
-.leaflet-tooltip {
-	-webkit-animation: fadein 0.4s; /* Safari, Chrome and Opera > 12.1 */
-	-moz-animation: fadein 0.4s; /* Firefox < 16 */
-	-ms-animation: fadein 0.4s; /* Internet Explorer */
-	-o-animation: fadein 0.4s; /* Opera < 12.1 */
-	animation: fadein 0.4s;
-}
+.leaflet-tooltip {animation: fadein 0.4s;}
 
 @keyframes fadein {
 	from {opacity: 0;}
 	to {opacity: 0.9;}
 }
-
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-	from {opacity: 0;}
-	to {opacity: 0.9;}
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-	from {opacity: 0;}
-	to {opacity: 0.9;}
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-	from {opacity: 0;}
-	to {opacity: 0.9;}
-}
-
-/* Opera < 12.1 */
-@-o-keyframes fadein {
-	from {opacity: 0;}
-	to {opacity: 0.9;}
-}
-
 
 @media screen and (max-width: 1099px) {
 
@@ -442,4 +501,6 @@ footer {
 		-ms-transform: translateY(-50%);
 		transform: translateY(-50%);
 	}
+
+	footer {padding: 40px;}
 }

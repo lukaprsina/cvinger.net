@@ -426,6 +426,11 @@ footer {
 	display: flex;
 	flex-flow: column nowrap;
 	align-self: stretch;
+	align-content: flex-end;
+}
+
+.footer-logo:last-child {
+	margin-bottom: 0;
 }
 
 .footer-logo img {

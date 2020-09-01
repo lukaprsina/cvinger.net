@@ -330,6 +330,20 @@ body {background-color: rgb(254, 252, 246);}
 	margin: 48px 0 32px 0;
 }
 
+.article-tabla {
+	margin: 40px 0;
+	width: 100%;
+	text-align: center;
+}
+
+.article-tabla a {
+	background-color: rgb(152, 0, 0);
+	text-decoration: none;
+	color: white;
+	border-radius: 7px;
+	padding: 10px;
+}
+
 footer {
 	box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.5);
 	background-color: rgb(252, 244, 224);
@@ -337,7 +351,7 @@ footer {
 	margin-top: 40px;
 	border-top: 1px solid rgb(135, 23, 31);
 	display: block;
-	padding: 80px;
+	padding: 20px;
 }
 
 #showAuthors {
@@ -387,24 +401,20 @@ footer {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
-	width: 800px;
 	margin: auto;
+	max-width: 800px;
 	height: 100%;
 }
 
 .footer-logo {
-	margin: 10px;
 	width: 200px;
 	height: 100px;
 	max-width: 100%;
 	max-height: 100%;
+	margin: 10px 0;
 	display: flex;
 	align-items: flex-end;
 	justify-content: center;
-}
-
-.thin-logo {
-	width: 100px;
 }
 
 .footer-logos a {
@@ -427,6 +437,7 @@ footer {
 	text-align: center;
 	font-size: 12px;
 	text-decoration: none;
+	margin-top: 5px;
 }
 
 #sketchfab {width: 100%;}

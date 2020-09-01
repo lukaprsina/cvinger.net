@@ -3,19 +3,19 @@
 
 <head>
 	<title>Cvinger</title>
+	<meta name="description" content="Cvinger pri Dolenjskih Toplicah je eno najpomembnejših starejšeželeznodobnih središč v Sloveniji in širšem jugovzhodnem predalpskem prostoru.">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/cocoen.css">
 	<link rel="stylesheet" type="text/css" href="css/hamburgers.css">
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<meta name="description" content="Cvinger pri Dolenjskih Toplicah je eno najpomembnejših starejšeželeznodobnih središč v Sloveniji in širšem jugovzhodnem predalpskem prostoru.">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body onresize="checkWidth();" onhashchange="build();" onkeydown="checkKey();" onload="onloadBuild()">
 	<div class="header-container">
 		<div class="header">
-			<a class="logo" href="#page=home"><img src="images/logo/logo.svg"></a>
+			<a class="logo" href="#page=home"><img alt="logo" src="images/logo/logo.svg"></a>
 			<button class="hamburger--squeeze menu-button" type="button" onclick="navbarVert(true);">
 				<span class="hamburger-box">
 					<span class="hamburger-inner"></span>
@@ -47,45 +47,45 @@
 	<div class="navbar_home-container">
 		<div style="height:50px;"></div>
 		<div class="navbar_home">
-			<a class="navbar_home-element" href="#page=pot" class="nav_pot">
-				<div class="navbar_home-circle"><img src="images/home/krogci/01_pot.png"></div>
+			<a class="navbar_home-element" href="#page=pot">
+				<div class="navbar_home-circle"><img alt="Arheološka pot" src="images/home/krogci/01_pot.png"></div>
 				<p class="navbar_home-text">Arheološka pot</p>
 			</a>
 			<div class="navbar_home-spacing"></div>
-			<a class="navbar_home-element" href="#page=gradisce" class="nav_gradisce">
-				<div class="navbar_home-circle"><img src="images/home/krogci/02_gradisce.png"></div>
+			<a class="navbar_home-element" href="#page=gradisce">
+				<div class="navbar_home-circle"><img alt="Prazgodovinsko gradišče" src="images/home/krogci/02_gradisce.png"></div>
 				<p class="navbar_home-text">Prazgodovinsko gradišče</p>
 			</a>
 			<div class="navbar_home-spacing"></div>
-			<a class="navbar_home-element" href="#page=vhod" class="nav_vhod">
-				<div class="navbar_home-circle"><img src="images/home/krogci/03_vhod.png"></div>
+			<a class="navbar_home-element" href="#page=vhod">
+				<div class="navbar_home-circle"><img alt="Utrjen vhod" src="images/home/krogci/03_vhod.png"></div>
 				<p class="navbar_home-text">Utrjen vhod</p>
 			</a>
 			<div class="navbar_home-spacing"></div>
-			<a class="navbar_home-element" href="#page=jama" class="nav_jama">
-				<div class="navbar_home-circle"><img src="images/home/krogci/04_jama.png"></div>
+			<a class="navbar_home-element" href="#page=jama">
+				<div class="navbar_home-circle"><img alt="Cvingerska jama" src="images/home/krogci/04_jama.png"></div>
 				<p class="navbar_home-text">Cvingerska jama</p>
 			</a>
 		</div>
 		<div style="height:16px;"></div>
 		<div class="navbar_home">
-			<a class="navbar_home-element" href="#page=talilnice" class="nav_talilnice">
-				<div class="navbar_home-circle"><img src="images/home/krogci/05_talilnice.png"></div>
+			<a class="navbar_home-element" href="#page=talilnice">
+				<div class="navbar_home-circle"><img alt="Talilniško območje" src="images/home/krogci/05_talilnice.png"></div>
 				<p class="navbar_home-text">Talilniško območje</p>
 			</a>
 			<div class="navbar_home-spacing"></div>
-			<a class="navbar_home-element" href="#page=gomile" class="nav_gomile">
-				<div class="navbar_home-circle"><img src="images/home/krogci/06_gomile.png"></div>
+			<a class="navbar_home-element" href="#page=gomile">
+				<div class="navbar_home-circle"><img alt="Gomilno grobišče" src="images/home/krogci/06_gomile.png"></div>
 				<p class="navbar_home-text">Gomilno grobišče</p>
 			</a>
 			<div class="navbar_home-spacing"></div>
-			<a class="navbar_home-element" href="#page=zemljevid" class="nav_zemljevid">
-				<div class="navbar_home-circle"><img src="images/home/krogci/07_zemljevid.png"></div>
+			<a class="navbar_home-element" href="#page=zemljevid">
+				<div class="navbar_home-circle"><img alt="Zemljevid" src="images/home/krogci/07_zemljevid.png"></div>
 				<p class="navbar_home-text">Zemljevid</p>
 			</a>
 			<div class="navbar_home-spacing"></div>
-			<a class="navbar_home-element" href="#page=literatura" class="nav_literatura">
-				<div class="navbar_home-circle"><img src="images/home/krogci/08_literatura.png"></div>
+			<a class="navbar_home-element" href="#page=literatura">
+				<div class="navbar_home-circle"><img alt="Literatura" src="images/home/krogci/08_literatura.png"></div>
 				<p class="navbar_home-text">Literatura</p>
 			</a>
 		</div>
@@ -131,7 +131,7 @@
 	<div class="gallery-container">
 		<div class="gallery-background" onclick="gallery(false);"></div>
 		<div class="gallery-wrap">
-			<img class="gallery-image">
+			<img class="gallery-image" alt="Galerija">
 			<p class="gallery-subtitle"></p>
 		</div>
 		<div class="gallery-control">
@@ -242,15 +242,14 @@
 			</figure>
 			<p>Verjetno je prav lega jame v bližini obljudenih krajev spodbudila domišljijo nekaterih piscev iz začetka 20. stoletja, da so jami namenili vsak po nekaj vrstic. Najstarejši znani zapis o njej najdemo v drobni knjižici Zdravišče Toplice, ki jo je leta 1900 spisal Pavel Zhuber pl. Okrog. V poglavju Okolica zdravišča je navedel: »Takoj za parkom vzdiguje se polagoma že prej imenovani hrib Tabor. Od ceste peljejo lepe gozdne poti in stezice med gostimi, visokimi smrekami proti vrhu k nekdanji keltiški naselbini. Prav na vrhu je nad 20 metrov globoka navpična jama. Zaradi nevarnega vhoda do sedaj nihče še ni preiskal te jame, vendar pa se sodi, da so s to navpično jamo v zvezi še druge vodoravne votline. V tej jami so prav lepi kapniki.« Slabo desetletje pozneje (1909) je že omenjeni Alfons Müllner objavil knjigo o zgodovini železa, v kateri je na kratko opisal svoj obisk (1873) prazgodovinskega obzidja in gomil, ter jo opremil z risbama – na prvi je označil zemljepisno lego Cvingerja, na drugi je risbi obzidja dodal še prerez naselja, sredi katerega je dobro vidno brezno. Na naslednjo pisno obravnavo je jama čakala vse do leta 1991, ko je domačin Andrej Hudoklin v prispevku za Naše jame objavil kratek pregled do tedaj znanega dogajanja z obravnavano jamo. Ena izmed njegovih ugotovitev je bila, da je nasutje v jami nastalo po drugi svetovni vojni, kar so potrdili tudi ostanki eksplodiranih minskih teles. Ob tem je zabeležil tudi pripovedi, ki so o jami in njenih skrivnostih krožile med domačini. </p>
 			<figure>
-				<iframe id="sketchfab" width="100%" id="IframeCvinger" title="A 3D model" src="https://sketchfab.com/models/c31f716e4e404254a9a0de31b5131fcd/embed?ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-				<figcaption>3D model vhodnega dela jame pred jamarsko-arheološkimi raziskavami. Model Tomaž Grdin.
-			</figure>
+				<iframe id="sketchfab" width="100%" title="A 3D model" src="https://sketchfab.com/models/c31f716e4e404254a9a0de31b5131fcd/embed?ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+				<figcaption>3D model vhodnega dela jame pred jamarsko-arheološkimi raziskavami. Model Tomaž Grdin.</figcaption>
 			</figure>
 			<p>Cvingersko jamo so uradno prvi obiskali topliški jamarji, sicer člani Jamarskega kluba Novo mesto (1982). Za trikotnim vhodom (2 × 2,5 m) so izmerili 6 m globoko in 10 m dolgo vhodno brezno, v katerem pa zaradi očitnega nasutja z vrha ni bilo nadaljevanja. Ker je bila njena bližnja in širša okolica več stoletij obljudena, bi lahko v jamo po naključju (ali namerno) padli tudi razni predmeti iz različnih zgodovinskih obdobij. Zaradi svoje specifične lege je bil jami torej pripisan visok arheološki potencial. Med letoma 1986 in 1987 so se zato tudi jamarji vključili v arheološke raziskave, ki jih je takrat na Cvingerju vodil Borut Križ. V teh dveh poletnih sezonah so odkopavali nasutje, ki je domnevno prekrivalo arheološke plasti in ki je hkrati zapiralo prehod v nižje dele jame. Iz jame so s pomočjo vrvne tehnike izvlekli okoli 10 m3 materiala (zemlja, kamenje, komunalni odpadki), s čimer so jamo poglobili za več metrov. Ker so večje skale, ki jih niso mogli izvleči, začele groziti s podorom, so s kopanjem v jami prenehali. Prehod v morebitno jamsko nadaljevanje ali dostop do arheoloških plasti je zato tudi po zaključenih raziskavah ostal neznanka.</p>
 			<figure>
 				<div class="cocoen">
-					<img src="images/jama/1987.jpg">
-					<img src="images/jama/2017.jpg">
+					<img alt="1987" src="images/jama/1987.jpg">
+					<img alt="2017" src="images/jama/2017.jpg">
 				</div>
 				<figcaption>Čiščenje nasutja leta 1987 in 30 let pozneje.</figcaption>
 			</figure>
@@ -329,7 +328,7 @@
 		<div class="article" id="article_literatura">
 			<h1>Literatura</h1>
 			<ul>
-				<li><span class="literatura-name">Basar, P. et al.</span> 2018, <i>Cvinger in železnodobno železarstvo</i>: katalog razstave. Projekt Vitrina meseca 7, april 2018. Univerza v Ljubljani, Filozofska fakulteta, Knjižnica oddelka za arheologijo. <span class="literatura-link">[<a href="documents/literatura/Cvinger in železnodobno železarstvo, Vitrina meseca 7, april 2018.pdf">PDF, 8 MB</a>]</span></span></li>
+				<li><span class="literatura-name">Basar, P. et al.</span> 2018, <i>Cvinger in železnodobno železarstvo</i>: katalog razstave. Projekt Vitrina meseca 7, april 2018. Univerza v Ljubljani, Filozofska fakulteta, Knjižnica oddelka za arheologijo. <span class="literatura-link">[<a href="documents/literatura/Cvinger in železnodobno železarstvo, Vitrina meseca 7, april 2018.pdf">PDF, 8 MB</a>]</span></li>
 				<li><span class="literatura-name">Breščak, D.</span> 1981, Meniška vas. ‒ <i>Varstvo spomenikov</i> 23, 214. <span class="literatura-link">[<a href="documents/literatura/Varstvo spomenikov 23, 1981.pdf">PDF, 52 MB</a>]</span></li>
 				<li><span class="literatura-name">Črešnar, M. et al. = Črešnar, M., B. Mušič, B. Horn, M. Vinazza, T. Leskovar, Samuel E. Harris, Catherine M. Batt, N. Dolinar</span> 2020, Interdisciplinary research of the Early Iron Age iron production centre Cvinger near Dolenjske Toplice (Slovenia) / Interdisciplinarne raziskave železarskega središča Cvinger pri Dolenjskih Toplicah iz starejše železne dobe. ‒ <i>Arheološki vestnik</i> 71, 529‒554. <span class="literatura-link">[<a href="documents/literatura/Arheološki vestnik 71, 529‒554.pdf">PDF, 17 MB</a>]</span></li>
 				<li><span class="literatura-name">Črešnar, M., J. Burja, M. Vinazza</span> 2017, Nove arheološke raziskave na Cvingerju pri Dolenjskih Toplicah in njihov doprinos k poznavanju železarstva v jugovzhodni Sloveniji v starejši železni dobi. – <i>Arheo</i> 34, 79‒93. <span class="literatura-link">[<a href="documents/literatura/Arheo 34, 2017, 79-93.pdf">PDF, 8 MB</a>]</span></li>
@@ -361,26 +360,31 @@
 	</div>
 	<footer>
 		<div class="footer-logos">
-			<img src="images/logo/UL Filozofska fakulteta.svg">
-			<img src="images/logo/logo_zvkd_slo.svg">
-			<img src="images/logo/dm_znak_logotip_barvni.svg">
-			<img src="images/logo/Znak Občina Dolenjske Toplice.svg">
+			<a target="_blank" href="http://www.ff.uni-lj.si/" class="footer-logo"><img alt="Filozofska fakuklteta" src="images/logo/UL Filozofska fakulteta.svg"></a>
+			<a target="_blank" href="https://www.zvkds.si" class="footer-logo"><img alt="ZVKDS" src="images/logo/logo_zvkd_slo.svg"></a>
+			<a target="_blank" href="https://www.dolenjskimuzej.si/" class="footer-logo"><img alt="Dolenjski muzej" src="images/logo/dm_znak_logotip_barvni.svg"></a>
+			<a target="_blank" href="https://dolenjske-toplice.si/" class="footer-logo"><div>
+				<img alt="Občina Dolenjske Toplice" src="images/logo/Znak Občina Dolenjske Toplice.svg">
+				<p>Občina Dolenjske Toplice</p>
+			</div></a>
+			
 		</div>
 		<hr>
 		<button onclick="avtorstvo();">Avtorstvo</button>
-		</div>
 		<div class="footer-text">
-			<span><b>Besedila</b></span>
+			<span><b>Besedila:</b></span>
 			<span>dr. Borut Križ, Andrej Hudoklin, Marko Pršina, dr. Matija Črešnar</span>
 			<br>
-			<span><b>Ilustracije in grafični prikazi</b></span>
+			<span><b>Ilustracije in grafični prikazi:</b></span>
 			<span>Marko Pršina, Matija Črešnar</span>
 			<br>
-			<span><b>Oblikovanje</b></span>
+			<span><b>Oblikovanje:</b></span>
 			<span>Marko Pršina</span>
 			<br>
-			<span><b>Spletna postavitev</b></span>
+			<span><b>Spletna postavitev:</b></span>
 			<span>Luka Pršina</span>
+			<br><br>
+			<span xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#" class="license-text">This work   is licensed under <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0" style="color:white;">CC BY-NC-ND 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" /><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" /><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" /><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" /></a></span>
 		</div>
 	</footer>
 	<script type="text/javascript" src="javascript/cocoen.js"></script>

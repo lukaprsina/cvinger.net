@@ -208,13 +208,15 @@ function moveGallery(number) {
 	}
 }
 
-function avtorstvo() {
-	var show = document.getElementsByClassName("footer-text")[0];
-
-	if (show.classList.contains("on")) {
-		show.classList.remove("on");
+function showAuthors() {
+	var text = document.getElementsByClassName("footer-text")[0];
+	var button = document.getElementById("showAuthors");
+	if (text.classList.contains("on")) {
+		setTimeout(function(){button.classList.remove("on");}, 500);
+		text.classList.remove("on");
 	} else {
-		show.classList.add("on");
+		button.classList.add("on");
+		text.classList.add("on");
 	}
 }
 

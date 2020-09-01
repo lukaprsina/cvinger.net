@@ -340,12 +340,7 @@ footer {
 	padding: 80px;
 }
 
-footer hr {
-	margin: 30px auto;
-	max-width: 800px;
-}
-
-footer button {
+#showAuthors {
 	cursor: pointer;
 	border: none;
 	outline: none;
@@ -355,11 +350,19 @@ footer button {
 	height: 100%;
 	display: flex;
 	justify-content: center;
+	border-radius: 7px;
+	margin: 20px auto 0;
+	max-width: 800px;
+	transition: border-radius 0.3s;
+	padding: 10px;
+}
+
+#showAuthors.on {
+	border-radius: 7px 7px 0 0;
+	transition: none;
 }
 
 .footer-text {
-	text-align: center;
-	margin-top: 10px;
 	overflow: hidden;
 	max-height: 0;
 	transition: max-height 0.5s ease-out;
@@ -367,7 +370,12 @@ footer button {
 	background-color: rgb(152, 0, 0);
 	color: white;
 	padding: 0;
+	border-radius: 0 0 7px 7px;
+	max-width: 800px;
+	margin: auto;
 }
+
+.footer-text p {text-align: center;}
 
 .footer-text.on {
 	max-height: 500px;
@@ -378,7 +386,9 @@ footer button {
 .footer-logos {
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: center;
+	justify-content: space-between;
+	width: 800px;
+	margin: auto;
 	height: 100%;
 }
 
@@ -391,6 +401,10 @@ footer button {
 	display: flex;
 	align-items: flex-end;
 	justify-content: center;
+}
+
+.thin-logo {
+	width: 100px;
 }
 
 .footer-logos a {

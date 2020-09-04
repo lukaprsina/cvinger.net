@@ -16,6 +16,11 @@ function init() {
 	document.querySelectorAll(".navbar_page a, .navbar_home a").forEach(item => {
 		item.onclick = function() {scrollToTop();};
 	});
+
+	document.querySelectorAll(".tabs").forEach(item => {
+		switchTab(item.getElementsByClassName("tab")[0], 0);
+	});
+
 	minWidth = 1100;
 
 
@@ -118,6 +123,7 @@ function checkWidth() {
 		document.getElementsByClassName("navbar_home-container")[0].style.display = "none";
 		navbarVert(false);
 	}
+	new Cocoen(document.querySelector('.cocoen'));
 	build();
 }
 
@@ -173,10 +179,6 @@ function pshImgToUrl(link) {
 	if (!link) {return;}
 	var source = link.getElementsByTagName("img")[0].src;
 	subtitle = link
-
-	/*console.log(subtitle)
-	console.log(document.getElementsByClassName("gallery-image")[0])*/
-
 	if (params.page) {
 		window.location.hash += '&image='.concat(source.slice(source.lastIndexOf("/") + 1));
 	} else {
@@ -226,6 +228,10 @@ function onloadBuild() {
 		window.open("documents/table/".concat(e.target._tooltip._content.replace(/ /g,"_"), ".pdf"));
 	}
 
+	function test(e) {
+		console.log(e)
+	}
+
 	hidePages = ["jama", "zemljevid"]
 	if (hidePages.indexOf(params.page) != -1) {
 		hidePages.splice(hidePages.indexOf(params.page), 1);
@@ -238,16 +244,15 @@ function onloadBuild() {
 	}
 
 	new Cocoen(document.querySelector('.cocoen'));
-	document.getElementById("sketchfab").height = document.getElementById("sketchfab").offsetWidth;
 
-	var bounds = [[0,0], [937,1201]];
+	bounds = [[0,0], [937,1201]];
 	map = L.map('zemljevid', {
 		crs: L.CRS.Simple,
 		tileSize: 2000,
 		zoomDelta: 0.5,
 		maxZoom: 2,
 	});
-	
+
 	var image = L.imageOverlay('images/zemljevid/zemljevid.jpg', bounds).addTo(map);
 	map.fitBounds(bounds);
 
@@ -272,6 +277,21 @@ function onloadBuild() {
 	for (var i=0; i < hidePagesLength; i++) {
 		document.getElementById("article_".concat(hidePages[i])).style.display = "none";
 		document.getElementById("article_".concat(hidePages[i])).style.visibility = "visible";
+	}
+}
+
+function switchTab(element, number) {
+	var tabs = element.parentElement.getElementsByClassName("tab");
+	var tabsLength = tabs.length;
+
+	for (var i=0; i < tabsLength; i++) {
+		if (number != i) {
+			tabs[i].classList.remove("on");
+			element.parentElement.parentElement.querySelectorAll(".tabs-content>*")[i].style.display = "none";
+		} else {
+			tabs[i].classList.add("on");
+			element.parentElement.parentElement.querySelectorAll(".tabs-content>*")[i].style.display = "block";
+		}
 	}
 }
 

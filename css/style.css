@@ -455,7 +455,7 @@ footer {
 }
 
 .tab {
-	align-items: center;
+	align-content: center;
 	padding: 0 10px;
 	border: none;
 	outline: none;

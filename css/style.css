@@ -566,6 +566,14 @@ footer {
 		width: 100%;
 		border-radius: 0;
 	}
+
+	.tabs.w100 {
+		min-height: 100px;
+	}
+
+	.tabs.w150 {
+		min-height: 150px;
+	}
 }
 
 /*.tabs {

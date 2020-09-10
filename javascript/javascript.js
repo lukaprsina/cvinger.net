@@ -42,8 +42,8 @@ function init() {
 }
 
 function scrollToTop() {
-	document.body.scrollTop = 0; // For Safari
-	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
 }
 
 function genInfo() {
@@ -71,7 +71,7 @@ function build() {
 	} else {
 		gallery(false);
 	}
-	
+
 	document.querySelectorAll(".article").forEach(item => {
 		if (item != document.getElementById(info.article)) {
 			item.style.display = "none";
@@ -87,7 +87,7 @@ function build() {
 		item.style.color = "";
 		item.style.border = "";
 	});
-	
+
 	if (!params.page) {
 		var images = document.getElementById("article_home").getElementsByClassName("image");
 	} else {
@@ -98,7 +98,7 @@ function build() {
 	for (var i=0; i < imagesLength; i++) {
 		images[i].getElementsByTagName("img")[0].src = images[i].getElementsByTagName("img")[0].alt;
 	}
-	
+
 	if (!params.page || params.page == "home") {
 		if (window.innerWidth >= 1100) {
 			document.getElementsByClassName("navbar_home-container")[0].style.display = "block";
@@ -164,7 +164,7 @@ function gallery(action) {
 		document.getElementsByClassName("gallery-image")[0].src = info.imgsrc;
 		if (subtitle) {
 			var caption = subtitle.parentElement.getElementsByTagName("figcaption")[0].innerHTML;
-			document.getElementsByClassName("gallery-subtitle")[0].innerHTML = caption;		
+			document.getElementsByClassName("gallery-subtitle")[0].innerHTML = caption;
 		}
 		document.getElementsByClassName("gallery-container")[0].style.display = "block";
 	} else {
@@ -236,7 +236,7 @@ function onloadBuild() {
 	if (hidePages.indexOf(params.page) != -1) {
 		hidePages.splice(hidePages.indexOf(params.page), 1);
 	}
-	
+
 	hidePagesLength = hidePages.length;
 	for (var i=0; i < hidePagesLength; i++) {
 		document.getElementById("article_".concat(hidePages[i])).style.visibility = "hidden";
@@ -265,7 +265,7 @@ function onloadBuild() {
     		fillOpacity: 0.5,
     		radius: 10
 		}).addTo(map);
-		
+
 		info.bindTooltip(markers[i].text, {
 			direction: "right",
 			offset: [20,0],

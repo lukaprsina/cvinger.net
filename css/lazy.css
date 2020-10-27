@@ -1,0 +1,279 @@
+@media screen and (max-width: 599px) {
+  .tabs {
+    flex-direction: column;
+  }
+
+  .tab {
+    border: none;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .tabs.w100 {
+    min-height: 100px;
+  }
+
+  .tabs.w150 {
+    min-height: 150px;
+  }
+}
+
+.navbar_home-container {
+  display: none;
+}
+
+.navbar_home {
+  display: inherit;
+  width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.navbar_home-element {
+  float: left;
+  text-decoration: none;
+  width: 185px;
+  filter: brightness(0.9);
+}
+
+.navbar_home-circle {
+  cursor: pointer;
+  overflow: hidden;
+  height: 185px;
+  width: 185px;
+  border-radius: 50%;
+}
+
+.navbar_home-element:hover img {
+  transition: filter 0.4s;
+  filter: brightness(1.2);
+}
+
+.navbar_home-text {
+  cursor: pointer;
+  margin: 15px 0 0 0;
+  text-align: center;
+  color: rgb(135, 23, 31);
+}
+
+.navbar_home-spacing {
+  width: 20px;
+  height: 184px;
+  display: inline;
+  float: left;
+}
+
+.navbar_page-background {
+  background-color: rgb(135, 23, 31);
+  margin: auto;
+  width: 100%;
+  height: 50px;
+  text-align: justify;
+}
+
+.navbar_page {
+  width: 1100px;
+  height: inherit;
+  margin: auto;
+}
+
+.navbar_page:after {
+  display: inline-block;
+  content: "";
+  width: 100%;
+}
+
+.navbar_page-text {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 6px;
+  border-radius: 11px;
+  color: rgb(254, 252, 246);
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.2s;
+}
+
+.navbar_page-text:hover {
+  background-color: rgba(254, 244, 224, 0.4);
+}
+
+.navbar_page-circle {
+  height: 4px;
+  width: 4px;
+  background-color: rgb(254, 244, 224);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: 7px;
+}
+
+.navbar_vert {
+  display: block;
+  position: fixed;
+  text-align: left;
+  width: 300px;
+  background-color: rgb(254, 252, 246);
+  border-radius: 0 5px 5px 0;
+  padding: 10px;
+  top: 0px;
+  bottom: 0px;
+  box-shadow: 3px 0 3px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  overflow: auto;
+}
+
+.navbar_vert-background {
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 10px;
+}
+
+.navbar_vert-icon {
+  width: 30px;
+  height: 30px;
+  margin: 0px 10px;
+  background-color: rgb(135, 23, 31);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: rgb(254, 252, 246);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.navbar_vert-text {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(135, 23, 31);
+  margin: 2px 0px;
+  padding: 10px 0px 10px 10px;
+  border-radius: 5px;
+}
+
+.navbar_vert-text:first-child {
+  margin-top: 0px;
+}
+
+.navbar_vert-text:last-child {
+  margin-bottom: 0px;
+}
+
+.navbar_vert-text p {
+  position: relative;
+  top: 0px;
+}
+
+.gallery-background {
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	cursor: pointer;
+}
+
+.gallery-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-flow: row wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-image {
+  max-width: 100%;
+  max-height: 80%;
+  display: flex;
+  z-index: 2;
+}
+
+.gallery-wrap::before {
+  content: "";
+  width: 100%;
+  order: 1;
+}
+
+.gallery-subtitle {
+  text-align: center;
+  width: 1200px;
+  max-width: 100%;
+  margin-top: 2px;
+  background-color: rgb(254, 252, 246);
+  padding: 10px;
+  z-index: 2;
+  font-variant: small-caps;
+  order: 2;
+}
+
+.gallery-control {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.gallery-button {
+  height: 100%;
+  width: 50%;
+  cursor: auto;
+}
+
+#showAuthors.on {
+  border-radius: 7px 7px 0 0;
+  transition: none;
+}
+
+.footer-text.on {
+  max-height: 500px;
+  padding: 10px;
+  transition: max-height 0.5s ease-in;
+}
+
+.footer-text p {
+  text-align: center;
+}
+
+
+.tab:hover {
+  background-color: lightgray;
+}
+
+#article_literatura li {
+  margin: 2px 0;
+}
+
+.literatura-name {
+  font-variant: small-caps;
+}
+
+.literatura-link,
+.literatura-link a {
+  font-size: 12px;
+}
+
+.leaflet-tooltip {
+  animation: fadein 0.4s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.9;
+  }
+}

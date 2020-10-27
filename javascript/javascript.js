@@ -273,13 +273,13 @@ function showAuthors() {
   var button = document.getElementById("showAuthors");
 
   if (text.classList.contains("on")) {
-    text.style.visibility = "hidden";
+    text.style.display = "none";
     setTimeout(function () {
       button.classList.remove("on");
     }, 500);
     text.classList.remove("on");
   } else {
-    text.style.visibility = "visible";
+    text.style.display = "block";
     button.classList.add("on");
     text.classList.add("on");
   }
